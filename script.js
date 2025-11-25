@@ -83,17 +83,22 @@ window.addEventListener('scroll', () => {
 }, { passive: true });
 
 // Smooth Scroll for Navigation Links - Optimisé
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+document.querySelectorAll('a[href^="#"]:not([href="#"])').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-        const target = document.querySelector(this.getAttribute('href'));
+        const targetId = this.getAttribute('href');
         
-        if (target) {
-            const offsetTop = target.offsetTop - 80;
-            window.scrollTo({
-                top: offsetTop,
-                behavior: 'smooth'
-            });
+        // Vérifier que c'est un ID valide (commence par #)
+        if (targetId && targetId.length > 1) {
+            const target = document.querySelector(targetId);
+            
+            if (target) {
+                e.preventDefault();
+                const offsetTop = target.offsetTop - 80;
+                window.scrollTo({
+                    top: offsetTop,
+                    behavior: 'smooth'
+                });
+            }
         }
     });
 });
@@ -422,13 +427,94 @@ document.querySelectorAll('img').forEach(img => {
 
 // Anti-spam phone number display - obfuscated
 document.addEventListener('DOMContentLoaded', () => {
+    console.log('🔐 Initialisation protection anti-spam...');
+    
     const phoneElement = document.getElementById('phone-number');
     if (phoneElement) {
         // Phone number split and reversed for obfuscation
         const parts = ['06', '19', '63', '44', '14'];
         const phone = parts.join(' ');
         phoneElement.textContent = phone;
+        console.log('✅ Téléphone protégé');
     }
+    
+    // Anti-spam email display - obfuscated
+    const emailDisplay = document.getElementById('email-display');
+    const emailLink = document.getElementById('email-link');
+    const emailLinkHero = document.getElementById('email-link-hero');
+    
+    if (emailDisplay && emailLink) {
+        // Email parts split for obfuscation
+        const user = ['aurel', '140783'].join('');
+        const domain = ['gmail', 'com'].join('.');
+        const email = user + '@' + domain;
+        
+        emailDisplay.textContent = email;
+        emailLink.href = 'mailto:' + email;
+        emailLink.setAttribute('aria-label', 'Envoyer un email à ' + email);
+        console.log('✅ Email section contact protégé:', email);
+    }
+    
+    if (emailLinkHero) {
+        const user = ['aurel', '140783'].join('');
+        const domain = ['gmail', 'com'].join('.');
+        const email = user + '@' + domain;
+        
+        emailLinkHero.href = 'mailto:' + email;
+        console.log('✅ Email hero protégé:', emailLinkHero.href);
+    }
+    
+    // Anti-spam GitHub profile - obfuscated
+    const githubLinkHero = document.getElementById('github-link-hero');
+    const githubLinkContact = document.getElementById('github-link-contact');
+    
+    if (githubLinkHero) {
+        // GitHub username split for obfuscation
+        const username = ['Aurel', '1407'].join('');
+        const githubUrl = 'https://github.com/' + username;
+        
+        githubLinkHero.href = githubUrl;
+        console.log('✅ GitHub hero protégé:', githubUrl);
+    } else {
+        console.warn('❌ Élément github-link-hero non trouvé');
+    }
+    
+    if (githubLinkContact) {
+        const username = ['Aurel', '1407'].join('');
+        const githubUrl = 'https://github.com/' + username;
+        
+        githubLinkContact.href = githubUrl;
+        console.log('✅ GitHub contact protégé:', githubUrl);
+    } else {
+        console.warn('❌ Élément github-link-contact non trouvé');
+    }
+    
+    // Anti-spam LinkedIn profile - obfuscated
+    const linkedinLinkHero = document.getElementById('linkedin-link-hero');
+    const linkedinLinkContact = document.getElementById('linkedin-link-contact');
+    
+    if (linkedinLinkHero) {
+        // LinkedIn profile split for obfuscation
+        const profile = ['aurélien-thébault-', '244b84336'].join('');
+        const linkedinUrl = 'https://www.linkedin.com/in/' + profile;
+        
+        linkedinLinkHero.href = linkedinUrl;
+        console.log('✅ LinkedIn hero protégé:', linkedinUrl);
+    } else {
+        console.warn('❌ Élément linkedin-link-hero non trouvé');
+    }
+    
+    if (linkedinLinkContact) {
+        const profile = ['aurélien-thébault-', '244b84336'].join('');
+        const linkedinUrl = 'https://www.linkedin.com/in/' + profile;
+        
+        linkedinLinkContact.href = linkedinUrl;
+        console.log('✅ LinkedIn contact protégé:', linkedinUrl);
+    } else {
+        console.warn('❌ Élément linkedin-link-contact non trouvé');
+    }
+    
+    console.log('🎉 Protection anti-spam complète !');
 });
 
 // Easter Egg - Konami Code
@@ -446,3 +532,57 @@ document.addEventListener('keydown', (e) => {
 });
 
 console.log('%c💡 Astuce: Essayez le code Konami !', 'color: #8b5cf6; font-size: 12px;');
+
+// Contact Form Handler
+document.addEventListener('DOMContentLoaded', () => {
+    const form = document.getElementById('contact-form');
+    const formStatus = document.getElementById('form-status');
+    
+    if (form) {
+        form.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            
+            const submitButton = form.querySelector('button[type="submit"]');
+            const originalText = submitButton.innerHTML;
+            
+            // Afficher état d'envoi
+            submitButton.disabled = true;
+            submitButton.innerHTML = '<i class="fas fa-spinner fa-spin mr-2"></i>Envoi en cours...';
+            
+            try {
+                const formData = new FormData(form);
+                const response = await fetch(form.action, {
+                    method: 'POST',
+                    body: formData,
+                    headers: {
+                        'Accept': 'application/json'
+                    }
+                });
+                
+                if (response.ok) {
+                    // Succès
+                    formStatus.className = 'block text-center p-4 rounded-xl bg-green-500/20 border border-green-500/50 text-green-300';
+                    formStatus.innerHTML = '<i class="fas fa-check-circle mr-2"></i>Message envoyé avec succès ! Je vous répondrai bientôt.';
+                    form.reset();
+                } else {
+                    // Erreur
+                    formStatus.className = 'block text-center p-4 rounded-xl bg-red-500/20 border border-red-500/50 text-red-300';
+                    formStatus.innerHTML = '<i class="fas fa-exclamation-circle mr-2"></i>Erreur lors de l\'envoi. Veuillez réessayer.';
+                }
+            } catch (error) {
+                // Erreur réseau
+                formStatus.className = 'block text-center p-4 rounded-xl bg-red-500/20 border border-red-500/50 text-red-300';
+                formStatus.innerHTML = '<i class="fas fa-exclamation-circle mr-2"></i>Erreur de connexion. Vérifiez votre connexion internet.';
+            } finally {
+                // Restaurer le bouton
+                submitButton.disabled = false;
+                submitButton.innerHTML = originalText;
+                
+                // Masquer le message après 5 secondes
+                setTimeout(() => {
+                    formStatus.className = 'hidden';
+                }, 5000);
+            }
+        });
+    }
+});

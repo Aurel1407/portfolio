@@ -16,7 +16,7 @@
     <!-- Content Security Policy -->
     <meta
       http-equiv="Content-Security-Policy"
-      content="default-src 'self'; script-src 'self' 'unsafe-inline' https://cdn.tailwindcss.com; style-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com https://fonts.googleapis.com; font-src 'self' https://cdnjs.cloudflare.com https://fonts.gstatic.com; img-src 'self' https: data:; connect-src 'self';"
+      content="default-src 'self'; script-src 'self' 'unsafe-inline' https://cdn.tailwindcss.com; style-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com https://fonts.googleapis.com; font-src 'self' https://cdnjs.cloudflare.com https://fonts.gstatic.com; img-src 'self' https: data:; connect-src 'self' https://formspree.io; form-action 'self' https://formspree.io;"
     />
 
     <!-- Open Graph / Facebook -->
@@ -85,11 +85,11 @@
         "jobTitle": "Développeur Web Full-Stack",
         "url": "https://votre-domaine.com",
         "sameAs": [
-          "https://github.com/votre-profil",
-          "https://linkedin.com/in/votre-profil"
+          "https://github.com/Aurel1407",
+          "https://www.linkedin.com/in/aurélien-thébault-244b84336"
         ],
-        "email": "contact@exemple.com",
-        "telephone": "+33612345678",
+        "email": "aurel140783@gmail.com",
+        "telephone": "+33619634414",
         "address": {
           "@type": "PostalAddress",
           "addressLocality": "Paris",
@@ -275,14 +275,17 @@
                 class="absolute inset-0 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full blur-xl opacity-75 animate-pulse"
                 aria-hidden="true"
               ></div>
-              <img
-                src="images/profile-photo.jpg"
-                alt="Photo de profil d'Aurélien Thébault"
-                class="w-48 h-48 rounded-full mx-auto shadow-2xl border-4 border-white/20 backdrop-blur-sm relative z-10 object-cover"
-                loading="lazy"
-                width="192"
-                height="192"
-              />
+              <picture>
+                <source srcset="images/profile-photo.webp" type="image/webp">
+                <img
+                  src="images/profile-photo.jpg"
+                  alt="Photo de profil d'Aurélien Thébault"
+                  class="w-48 h-48 rounded-full mx-auto shadow-2xl border-2 border-white/20 backdrop-blur-sm relative z-10 object-cover"
+                  loading="lazy"
+                  width="192"
+                  height="192"
+                />
+              </picture>
             </div>
           </div>
           <h1
@@ -335,7 +338,8 @@
             class="flex justify-center space-x-6 mt-10 animate-fade-in-up animation-delay-1000"
           >
             <a
-              href="https://github.com"
+              href="#"
+              id="github-link-hero"
               target="_blank"
               rel="noopener noreferrer"
               class="w-12 h-12 flex items-center justify-center rounded-xl bg-white/10 backdrop-blur-sm hover:bg-white/20 text-white text-xl transition-all duration-300 transform hover:-translate-y-1 hover:scale-110 border border-white/20 focus:outline-none focus:ring-2 focus:ring-white"
@@ -344,7 +348,8 @@
               <i class="fab fa-github" aria-hidden="true"></i>
             </a>
             <a
-              href="https://linkedin.com"
+              href="#"
+              id="linkedin-link-hero"
               target="_blank"
               rel="noopener noreferrer"
               class="w-12 h-12 flex items-center justify-center rounded-xl bg-white/10 backdrop-blur-sm hover:bg-white/20 text-white text-xl transition-all duration-300 transform hover:-translate-y-1 hover:scale-110 border border-white/20 focus:outline-none focus:ring-2 focus:ring-white"
@@ -353,7 +358,8 @@
               <i class="fab fa-linkedin" aria-hidden="true"></i>
             </a>
             <a
-              href="mailto:contact@exemple.com"
+              href="#"
+              id="email-link-hero"
               target="_blank"
               rel="noopener noreferrer"
               class="w-12 h-12 flex items-center justify-center rounded-xl bg-white/10 backdrop-blur-sm hover:bg-white/20 text-white text-xl transition-all duration-300 transform hover:-translate-y-1 hover:scale-110 border border-white/20 focus:outline-none focus:ring-2 focus:ring-white"
@@ -776,24 +782,12 @@
                   aria-hidden="true"
                 >
                   <div class="flex flex-col gap-3 w-full max-w-xs">
-                    <a
-                      href="../Site-ZetouPanda/start.bat"
-                      class="block bg-white text-purple-600 px-6 py-3 rounded-xl font-semibold hover:bg-gray-100 transition-colors shadow-lg transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-white text-center"
-                      aria-label="Lancer l'application ZetouPanda"
-                    >
-                      <i class="fas fa-play mr-2" aria-hidden="true"></i>Lancer
-                      l'app
-                    </a>
-                    <a
-                      href="https://github.com"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      class="block bg-white/10 backdrop-blur-sm border-2 border-white text-white px-6 py-3 rounded-xl font-semibold hover:bg-white/20 transition-colors focus:outline-none focus:ring-2 focus:ring-white text-center"
-                      aria-label="Voir le code source de ZetouPanda sur GitHub"
-                    >
-                      <i class="fab fa-github mr-2" aria-hidden="true"></i>Code
-                      source
-                    </a>
+                    <div class="bg-yellow-500/90 text-gray-900 px-4 py-2 rounded-xl font-semibold text-center">
+                      <i class="fas fa-code mr-2" aria-hidden="true"></i>En cours de développement
+                    </div>
+                    <div class="bg-white/10 backdrop-blur-sm border-2 border-white/50 text-white/70 px-6 py-3 rounded-xl font-semibold text-center">
+                      <i class="fab fa-github mr-2" aria-hidden="true"></i>Code source privé
+                    </div>
                   </div>
                 </div>
               </div>
@@ -846,18 +840,11 @@
                   aria-hidden="true"
                 >
                   <div class="flex flex-col gap-3 w-full max-w-xs">
+                    <div class="bg-yellow-500/90 text-gray-900 px-4 py-2 rounded-xl font-semibold text-center">
+                      <i class="fas fa-code mr-2" aria-hidden="true"></i>En cours de développement
+                    </div>
                     <a
-                      href="../Shu-no/index.html"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      class="block bg-white text-purple-600 px-6 py-3 rounded-xl font-semibold hover:bg-gray-100 transition-colors shadow-lg transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-white text-center"
-                      aria-label="Voir le site Shu-no en ligne"
-                    >
-                      <i class="fas fa-eye mr-2" aria-hidden="true"></i>Voir le
-                      projet
-                    </a>
-                    <a
-                      href="https://github.com"
+                      href="https://github.com/Aurel1407/Shu-no"
                       target="_blank"
                       rel="noopener noreferrer"
                       class="block bg-white/10 backdrop-blur-sm border-2 border-white text-white px-6 py-3 rounded-xl font-semibold hover:bg-white/20 transition-colors focus:outline-none focus:ring-2 focus:ring-white text-center"
@@ -927,7 +914,7 @@
                       projet
                     </a>
                     <a
-                      href="https://github.com"
+                      href="https://github.com/Aurel1407/new_portfolio"
                       target="_blank"
                       rel="noopener noreferrer"
                       class="block bg-white/10 backdrop-blur-sm border-2 border-white text-white px-6 py-3 rounded-xl font-semibold hover:bg-white/20 transition-colors focus:outline-none focus:ring-2 focus:ring-white text-center"
@@ -1017,12 +1004,13 @@
                 <div>
                   <h3 class="text-lg font-semibold text-white mb-1">Email</h3>
                   <a
-                    href="mailto:contact@exemple.com"
+                    href="#"
+                    id="email-link"
                     target="_blank"
                     rel="noopener noreferrer"
                     class="text-gray-300 hover:text-blue-400 transition-colors"
-                    aria-label="Envoyer un email à contact@exemple.com"
-                    >contact@exemple.com</a
+                    aria-label="Envoyer un email"
+                    ><span id="email-display"></span></a
                   >
                 </div>
               </div>
@@ -1077,7 +1065,8 @@
                   aria-label="Liens réseaux sociaux"
                 >
                   <a
-                    href="https://github.com"
+                    href="#"
+                    id="github-link-contact"
                     target="_blank"
                     rel="noopener noreferrer"
                     class="w-12 h-12 bg-white/10 backdrop-blur-sm hover:bg-white/20 text-white rounded-xl flex items-center justify-center transition-all duration-300 transform hover:-translate-y-1 hover:scale-110 border border-white/20 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-slate-900"
@@ -1086,7 +1075,8 @@
                     <i class="fab fa-github text-xl" aria-hidden="true"></i>
                   </a>
                   <a
-                    href="https://linkedin.com"
+                    href="#"
+                    id="linkedin-link-contact"
                     target="_blank"
                     rel="noopener noreferrer"
                     class="w-12 h-12 bg-white/10 backdrop-blur-sm hover:bg-white/20 text-white rounded-xl flex items-center justify-center transition-all duration-300 transform hover:-translate-y-1 hover:scale-110 border border-white/20 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-slate-900"
@@ -1104,6 +1094,8 @@
             >
               <form
                 id="contact-form"
+                action="https://formspree.io/f/mvgnlgow"
+                method="POST"
                 class="space-y-6"
                 aria-label="Formulaire de contact"
               >
@@ -1191,6 +1183,9 @@
                     aria-hidden="true"
                   ></div>
                 </button>
+                
+                <!-- Message de confirmation -->
+                <div id="form-status" class="hidden text-center p-4 rounded-xl" role="alert"></div>
               </form>
             </div>
           </div>
