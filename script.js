@@ -210,16 +210,24 @@ if (typingText) {
     const text = typingText.textContent;
     typingText.textContent = '';
     let i = 0;
+    let lastTime = 0;
     
-    function typeWriter() {
-        if (i < text.length) {
+    function typeWriter(timestamp) {
+        if (!lastTime) lastTime = timestamp;
+        const elapsed = timestamp - lastTime;
+        
+        if (elapsed > 100 && i < text.length) {
             typingText.textContent += text.charAt(i);
             i++;
-            setTimeout(typeWriter, 100);
+            lastTime = timestamp;
+        }
+        
+        if (i < text.length) {
+            requestAnimationFrame(typeWriter);
         }
     }
     
-    typeWriter();
+    requestAnimationFrame(typeWriter);
 }
 
 // Effet parallaxe pour la section hero
