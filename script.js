@@ -307,7 +307,7 @@ function debounce(func, wait) {
 }
 
 // Message dans la console
-console.log('%c👨‍💻 Portfolio d\'Aurélien Thébault', 'color: #3b82f6; font-size: 20px; font-weight: bold;');
+console.log('%cPortfolio d\'Aurélien Thébault', 'color: #3b82f6; font-size: 20px; font-weight: bold;');
 console.log('%cDéveloppeur Web Full-Stack', 'color: #6b7280; font-size: 14px;');
 console.log('%cVous cherchez un développeur ? Contactez-moi !', 'color: #10b981; font-size: 12px;');
 
@@ -423,7 +423,7 @@ document.addEventListener('keydown', (e) => {
 // Rendre la fonction accessible depuis la console
 window.konami = activateKonami;
 
-console.log('%c💡 Astuce: Essayez le code Konami légendaire ou tapez konami() dans la console !', 'color: #8b5cf6; font-size: 12px;');
+console.log('%c💡 Astuce: Essayez le code Konami légendaire dans la console !', 'color: #8b5cf6; font-size: 12px;');
 
 // Gestionnaire de formulaire de contact
 document.addEventListener('DOMContentLoaded', () => {
