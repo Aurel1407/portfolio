@@ -61,7 +61,6 @@ Toute modification poussée sur `main` déclenche un redéploiement automatique.
 
 - Content Security Policy (CSP) stricte
 - Protection anti-spam des contacts (obfuscation JavaScript)
-- Données sensibles retirées du Schema.org
 - Validation des formulaires côté client
 
 ## Contact
