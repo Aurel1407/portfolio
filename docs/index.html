@@ -13,7 +13,7 @@
       content="développeur web, full-stack, React, Node.js, portfolio, Aurélien Thébault"
     />
 
-    <!-- Politique de sécurité du contenu -->
+    <!-- Content Security Policy -->
     <meta
       http-equiv="Content-Security-Policy"
       content="default-src 'self'; script-src 'self' 'unsafe-inline' https://cdn.tailwindcss.com; style-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com https://fonts.googleapis.com; font-src 'self' https://cdnjs.cloudflare.com https://fonts.gstatic.com; img-src 'self' https: data:; connect-src 'self' https://formspree.io; form-action 'self' https://formspree.io;"
@@ -39,7 +39,7 @@
       content="Portfolio professionnel de développeur web full-stack"
     />
 
-    <!-- Icône de favori -->
+    <!-- Favicon -->
     <link rel="icon" type="image/svg+xml" href="favicon.svg" />
     <link
       rel="alternate icon"
@@ -49,7 +49,7 @@
 
     <title>Aurélien Thébault - Développeur Web Full-Stack</title>
 
-    <!-- CDN Tailwind CSS -->
+    <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
 
     <!-- Font Awesome avec Integrity -->
@@ -61,7 +61,7 @@
       referrerpolicy="no-referrer"
     />
 
-    <!-- Polices Google -->
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -69,11 +69,11 @@
       rel="stylesheet"
     />
 
-    <!-- CSS personnalisé -->
+    <!-- Custom CSS -->
     <link rel="stylesheet" href="style.css" />
     />
 
-    <!-- CSS personnalisé -->
+    <!-- Custom CSS -->
     <link rel="stylesheet" href="style.css" />
 
     <!-- Schema.org JSON-LD -->
@@ -88,9 +88,11 @@
           "https://github.com/Aurel1407",
           "https://www.linkedin.com/in/aurélien-thébault-244b84336"
         ],
+        "email": "aurel140783@gmail.com",
+        "telephone": "+33619634414",
         "address": {
           "@type": "PostalAddress",
-          "addressLocality": "La Croixille, Mayenne",
+          "addressLocality": "Paris",
           "addressCountry": "FR"
         },
         "description": "Développeur web junior passionné, fraîchement diplômé d'une formation full-stack. Créatif et rigoureux, je donne vie à des projets web modernes.",
@@ -126,12 +128,12 @@
     </script>
   </head>
   <body class="bg-gray-50 font-sans">
-    <!-- Lien pour passer au contenu principal (accessibilité) -->
+    <!-- Skip to main content for accessibility -->
     <a href="#main-content" class="skip-to-content">
       Aller au contenu principal
     </a>
 
-    <!-- Menu de navigation -->
+    <!-- Navigation -->
     <nav
       class="fixed top-0 w-full bg-slate-900/95 backdrop-blur-sm shadow-lg z-50 transition-all duration-300"
       id="navbar"
@@ -150,7 +152,7 @@
             >
           </div>
 
-          <!-- Menu de bureau -->
+          <!-- Desktop Menu -->
           <div class="hidden md:block">
             <div class="ml-10 flex items-baseline space-x-8" role="menubar">
               <a
@@ -181,7 +183,7 @@
             </div>
           </div>
 
-          <!-- Bouton du menu mobile -->
+          <!-- Mobile menu button -->
           <div class="md:hidden">
             <button
               id="mobile-menu-btn"
@@ -209,7 +211,7 @@
         </div>
       </div>
 
-      <!-- Menu mobile -->
+      <!-- Mobile Menu -->
       <div
         id="mobile-menu"
         class="hidden md:hidden bg-slate-800 border-t border-slate-700"
@@ -244,13 +246,13 @@
       </div>
     </nav>
 
-    <!-- Section Hero -->
+    <!-- Hero Section -->
     <section
       id="home"
       class="min-h-screen flex items-center justify-center relative overflow-hidden pt-16"
       aria-labelledby="hero-heading"
     >
-      <!-- Arrière-plan animé -->
+      <!-- Animated Background -->
       <div
         class="absolute inset-0 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"
         aria-hidden="true"
@@ -370,7 +372,7 @@
       </div>
     </section>
 
-    <!-- Section À propos -->
+    <!-- About Section -->
     <main id="main-content">
       <section
         id="about"
@@ -499,7 +501,7 @@
         </div>
       </section>
 
-      <!-- Section Compétences -->
+      <!-- Skills Section -->
       <section
         id="skills"
         class="py-20 bg-gradient-to-br from-indigo-900 via-slate-900 to-slate-800 relative overflow-hidden"
@@ -533,7 +535,7 @@
           </div>
 
           <div class="grid md:grid-cols-3 gap-8">
-            <!-- Front-End -->
+            <!-- Frontend -->
             <div
               class="bg-white/10 backdrop-blur-sm border border-white/20 p-8 rounded-2xl shadow-lg hover:bg-white/15 hover:shadow-2xl hover:shadow-blue-500/20 transition-all transform hover:-translate-y-2"
             >
@@ -597,7 +599,7 @@
               </div>
             </div>
 
-            <!-- Back-End -->
+            <!-- Backend -->
             <div
               class="bg-white/10 backdrop-blur-sm border border-white/20 p-8 rounded-2xl shadow-lg hover:bg-white/15 hover:shadow-2xl hover:shadow-purple-500/20 transition-all transform hover:-translate-y-2"
             >
@@ -728,7 +730,7 @@
         </div>
       </section>
 
-      <!-- Section Projets -->
+      <!-- Projects Section -->
       <section
         id="projects"
         class="py-20 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-800 relative overflow-hidden"
@@ -762,7 +764,7 @@
           <div
             class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto"
           >
-            <!-- Projet 1 - ZetouPanda -->
+            <!-- Project 1 - ZetouPanda -->
             <article
               class="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 flex flex-col h-full"
             >
@@ -826,7 +828,7 @@
               </div>
             </article>
 
-            <!-- Projet 2 - Shu-no -->
+            <!-- Project 2 - Shu-no -->
             <article
               class="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 flex flex-col h-full"
             >
@@ -894,7 +896,7 @@
               </div>
             </article>
 
-            <!-- Projet 3 - Portfolio -->
+            <!-- Project 3 - Portfolio -->
             <article
               class="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 flex flex-col h-full"
             >
@@ -958,7 +960,7 @@
         </div>
       </section>
 
-      <!-- Section Contact -->
+      <!-- Contact Section -->
       <section
         id="contact"
         class="py-20 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden"
@@ -987,7 +989,7 @@
           </div>
 
           <div class="grid md:grid-cols-2 gap-12 max-w-5xl mx-auto">
-            <!-- Informations de contact -->
+            <!-- Contact Info -->
             <div class="space-y-8">
               <div class="flex items-start space-x-4 group">
                 <div class="flex-shrink-0">
@@ -1087,7 +1089,7 @@
               </div>
             </div>
 
-            <!-- Formulaire de contact -->
+            <!-- Contact Form -->
             <div
               class="bg-white/10 backdrop-blur-lg rounded-2xl shadow-2xl p-8 border border-white/20"
             >
@@ -1196,7 +1198,7 @@
       </section>
     </main>
 
-    <!-- Pied de page -->
+    <!-- Footer -->
     <footer
       class="bg-gradient-to-b from-slate-900 to-black text-white py-12 border-t border-white/10"
       role="contentinfo"
@@ -1284,7 +1286,7 @@
       </div>
     </footer>
 
-    <!-- Bouton de retour en haut -->
+    <!-- Scroll to Top Button -->
     <button
       id="scroll-top"
       class="fixed bottom-8 right-8 bg-primary hover:bg-secondary text-white w-12 h-12 rounded-full shadow-lg opacity-0 invisible transition-all duration-300 z-50 focus:outline-none focus:ring-2 focus:ring-white"

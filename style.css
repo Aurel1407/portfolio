@@ -1,4 +1,4 @@
-/* Custom Animations - Optimisé avec GPU */
+/* Animations personnalisées - Optimisé avec GPU */
 @keyframes fade-in-up {
   from {
     opacity: 0;
@@ -46,7 +46,7 @@
   }
 }
 
-/* Animated Blobs - Optimisation GPU */
+/* Blobs animés - Optimisation GPU */
 .blob {
   will-change: transform;
   position: absolute;
@@ -129,7 +129,7 @@
   animation-delay: 7s;
 }
 
-/* Background Patterns - Optimisé */
+/* Motifs d'arrière-plan - Optimisé */
 .bg-grid-pattern {
   background-image: linear-gradient(
       rgba(255, 255, 255, 0.05) 1px,
@@ -150,7 +150,7 @@
   will-change: auto;
 }
 
-/* Gradient Text - Optimisé */
+/* Texte dégradé - Optimisé */
 .gradient-text-hero {
   background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
   -webkit-background-clip: text;
@@ -161,7 +161,7 @@
   will-change: background-position;
 }
 
-/* Glassmorphism Effect - Optimisé */
+/* Effet Glassmorphisme - Optimisé */
 .glass-effect {
   background: rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(10px);
@@ -170,7 +170,7 @@
   transform: translateZ(0);
 }
 
-/* Animate Blob for Skills Section - Optimisé */
+/* Animation Blob pour la section Compétences - Optimisé */
 @keyframes animate-blob {
   0%,
   100% {
@@ -223,12 +223,12 @@
   animation-delay: 1s;
 }
 
-/* Smooth Scrolling */
+/* Défilement fluide */
 html {
   scroll-behavior: smooth;
 }
 
-/* Custom Scrollbar */
+/* Barre de défilement personnalisée */
 ::-webkit-scrollbar {
   width: 12px;
 }
@@ -247,13 +247,13 @@ html {
   background: linear-gradient(180deg, #764ba2 0%, #667eea 100%);
 }
 
-/* Navbar Active Link */
+/* Lien actif de la navbar */
 .nav-link.active {
   color: #c084fc;
   font-weight: 600;
 }
 
-/* Skill Progress Bar Animation */
+/* Animation de la barre de progression des compétences */
 .skill-item {
   transition: transform 0.3s ease;
 }
@@ -267,7 +267,7 @@ html {
   box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
 }
 
-/* Modern Card Effects */
+/* Effets de cartes modernes */
 .modern-card {
   background: rgba(255, 255, 255, 0.05);
   backdrop-filter: blur(10px);
@@ -283,7 +283,7 @@ html {
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
 }
 
-/* Card Hover Effects */
+/* Effets au survol de carte */
 .card-hover {
   transition: all 0.3s ease;
   will-change: transform;
@@ -295,7 +295,7 @@ html {
     0 10px 10px -5px rgba(0, 0, 0, 0.04);
 }
 
-/* Image Overlay Effect */
+/* Effet de superposition d'image */
 .image-overlay {
   position: relative;
   overflow: hidden;
@@ -322,7 +322,7 @@ html {
   opacity: 1;
 }
 
-/* Button Pulse Animation */
+/* Animation de pulsation du bouton */
 @keyframes pulse {
   0%,
   100% {
@@ -337,7 +337,7 @@ html {
   animation: pulse 2s infinite;
 }
 
-/* Loading Animation */
+/* Animation de chargement */
 @keyframes spin {
   to {
     transform: rotate(360deg);
@@ -348,7 +348,7 @@ html {
   animation: spin 1s linear infinite;
 }
 
-/* Gradient Text */
+/* Texte dégradé */
 .gradient-text {
   background: linear-gradient(135deg, #3b82f6, #8b5cf6);
   -webkit-background-clip: text;
@@ -356,7 +356,7 @@ html {
   background-clip: text;
 }
 
-/* Form Focus States */
+/* États de focus des formulaires */
 input:focus,
 textarea:focus,
 select:focus {
@@ -365,7 +365,7 @@ select:focus {
   box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
 }
 
-/* Responsive Typography */
+/* Typographie responsive */
 @media (max-width: 640px) {
   h1 {
     font-size: 2.5rem;
@@ -376,7 +376,7 @@ select:focus {
   }
 }
 
-/* Project Card Hover Effect */
+/* Effet au survol de la carte projet */
 .project-card {
   position: relative;
   overflow: hidden;
@@ -402,7 +402,7 @@ select:focus {
   opacity: 1;
 }
 
-/* Section Reveal Animation */
+/* Animation de révélation de section */
 .reveal {
   opacity: 0;
   transform: translateY(50px);
@@ -414,7 +414,7 @@ select:focus {
   transform: translateY(0);
 }
 
-/* Floating Animation for Icons */
+/* Animation flottante pour les icônes */
 @keyframes float {
   0%,
   100% {
@@ -429,7 +429,7 @@ select:focus {
   animation: float 3s ease-in-out infinite;
 }
 
-/* Custom Border Gradient */
+/* Bordure dégradée personnalisée */
 .border-gradient {
   border: 2px solid transparent;
   background-clip: padding-box;
@@ -449,7 +449,7 @@ select:focus {
   background: linear-gradient(135deg, #3b82f6, #8b5cf6);
 }
 
-/* Text Selection */
+/* Sélection de texte */
 ::selection {
   background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
   color: white;
@@ -460,7 +460,7 @@ select:focus {
   color: white;
 }
 
-/* Shimmer Effect */
+/* Effet de scintillement */
 @keyframes shimmer {
   0% {
     background-position: -1000px 0;
@@ -481,13 +481,13 @@ select:focus {
   animation: shimmer 2s infinite;
 }
 
-/* Neon Glow Effect */
+/* Effet de lueur néon */
 .neon-glow {
   text-shadow: 0 0 10px rgba(102, 126, 234, 0.5),
     0 0 20px rgba(102, 126, 234, 0.3), 0 0 30px rgba(102, 126, 234, 0.2);
 }
 
-/* Particle Effect */
+/* Effet de particules */
 @keyframes particles {
   0%,
   100% {
@@ -502,26 +502,26 @@ select:focus {
   }
 }
 
-/* Backdrop Blur Support */
+/* Support du flou d'arrière-plan */
 @supports (backdrop-filter: blur(10px)) {
   .backdrop-blur {
     backdrop-filter: blur(10px);
   }
 }
 
-/* Print Styles */
+/* Styles d'impression */
 @media print {
   .no-print {
     display: none !important;
   }
 }
 
-/* Dark Mode Support (Optional) */
+/* Support du mode sombre (Optionnel) */
 @media (prefers-color-scheme: dark) {
-  /* Add dark mode styles here if needed */
+  /* Ajoutez ici les styles du mode sombre si nécessaire */
 }
 
-/* Accessibility */
+/* Accessibilité */
 .skip-to-content {
   position: absolute;
   top: -40px;
@@ -537,7 +537,7 @@ select:focus {
   top: 0;
 }
 
-/* Screen Reader Only */
+/* Lecteur d'écran uniquement */
 .sr-only {
   position: absolute;
   width: 1px;
@@ -561,19 +561,19 @@ select:focus {
   white-space: normal;
 }
 
-/* Focus Visible */
+/* Focus visible */
 button:focus-visible,
 a:focus-visible,
 input:focus-visible,
 textarea:focus-visible {
   outline: 2px solid #3b82f6;
   outline-offset: 2px;
-} /* Transition All */
+} /* Transition pour tous les éléments */
 * {
   transition: color 0.2s ease, background-color 0.2s ease;
 }
 
-/* Remove transition from animations */
+/* Supprimer les transitions des animations */
 .animate-fade-in-up,
 .reveal {
   transition: none;
