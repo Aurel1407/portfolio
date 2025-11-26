@@ -53,15 +53,19 @@ const sections = document.querySelectorAll('section');
 const navLinks = document.querySelectorAll('.nav-link');
 let navTicking = false;
 
+// Mettre en cache les positions des sections pour éviter les reflows
+const sectionPositions = Array.from(sections).map(section => ({
+    id: section.getAttribute('id'),
+    offsetTop: section.offsetTop
+}));
+
 const updateActiveNav = () => {
     let current = '';
+    const scrollPos = pageYOffset;
     
-    sections.forEach(section => {
-        const sectionTop = section.offsetTop;
-        const sectionHeight = section.clientHeight;
-        
-        if (pageYOffset >= sectionTop - 200) {
-            current = section.getAttribute('id');
+    sectionPositions.forEach(section => {
+        if (scrollPos >= section.offsetTop - 200) {
+            current = section.id;
         }
     });
     
