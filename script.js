@@ -232,20 +232,6 @@ window.addEventListener('scroll', () => {
     }
 });
 
-// Filtre de projets (si vous ajoutez des catégories plus tard)
-function filterProjects(category) {
-    const projects = document.querySelectorAll('.project-card');
-    
-    projects.forEach(project => {
-        if (category === 'all' || project.dataset.category === category) {
-            project.style.display = 'block';
-            project.classList.add('animate-fade-in-up');
-        } else {
-            project.style.display = 'none';
-        }
-    });
-}
-
 // Effet de curseur 
 const cursor = document.createElement('div');
 cursor.className = 'custom-cursor';
@@ -437,7 +423,7 @@ document.addEventListener('keydown', (e) => {
 // Rendre la fonction accessible depuis la console
 window.konami = activateKonami;
 
-console.log('%c💡 Astuce: Essayez le code Konami (↑↑↓↓←→←→BA) ou tapez konami() dans la console !', 'color: #8b5cf6; font-size: 12px;');
+console.log('%c💡 Astuce: Essayez le code Konami légendaire ou tapez konami() dans la console !', 'color: #8b5cf6; font-size: 12px;');
 
 // Gestionnaire de formulaire de contact
 document.addEventListener('DOMContentLoaded', () => {
