@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="fr" class="scroll-smooth">
   <head>
-    <!-- Google tag (gtag.js) -->
+    <!-- Google Analytics (configuration basée sur le consentement) -->
     <script
       async
       src="https://www.googletagmanager.com/gtag/js?id=G-CUXWNCS693"
@@ -12,7 +12,13 @@
         dataLayer.push(arguments);
       }
       gtag("js", new Date());
-      gtag("config", "G-CUXWNCS693");
+      
+      // Configuration initiale sans consentement (mode refusé par défaut)
+      gtag('consent', 'default', {
+        'analytics_storage': 'denied'
+      });
+      
+      gtag("config", "G-CUXWNCS693", { anonymize_ip: true });
     </script>
 
     <meta charset="UTF-8" />
@@ -1299,13 +1305,36 @@
             &copy; 2025 Aurélien Thébault. Tous droits réservés.
           </p>
           <p class="text-sm text-gray-500">
-            <a href="mentions-legales.html" class="hover:text-blue-400 transition-colors">
+            <a
+              href="mentions-legales.html"
+              class="hover:text-blue-400 transition-colors"
+            >
               Mentions légales
             </a>
           </p>
         </div>
       </div>
     </footer>
+
+    <!-- Bandeau de consentement des cookies -->
+    <div id="cookie-banner" class="fixed bottom-0 left-0 right-0 bg-slate-900/95 backdrop-blur-sm border-t border-white/10 p-4 z-50 hidden">
+      <div class="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
+        <div class="text-sm text-gray-300">
+          <p>
+            Ce site utilise Google Analytics pour analyser le trafic. Les données sont anonymisées.
+            <a href="mentions-legales.html#cookies" class="text-blue-400 hover:text-blue-300 underline">En savoir plus</a>
+          </p>
+        </div>
+        <div class="flex gap-3">
+          <button id="cookie-accept" class="px-4 py-2 bg-blue-500 hover:bg-blue-600 text-white rounded-lg transition-colors">
+            Accepter
+          </button>
+          <button id="cookie-decline" class="px-4 py-2 bg-slate-700 hover:bg-slate-600 text-white rounded-lg transition-colors">
+            Refuser
+          </button>
+        </div>
+      </div>
+    </div>
 
     <!-- Bouton de retour en haut -->
     <button
@@ -1318,5 +1347,44 @@
 
     <!-- JavaScript -->
     <script src="script.js"></script>
+    
+    <!-- Gestion du consentement des cookies -->
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        const cookieBanner = document.getElementById('cookie-banner');
+        const acceptBtn = document.getElementById('cookie-accept');
+        const declineBtn = document.getElementById('cookie-decline');
+        
+        // Vérifier le consentement existant
+        const consent = localStorage.getItem('cookieConsent');
+        
+        if (consent === 'accepted') {
+          // Activer Analytics si déjà accepté
+          gtag('consent', 'update', {
+            'analytics_storage': 'granted'
+          });
+        } else if (!consent) {
+          // Afficher le bandeau si pas de choix enregistré
+          cookieBanner.classList.remove('hidden');
+        }
+        
+        // Gérer l'acceptation
+        acceptBtn.addEventListener('click', function() {
+          localStorage.setItem('cookieConsent', 'accepted');
+          cookieBanner.classList.add('hidden');
+          // Activer Google Analytics
+          gtag('consent', 'update', {
+            'analytics_storage': 'granted'
+          });
+        });
+        
+        // Gérer le refus
+        declineBtn.addEventListener('click', function() {
+          localStorage.setItem('cookieConsent', 'declined');
+          cookieBanner.classList.add('hidden');
+          // Analytics reste désactivé (déjà en mode 'denied' par défaut)
+        });
+      });
+    </script>
   </body>
 </html>
