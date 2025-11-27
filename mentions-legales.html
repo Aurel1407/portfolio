@@ -55,8 +55,8 @@
             <h2 class="text-2xl font-semibold mb-4 text-white">1. Éditeur du site</h2>
             <p class="mb-2"><strong class="text-white">Nom :</strong> Aurélien Thébault</p>
             <p class="mb-2"><strong class="text-white">Statut :</strong> Particulier - Portfolio professionnel</p>
-            <p class="mb-2"><strong class="text-white">Email :</strong> <a href="mailto:aurel140783@gmail.com" class="text-blue-400 hover:text-blue-300">aurel140783@gmail.com</a></p>
-            <p class="mb-2"><strong class="text-white">Téléphone :</strong> 06 19 63 44 14</p>
+            <p class="mb-2"><strong class="text-white">Email :</strong> <a href="#" id="email-legal" class="text-blue-400 hover:text-blue-300"></a></p>
+            <p class="mb-2"><strong class="text-white">Téléphone :</strong> <span id="phone-legal"></span></p>
           </section>
 
           <!-- Hébergeur -->
@@ -133,7 +133,7 @@
               <li><strong class="text-white">Droit à la portabilité :</strong> Vous pouvez demander une copie de vos données.</li>
             </ul>
             <p>
-              Pour exercer ces droits, contactez-moi à : <a href="mailto:aurel140783@gmail.com" class="text-blue-400 hover:text-blue-300">aurel140783@gmail.com</a>
+              Pour exercer ces droits, contactez-moi à : <a href="#" id="email-rgpd" class="text-blue-400 hover:text-blue-300"></a>
             </p>
           </section>
 
@@ -181,5 +181,39 @@
         <a href="index.html" class="text-blue-400 hover:text-blue-300">Retour au portfolio</a>
       </p>
     </footer>
+
+    <!-- Protection anti-spam -->
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        // Protection de l'email
+        const userParts = ['aurel', '140783'];
+        const domainParts = ['gmail', 'com'];
+        const user = userParts.join('');
+        const domain = domainParts.join('.');
+        const email = user + '@' + domain;
+        
+        // Population email éditeur
+        const emailLegal = document.getElementById('email-legal');
+        if (emailLegal) {
+          emailLegal.href = 'mailto:' + email;
+          emailLegal.textContent = email;
+        }
+        
+        // Population email RGPD
+        const emailRgpd = document.getElementById('email-rgpd');
+        if (emailRgpd) {
+          emailRgpd.href = 'mailto:' + email;
+          emailRgpd.textContent = email;
+        }
+        
+        // Protection du téléphone
+        const phoneParts = ['06', '19', '63', '44', '14'];
+        const phone = phoneParts.join(' ');
+        const phoneElement = document.getElementById('phone-legal');
+        if (phoneElement) {
+          phoneElement.textContent = phone;
+        }
+      });
+    </script>
   </body>
 </html>
