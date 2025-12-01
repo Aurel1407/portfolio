@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="fr" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="ZetouPanda - Application e-commerce développée en React et Node.js"
+    />
+    <title>ZetouPanda - Projet E-commerce | Aurélien Thébault</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="../favicon.svg" />
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!-- Polices Google -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- CSS personnalisé -->
+    <link rel="stylesheet" href="../style.css" />
+  </head>
+
+  <body class="bg-gray-50 font-sans">
+    <!-- Navigation -->
+    <nav
+      class="fixed top-0 w-full bg-slate-900/95 backdrop-blur-sm shadow-lg z-50"
+    >
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between items-center h-16">
+          <a
+            href="../index.html"
+            class="text-2xl font-bold text-gray-400 hover:text-white transition-colors"
+            >AT</a
+          >
+          <a
+            href="../index.html#projects"
+            class="text-gray-300 hover:text-white transition-colors"
+          >
+            <i class="fas fa-arrow-left mr-2"></i>Retour aux projets
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="pt-24 pb-12 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-8">
+          <div class="inline-block p-4 bg-gradient-to-br from-gray-900 via-gray-800 to-green-900 rounded-2xl mb-6">
+            <img
+              src="../images/zetoupanda-logo.svg"
+              alt="Logo ZetouPanda"
+              class="w-32 h-32"
+            />
+          </div>
+          <h1 class="text-4xl md:text-5xl font-bold text-white mb-4">
+            ZetouPanda
+          </h1>
+          <p class="text-xl text-gray-300 mb-6">
+            Application E-commerce Full-Stack
+          </p>
+          <div class="flex flex-wrap justify-center gap-3">
+            <span class="px-4 py-2 bg-yellow-500/90 text-gray-900 rounded-xl font-semibold">
+              <i class="fas fa-code mr-2"></i>En développement
+            </span>
+            <span class="px-4 py-2 bg-gray-700 text-white rounded-xl">
+              <i class="fas fa-calendar mr-2"></i>2025
+            </span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contenu principal -->
+    <main class="py-12">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <!-- Description -->
+        <section class="mb-12">
+          <h2 class="text-3xl font-bold text-gray-900 mb-6">
+            À propos du projet
+          </h2>
+          <div class="prose prose-lg max-w-none">
+            <p class="text-gray-700 leading-relaxed mb-4">
+              ZetouPanda est une application e-commerce complète développée dans le cadre de ma formation de développeur web full-stack. 
+              Ce projet personnel ambitieux combine une interface utilisateur moderne avec un système de gestion complet côté administrateur.
+            </p>
+            <p class="text-gray-700 leading-relaxed">
+              L'application permet aux utilisateurs de parcourir un catalogue de produits, de gérer leur panier et de passer des commandes, 
+              tandis que l'interface d'administration offre une gestion complète des produits, des commandes et des utilisateurs.
+            </p>
+          </div>
+        </section>
+
+        <!-- Technologies utilisées -->
+        <section class="mb-12">
+          <h2 class="text-3xl font-bold text-gray-900 mb-6">
+            Technologies utilisées
+          </h2>
+          <div class="grid md:grid-cols-2 gap-6">
+            <!-- Frontend -->
+            <div class="bg-white p-6 rounded-xl shadow-md">
+              <h3 class="text-xl font-bold text-gray-900 mb-4 flex items-center">
+                <i class="fas fa-laptop-code text-gray-600 mr-3"></i>
+                Frontend
+              </h3>
+              <div class="flex flex-wrap gap-2">
+                <span class="px-3 py-1 bg-gray-200 text-gray-700 rounded-full text-sm">React.js</span>
+                <span class="px-3 py-1 bg-gray-200 text-gray-700 rounded-full text-sm">TypeScript</span>
+                <span class="px-3 py-1 bg-gray-200 text-gray-700 rounded-full text-sm">Tailwind CSS</span>
+                <span class="px-3 py-1 bg-gray-200 text-gray-700 rounded-full text-sm">React Router</span>
+                <span class="px-3 py-1 bg-gray-200 text-gray-700 rounded-full text-sm">Context API</span>
+              </div>
+            </div>
+
+            <!-- Backend -->
+            <div class="bg-white p-6 rounded-xl shadow-md">
+              <h3 class="text-xl font-bold text-gray-900 mb-4 flex items-center">
+                <i class="fas fa-server text-gray-600 mr-3"></i>
+                Backend
+              </h3>
+              <div class="flex flex-wrap gap-2">
+                <span class="px-3 py-1 bg-gray-200 text-gray-700 rounded-full text-sm">Node.js</span>
+                <span class="px-3 py-1 bg-gray-200 text-gray-700 rounded-full text-sm">Express</span>
+                <span class="px-3 py-1 bg-gray-200 text-gray-700 rounded-full text-sm">MySQL</span>
+                <span class="px-3 py-1 bg-gray-200 text-gray-700 rounded-full text-sm">JWT</span>
+                <span class="px-3 py-1 bg-gray-200 text-gray-700 rounded-full text-sm">Bcrypt</span>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Fonctionnalités principales -->
+        <section class="mb-12">
+          <h2 class="text-3xl font-bold text-gray-900 mb-6">
+            Fonctionnalités principales
+          </h2>
+          <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div class="bg-white p-6 rounded-xl shadow-md">
+              <div class="w-12 h-12 bg-gray-200 rounded-lg flex items-center justify-center mb-4">
+                <i class="fas fa-shopping-cart text-gray-700 text-xl"></i>
+              </div>
+              <h3 class="text-lg font-bold text-gray-900 mb-2">
+                Gestion du panier
+              </h3>
+              <p class="text-gray-600 text-sm">
+                Ajout, modification et suppression de produits avec calcul automatique du total
+              </p>
+            </div>
+
+            <div class="bg-white p-6 rounded-xl shadow-md">
+              <div class="w-12 h-12 bg-gray-200 rounded-lg flex items-center justify-center mb-4">
+                <i class="fas fa-user-shield text-gray-700 text-xl"></i>
+              </div>
+              <h3 class="text-lg font-bold text-gray-900 mb-2">
+                Authentification
+              </h3>
+              <p class="text-gray-600 text-sm">
+                Système d'inscription et connexion sécurisé avec JWT
+              </p>
+            </div>
+
+            <div class="bg-white p-6 rounded-xl shadow-md">
+              <div class="w-12 h-12 bg-gray-200 rounded-lg flex items-center justify-center mb-4">
+                <i class="fas fa-box text-gray-700 text-xl"></i>
+              </div>
+              <h3 class="text-lg font-bold text-gray-900 mb-2">
+                Catalogue produits
+              </h3>
+              <p class="text-gray-600 text-sm">
+                Navigation par catégories avec recherche et filtres avancés
+              </p>
+            </div>
+
+            <div class="bg-white p-6 rounded-xl shadow-md">
+              <div class="w-12 h-12 bg-gray-200 rounded-lg flex items-center justify-center mb-4">
+                <i class="fas fa-credit-card text-gray-700 text-xl"></i>
+              </div>
+              <h3 class="text-lg font-bold text-gray-900 mb-2">
+                Gestion des commandes
+              </h3>
+              <p class="text-gray-600 text-sm">
+                Suivi des commandes de la création à la livraison
+              </p>
+            </div>
+
+            <div class="bg-white p-6 rounded-xl shadow-md">
+              <div class="w-12 h-12 bg-gray-200 rounded-lg flex items-center justify-center mb-4">
+                <i class="fas fa-tachometer-alt text-gray-700 text-xl"></i>
+              </div>
+              <h3 class="text-lg font-bold text-gray-900 mb-2">
+                Panel Admin
+              </h3>
+              <p class="text-gray-600 text-sm">
+                Interface d'administration complète pour gérer le site
+              </p>
+            </div>
+
+            <div class="bg-white p-6 rounded-xl shadow-md">
+              <div class="w-12 h-12 bg-gray-200 rounded-lg flex items-center justify-center mb-4">
+                <i class="fas fa-mobile-alt text-gray-700 text-xl"></i>
+              </div>
+              <h3 class="text-lg font-bold text-gray-900 mb-2">
+                Responsive Design
+              </h3>
+              <p class="text-gray-600 text-sm">
+                Interface adaptée à tous les appareils (mobile, tablette, desktop)
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <!-- Galerie de captures d'écran -->
+        <section class="mb-12">
+          <h2 class="text-3xl font-bold text-gray-900 mb-6">
+            Captures d'écran
+          </h2>
+          <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <!-- Placeholder pour les images -->
+            <div class="bg-gray-200 rounded-xl aspect-video flex items-center justify-center">
+              <div class="text-center">
+                <i class="fas fa-image text-gray-400 text-4xl mb-2"></i>
+                <p class="text-gray-500 text-sm">Page d'accueil</p>
+              </div>
+            </div>
+            <div class="bg-gray-200 rounded-xl aspect-video flex items-center justify-center">
+              <div class="text-center">
+                <i class="fas fa-image text-gray-400 text-4xl mb-2"></i>
+                <p class="text-gray-500 text-sm">Catalogue produits</p>
+              </div>
+            </div>
+            <div class="bg-gray-200 rounded-xl aspect-video flex items-center justify-center">
+              <div class="text-center">
+                <i class="fas fa-image text-gray-400 text-4xl mb-2"></i>
+                <p class="text-gray-500 text-sm">Page produit</p>
+              </div>
+            </div>
+            <div class="bg-gray-200 rounded-xl aspect-video flex items-center justify-center">
+              <div class="text-center">
+                <i class="fas fa-image text-gray-400 text-4xl mb-2"></i>
+                <p class="text-gray-500 text-sm">Panier</p>
+              </div>
+            </div>
+            <div class="bg-gray-200 rounded-xl aspect-video flex items-center justify-center">
+              <div class="text-center">
+                <i class="fas fa-image text-gray-400 text-4xl mb-2"></i>
+                <p class="text-gray-500 text-sm">Panel Admin</p>
+              </div>
+            </div>
+            <div class="bg-gray-200 rounded-xl aspect-video flex items-center justify-center">
+              <div class="text-center">
+                <i class="fas fa-image text-gray-400 text-4xl mb-2"></i>
+                <p class="text-gray-500 text-sm">Gestion produits</p>
+              </div>
+            </div>
+          </div>
+          <p class="text-sm text-gray-500 mt-4 text-center italic">
+            <i class="fas fa-info-circle mr-1"></i>
+            Les captures d'écran seront ajoutées prochainement
+          </p>
+        </section>
+
+        <!-- Liens du projet -->
+        <section class="mb-12">
+          <h2 class="text-3xl font-bold text-gray-900 mb-6">Liens</h2>
+          <div class="flex flex-wrap gap-4">
+            <a
+              href="https://github.com/Aurel1407"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="inline-flex items-center px-6 py-3 bg-gray-900 text-white rounded-xl hover:bg-gray-800 transition-colors"
+            >
+              <i class="fab fa-github mr-2"></i>
+              Code source (privé)
+            </a>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900 text-white py-8">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <p class="text-gray-400">
+          &copy; 2025 Aurélien Thébault. Tous droits réservés.
+        </p>
+      </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="../script.js"></script>
+  </body>
+</html>

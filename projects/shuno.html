@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="fr" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Shu-no - Plateforme de réservation de gîtes en Bretagne développée en React et Node.js"
+    />
+    <title>Shu-no - Plateforme de Réservation | Aurélien Thébault</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="../favicon.svg" />
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!-- Polices Google -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- CSS personnalisé -->
+    <link rel="stylesheet" href="../style.css" />
+  </head>
+
+  <body class="bg-gray-50 font-sans">
+    <!-- Navigation -->
+    <nav
+      class="fixed top-0 w-full bg-slate-900/95 backdrop-blur-sm shadow-lg z-50"
+    >
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between items-center h-16">
+          <a
+            href="../index.html"
+            class="text-2xl font-bold text-gray-400 hover:text-white transition-colors"
+            >AT</a
+          >
+          <a
+            href="../index.html#projects"
+            class="text-gray-300 hover:text-white transition-colors"
+          >
+            <i class="fas fa-arrow-left mr-2"></i>Retour aux projets
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="pt-24 pb-12 bg-gradient-to-br from-slate-900 via-slate-800 to-cyan-900">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-8">
+          <div class="inline-block p-4 bg-gradient-to-br from-gray-900 via-cyan-900 to-gray-800 rounded-2xl mb-6">
+            <img
+              src="../images/shuno-logo.svg"
+              alt="Logo Shu-no"
+              class="w-32 h-32"
+            />
+          </div>
+          <h1 class="text-4xl md:text-5xl font-bold text-white mb-4">
+            Shu-no
+          </h1>
+          <p class="text-xl text-gray-300 mb-6">
+            Plateforme de Réservation de Gîtes en Bretagne
+          </p>
+          <div class="flex flex-wrap justify-center gap-3">
+            <span class="px-4 py-2 bg-yellow-500/90 text-gray-900 rounded-xl font-semibold">
+              <i class="fas fa-code mr-2"></i>En développement actif
+            </span>
+            <span class="px-4 py-2 bg-gray-700 text-white rounded-xl">
+              <i class="fas fa-calendar mr-2"></i>2025
+            </span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contenu principal -->
+    <main class="py-12">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <!-- Description -->
+        <section class="mb-12">
+          <h2 class="text-3xl font-bold text-gray-900 mb-6">
+            À propos du projet
+          </h2>
+          <div class="prose prose-lg max-w-none">
+            <p class="text-gray-700 leading-relaxed mb-4">
+              Shu-no est une plateforme complète de gestion de réservations de gîtes offrant une expérience utilisateur moderne et intuitive 
+              pour découvrir, réserver et gérer des hébergements touristiques sur la Côte de Goëlo en Bretagne. 
+              Ce projet a été développé dans le cadre de mon stage professionnel DWWM (Développeur Web et Web Mobile) à l'AFPA de Brest.
+            </p>
+            <p class="text-gray-700 leading-relaxed mb-4">
+              L'application utilise une architecture full-stack moderne avec TypeScript côté frontend (React 18) et backend (Node.js/Express), 
+              garantissant une base de code robuste et maintenable. Une attention particulière a été portée aux performances, 
+              à l'accessibilité et à la sécurité tout au long du développement.
+            </p>
+            <p class="text-gray-700 leading-relaxed">
+              Développé selon la méthodologie Agile sur 10 semaines (5 sprints de 2 semaines) dans le cadre de mon stage DWWM, 
+              le projet continue d'évoluer avec l'ajout de nouvelles fonctionnalités et l'amélioration continue de l'expérience utilisateur. 
+              L'infrastructure de déploiement a été mise en place pour la soutenance de stage, et le projet est actuellement en phase 
+              d'amélioration et d'ajout de fonctionnalités avancées.
+            </p>
+          </div>
+        </section>
+
+        <!-- Technologies utilisées -->
+        <section class="mb-12">
+          <h2 class="text-3xl font-bold text-gray-900 mb-6">
+            Technologies utilisées
+          </h2>
+          <div class="grid md:grid-cols-2 gap-6">
+            <!-- Frontend -->
+            <div class="bg-white p-6 rounded-xl shadow-md">
+              <h3 class="text-xl font-bold text-gray-900 mb-4 flex items-center">
+                <i class="fas fa-laptop-code text-gray-600 mr-3"></i>
+                Frontend
+              </h3>
+              <div class="flex flex-wrap gap-2">
+                <span class="px-3 py-1 bg-gray-200 text-gray-700 rounded-full text-sm">React 18</span>
+                <span class="px-3 py-1 bg-gray-200 text-gray-700 rounded-full text-sm">TypeScript</span>
+                <span class="px-3 py-1 bg-gray-200 text-gray-700 rounded-full text-sm">Vite</span>
+                <span class="px-3 py-1 bg-gray-200 text-gray-700 rounded-full text-sm">Tailwind CSS</span>
+                <span class="px-3 py-1 bg-gray-200 text-gray-700 rounded-full text-sm">React Router 6</span>
+                <span class="px-3 py-1 bg-gray-200 text-gray-700 rounded-full text-sm">React Query</span>
+                <span class="px-3 py-1 bg-gray-200 text-gray-700 rounded-full text-sm">Radix UI</span>
+              </div>
+            </div>
+
+            <!-- Backend -->
+            <div class="bg-white p-6 rounded-xl shadow-md">
+              <h3 class="text-xl font-bold text-gray-900 mb-4 flex items-center">
+                <i class="fas fa-server text-gray-600 mr-3"></i>
+                Backend
+              </h3>
+              <div class="flex flex-wrap gap-2">
+                <span class="px-3 py-1 bg-gray-200 text-gray-700 rounded-full text-sm">Node.js</span>
+                <span class="px-3 py-1 bg-gray-200 text-gray-700 rounded-full text-sm">Express</span>
+                <span class="px-3 py-1 bg-gray-200 text-gray-700 rounded-full text-sm">TypeScript</span>
+                <span class="px-3 py-1 bg-gray-200 text-gray-700 rounded-full text-sm">TypeORM</span>
+                <span class="px-3 py-1 bg-gray-200 text-gray-700 rounded-full text-sm">PostgreSQL</span>
+                <span class="px-3 py-1 bg-gray-200 text-gray-700 rounded-full text-sm">JWT</span>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Fonctionnalités principales -->
+        <section class="mb-12">
+          <h2 class="text-3xl font-bold text-gray-900 mb-6">
+            Fonctionnalités principales
+          </h2>
+          <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-6">
+            <!-- Première grille (6 cartes en 3 colonnes) -->
+            <div class="bg-white p-6 rounded-xl shadow-md">
+              <div class="w-12 h-12 bg-gray-200 rounded-lg flex items-center justify-center mb-4">
+                <i class="fas fa-calendar-check text-gray-700 text-xl"></i>
+              </div>
+              <h3 class="text-lg font-bold text-gray-900 mb-2">
+                Réservation en temps réel
+              </h3>
+              <p class="text-gray-600 text-sm">
+                Système de réservation avec calendrier interactif et disponibilité instantanée
+              </p>
+            </div>
+
+            <div class="bg-white p-6 rounded-xl shadow-md">
+              <div class="w-12 h-12 bg-gray-200 rounded-lg flex items-center justify-center mb-4">
+                <i class="fas fa-search text-gray-700 text-xl"></i>
+              </div>
+              <h3 class="text-lg font-bold text-gray-900 mb-2">
+                Recherche avancée
+              </h3>
+              <p class="text-gray-600 text-sm">
+                Filtres par dates, nombre de personnes, et localisation avec résultats instantanés
+              </p>
+            </div>
+
+            <div class="bg-white p-6 rounded-xl shadow-md">
+              <div class="w-12 h-12 bg-gray-200 rounded-lg flex items-center justify-center mb-4">
+                <i class="fas fa-chart-line text-gray-700 text-xl"></i>
+              </div>
+              <h3 class="text-lg font-bold text-gray-900 mb-2">
+                Dashboard analytique
+              </h3>
+              <p class="text-gray-600 text-sm">
+                Statistiques complètes et graphiques en temps réel pour les administrateurs
+              </p>
+            </div>
+
+            <div class="bg-white p-6 rounded-xl shadow-md">
+              <div class="w-12 h-12 bg-gray-200 rounded-lg flex items-center justify-center mb-4">
+                <i class="fas fa-euro-sign text-gray-700 text-xl"></i>
+              </div>
+              <h3 class="text-lg font-bold text-gray-900 mb-2">
+                Tarification dynamique
+              </h3>
+              <p class="text-gray-600 text-sm">
+                Gestion des périodes et tarifs saisonniers avec calcul automatique
+              </p>
+            </div>
+
+            <div class="bg-white p-6 rounded-xl shadow-md">
+              <div class="w-12 h-12 bg-gray-200 rounded-lg flex items-center justify-center mb-4">
+                <i class="fas fa-home text-gray-700 text-xl"></i>
+              </div>
+              <h3 class="text-lg font-bold text-gray-900 mb-2">
+                Gestion des propriétés
+              </h3>
+              <p class="text-gray-600 text-sm">
+                CRUD complet sur les gîtes avec galerie photos et descriptions détaillées
+              </p>
+            </div>
+
+            <div class="bg-white p-6 rounded-xl shadow-md">
+              <div class="w-12 h-12 bg-gray-200 rounded-lg flex items-center justify-center mb-4">
+                <i class="fas fa-user-shield text-gray-700 text-xl"></i>
+              </div>
+              <h3 class="text-lg font-bold text-gray-900 mb-2">
+                Authentification JWT
+              </h3>
+              <p class="text-gray-600 text-sm">
+                Système de sécurité robuste avec JWT et gestion des rôles utilisateurs
+              </p>
+            </div>
+          </div>
+
+          <!-- Deuxième grille (2 cartes centrées) -->
+          <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div class="bg-white p-6 rounded-xl shadow-md">
+              <div class="w-12 h-12 bg-gray-200 rounded-lg flex items-center justify-center mb-4">
+                <i class="fas fa-mobile-alt text-gray-700 text-xl"></i>
+              </div>
+              <h3 class="text-lg font-bold text-gray-900 mb-2">
+                Design responsive
+              </h3>
+              <p class="text-gray-600 text-sm">
+                Interface adaptative pour une expérience optimale sur tous les appareils
+              </p>
+            </div>
+
+            <div class="bg-white p-6 rounded-xl shadow-md">
+              <div class="w-12 h-12 bg-gray-200 rounded-lg flex items-center justify-center mb-4">
+                <i class="fas fa-rocket text-gray-700 text-xl"></i>
+              </div>
+              <h3 class="text-lg font-bold text-gray-900 mb-2">
+                Performances optimisées
+              </h3>
+              <p class="text-gray-600 text-sm">
+                Optimisation du temps de chargement et de la réactivité de l'interface
+              </p>
+            </div>
+
+            <div class="bg-white p-6 rounded-xl shadow-md">
+              <div class="w-12 h-12 bg-gray-200 rounded-lg flex items-center justify-center mb-4">
+                <i class="fas fa-universal-access text-gray-700 text-xl"></i>
+              </div>
+              <h3 class="text-lg font-bold text-gray-900 mb-2">
+                Accessibilité
+              </h3>
+              <p class="text-gray-600 text-sm">
+                Respect des normes d'accessibilité pour une utilisation inclusive
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <!-- Galerie de captures d'écran -->
+        <section class="mb-12">
+          <h2 class="text-3xl font-bold text-gray-900 mb-6">
+            Captures d'écran
+          </h2>
+          <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <!-- Placeholder pour les images -->
+            <div class="bg-gray-200 rounded-xl aspect-video flex items-center justify-center">
+              <div class="text-center">
+                <i class="fas fa-image text-gray-400 text-4xl mb-2"></i>
+                <p class="text-gray-500 text-sm">Page d'accueil</p>
+              </div>
+            </div>
+            <div class="bg-gray-200 rounded-xl aspect-video flex items-center justify-center">
+              <div class="text-center">
+                <i class="fas fa-image text-gray-400 text-4xl mb-2"></i>
+                <p class="text-gray-500 text-sm">Recherche de gîtes</p>
+              </div>
+            </div>
+            <div class="bg-gray-200 rounded-xl aspect-video flex items-center justify-center">
+              <div class="text-center">
+                <i class="fas fa-image text-gray-400 text-4xl mb-2"></i>
+                <p class="text-gray-500 text-sm">Détails d'un gîte</p>
+              </div>
+            </div>
+            <div class="bg-gray-200 rounded-xl aspect-video flex items-center justify-center">
+              <div class="text-center">
+                <i class="fas fa-image text-gray-400 text-4xl mb-2"></i>
+                <p class="text-gray-500 text-sm">Calendrier de réservation</p>
+              </div>
+            </div>
+            <div class="bg-gray-200 rounded-xl aspect-video flex items-center justify-center">
+              <div class="text-center">
+                <i class="fas fa-image text-gray-400 text-4xl mb-2"></i>
+                <p class="text-gray-500 text-sm">Dashboard Admin</p>
+              </div>
+            </div>
+            <div class="bg-gray-200 rounded-xl aspect-video flex items-center justify-center">
+              <div class="text-center">
+                <i class="fas fa-image text-gray-400 text-4xl mb-2"></i>
+                <p class="text-gray-500 text-sm">Gestion des propriétés</p>
+              </div>
+            </div>
+          </div>
+          <p class="text-sm text-gray-500 mt-4 text-center italic">
+            <i class="fas fa-info-circle mr-1"></i>
+            Les captures d'écran seront ajoutées prochainement
+          </p>
+        </section>
+
+        <!-- Liens du projet -->
+        <section class="mb-12">
+          <h2 class="text-3xl font-bold text-gray-900 mb-6">Liens</h2>
+          <div class="flex flex-wrap gap-4">
+            <a
+              href="https://github.com/Aurel1407/Shu-no"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="inline-flex items-center px-6 py-3 bg-gray-900 text-white rounded-xl hover:bg-gray-800 transition-colors"
+            >
+              <i class="fab fa-github mr-2"></i>
+              Voir le code source
+            </a>
+          </div>
+          <p class="text-sm text-gray-500 mt-4 italic">
+            <i class="fas fa-info-circle mr-1"></i>
+            Projet en développement actif - Le déploiement en production interviendra après finalisation des fonctionnalités avancées
+          </p>
+        </section>
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900 text-white py-8">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <p class="text-gray-400">
+          &copy; 2025 Aurélien Thébault. Tous droits réservés.
+        </p>
+      </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="../script.js"></script>
+  </body>
+</html>
