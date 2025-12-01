@@ -1,3 +1,8 @@
+// Variables globales pour le nettoyage bfcache
+let activeIntervals = [];
+let activeTimeouts = [];
+let activeFetchControllers = [];
+
 // Menu mobile
 const mobileMenuBtn = document.getElementById('mobile-menu-btn');
 const mobileMenu = document.getElementById('mobile-menu');
@@ -407,10 +412,26 @@ function activateKonami() {
         document.body.style.filter = `hue-rotate(${hue}deg)`;
     }, 50);
     
-    setTimeout(() => {
+    // Stocker l'interval pour le nettoyage
+    if (typeof activeIntervals !== 'undefined') {
+        activeIntervals.push(rainbowInterval);
+    }
+    
+    const stopTimeout = setTimeout(() => {
         clearInterval(rainbowInterval);
         document.body.style.filter = '';
+        
+        // Retirer de la liste des intervals actifs
+        if (typeof activeIntervals !== 'undefined') {
+            const index = activeIntervals.indexOf(rainbowInterval);
+            if (index > -1) activeIntervals.splice(index, 1);
+        }
     }, 20000);
+    
+    // Stocker le timeout pour le nettoyage
+    if (typeof activeTimeouts !== 'undefined') {
+        activeTimeouts.push(stopTimeout);
+    }
 }
 
 document.addEventListener('keydown', (e) => {
@@ -443,6 +464,10 @@ document.addEventListener('DOMContentLoaded', () => {
             submitButton.disabled = true;
             submitButton.innerHTML = '<i class="fas fa-spinner fa-spin mr-2"></i>Envoi en cours...';
             
+            // Créer un AbortController pour pouvoir annuler la requête
+            const controller = new AbortController();
+            activeFetchControllers.push(controller);
+            
             try {
                 const formData = new FormData(form);
                 const response = await fetch(form.action, {
@@ -450,8 +475,13 @@ document.addEventListener('DOMContentLoaded', () => {
                     body: formData,
                     headers: {
                         'Accept': 'application/json'
-                    }
+                    },
+                    signal: controller.signal
                 });
+                
+                // Retirer le controller de la liste
+                const index = activeFetchControllers.indexOf(controller);
+                if (index > -1) activeFetchControllers.splice(index, 1);
                 
                 if (response.ok) {
                     // Succès
@@ -464,10 +494,19 @@ document.addEventListener('DOMContentLoaded', () => {
                     formStatus.innerHTML = '<i class="fas fa-exclamation-circle mr-2"></i>Erreur lors de l\'envoi. Veuillez réessayer.';
                 }
             } catch (error) {
+                // Ne pas afficher d'erreur si la requête a été annulée (navigation)
+                if (error.name === 'AbortError') {
+                    return;
+                }
+                
                 // Erreur réseau
                 formStatus.className = 'block text-center p-4 rounded-xl bg-red-500/20 border border-red-500/50 text-red-300';
                 formStatus.innerHTML = '<i class="fas fa-exclamation-circle mr-2"></i>Erreur de connexion. Vérifiez votre connexion internet.';
             } finally {
+                // Nettoyer le controller de la liste s'il y est encore
+                const index = activeFetchControllers.indexOf(controller);
+                if (index > -1) activeFetchControllers.splice(index, 1);
+                
                 // Restaurer le bouton
                 submitButton.disabled = false;
                 submitButton.innerHTML = originalText;
@@ -478,5 +517,51 @@ document.addEventListener('DOMContentLoaded', () => {
                 }, 5000);
             }
         });
+    }
+});
+
+// Support pour la restauration du cache (bfcache)
+// Nettoyer les ressources pour permettre le bfcache
+window.addEventListener('pagehide', (event) => {
+    // Annuler toutes les requêtes fetch en cours
+    activeFetchControllers.forEach(controller => {
+        try {
+            controller.abort();
+        } catch (e) {
+            // Ignorer les erreurs si déjà annulé
+        }
+    });
+    activeFetchControllers = [];
+    
+    // Nettoyer tous les intervals actifs
+    activeIntervals.forEach(interval => clearInterval(interval));
+    activeIntervals = [];
+    
+    // Nettoyer tous les timeouts actifs
+    activeTimeouts.forEach(timeout => clearTimeout(timeout));
+    activeTimeouts = [];
+    
+    // Réinitialiser le filtre si l'effet Konami est actif
+    if (document.body.style.filter) {
+        document.body.style.filter = '';
+    }
+}, { capture: true });
+
+// Restaurer l'état lors du retour depuis le cache
+window.addEventListener('pageshow', (event) => {
+    if (event.persisted) {
+        // La page vient du cache bfcache
+        const form = document.getElementById('contact-form');
+        if (form) {
+            form.reset();
+        }
+        
+        // Réinitialiser les animations et les états
+        document.body.style.filter = '';
+        
+        // Re-calculer les positions des sections pour la navigation
+        if (typeof updateActiveNav === 'function') {
+            updateActiveNav();
+        }
     }
 });

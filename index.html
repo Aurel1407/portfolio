@@ -40,11 +40,6 @@
 
     <!-- Icône de favori -->
     <link rel="icon" type="image/svg+xml" href="favicon.svg" />
-    <link
-      rel="alternate icon"
-      type="image/png"
-      href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><defs><linearGradient id='g' x1='0%' y1='0%' x2='100%' y2='100%'><stop offset='0%' style='stop-color:%238b5cf6'/><stop offset='100%' style='stop-color:%23c084fc'/></linearGradient></defs><rect width='100' height='100' fill='url(%23g)' rx='20'/><text x='50' y='65' font-size='50' font-weight='bold' text-anchor='middle' fill='white' font-family='sans-serif'>AT</text></svg>"
-    />
 
     <title>Aurélien Thébault - Développeur Web Full-Stack</title>
 
@@ -66,10 +61,6 @@
     <link
       href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
       rel="stylesheet"
-    />
-
-    <!-- CSS personnalisé -->
-    <link rel="stylesheet" href="style.css" />
     />
 
     <!-- CSS personnalisé -->
@@ -107,21 +98,6 @@
       }
     </script>
 
-    <script>
-      tailwind.config = {
-        theme: {
-          extend: {
-            fontFamily: {
-              sans: ["Inter", "sans-serif"],
-            },
-            colors: {
-              primary: "#3b82f6",
-              secondary: "#1e40af",
-              dark: "#0f172a",
-            },
-          },
-        },
-      };
     </script>
   </head>
   <body class="bg-gray-50 font-sans">
@@ -143,7 +119,7 @@
           <div class="flex-shrink-0">
             <a
               href="#home"
-              class="text-2xl font-bold text-purple-400"
+              class="text-2xl font-bold text-gray-400"
               aria-label="Retour à l'accueil"
               >AT</a
             >
@@ -154,27 +130,27 @@
             <div class="ml-10 flex items-baseline space-x-8" role="menubar">
               <a
                 href="#home"
-                class="nav-link text-gray-300 hover:text-purple-400 transition-colors"
+                class="nav-link text-gray-300 hover:text-white transition-colors"
                 >Accueil</a
               >
               <a
                 href="#about"
-                class="nav-link text-gray-300 hover:text-purple-400 transition-colors"
+                class="nav-link text-gray-300 hover:text-white transition-colors"
                 >À propos</a
               >
               <a
                 href="#skills"
-                class="nav-link text-gray-300 hover:text-purple-400 transition-colors"
+                class="nav-link text-gray-300 hover:text-white transition-colors"
                 >Compétences</a
               >
               <a
                 href="#projects"
-                class="nav-link text-gray-300 hover:text-purple-400 transition-colors"
+                class="nav-link text-gray-300 hover:text-white transition-colors"
                 >Projets</a
               >
               <a
                 href="#contact"
-                class="nav-link text-gray-300 hover:text-purple-400 transition-colors"
+                class="nav-link text-gray-300 hover:text-white transition-colors"
                 >Contact</a
               >
             </div>
@@ -184,7 +160,7 @@
           <div class="md:hidden">
             <button
               id="mobile-menu-btn"
-              class="text-gray-300 hover:text-purple-400 focus:outline-none focus:ring-2 focus:ring-purple-400 focus:ring-offset-2 focus:ring-offset-slate-900 rounded-lg p-2"
+              class="text-gray-300 hover:text-white focus:outline-none focus:ring-2 focus:ring-gray-400 focus:ring-offset-2 focus:ring-offset-slate-900 rounded-lg p-2"
               aria-label="Ouvrir le menu de navigation"
               aria-expanded="false"
               aria-controls="mobile-menu"
@@ -216,27 +192,27 @@
         <div class="px-2 pt-2 pb-3 space-y-1">
           <a
             href="#home"
-            class="block px-3 py-2 text-gray-300 hover:text-purple-400 hover:bg-slate-700 rounded-md"
+            class="block px-3 py-2 text-gray-300 hover:text-white hover:bg-slate-700 rounded-md"
             >Accueil</a
           >
           <a
             href="#about"
-            class="block px-3 py-2 text-gray-300 hover:text-purple-400 hover:bg-slate-700 rounded-md"
+            class="block px-3 py-2 text-gray-300 hover:text-white hover:bg-slate-700 rounded-md"
             >À propos</a
           >
           <a
             href="#skills"
-            class="block px-3 py-2 text-gray-300 hover:text-purple-400 hover:bg-slate-700 rounded-md"
+            class="block px-3 py-2 text-gray-300 hover:text-white hover:bg-slate-700 rounded-md"
             >Compétences</a
           >
           <a
             href="#projects"
-            class="block px-3 py-2 text-gray-300 hover:text-purple-400 hover:bg-slate-700 rounded-md"
+            class="block px-3 py-2 text-gray-300 hover:text-white hover:bg-slate-700 rounded-md"
             >Projets</a
           >
           <a
             href="#contact"
-            class="block px-3 py-2 text-gray-300 hover:text-purple-400 hover:bg-slate-700 rounded-md"
+            class="block px-3 py-2 text-gray-300 hover:text-white hover:bg-slate-700 rounded-md"
             >Contact</a
           >
         </div>
@@ -251,7 +227,7 @@
     >
       <!-- Arrière-plan décoratif de la section Hero (dégradés + motif grille + blobs animés) -->
       <div
-        class="absolute inset-0 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"
+        class="absolute inset-0 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900"
         aria-hidden="true"
       ></div>
       <div
@@ -269,7 +245,7 @@
           <div class="mb-8 animate-fade-in-up">
             <div class="relative inline-block">
               <div
-                class="absolute inset-0 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full blur-xl opacity-75 animate-pulse"
+                class="absolute inset-0 bg-gradient-to-r from-gray-600 to-gray-500 rounded-full blur-xl opacity-75 animate-pulse"
                 aria-hidden="true"
               ></div>
               <picture>
@@ -292,7 +268,7 @@
             Aurélien <span class="gradient-text-hero">Thébault</span>
           </h1>
           <p
-            class="text-xl md:text-3xl text-blue-300 mb-8 animate-fade-in-up animation-delay-400 font-light"
+            class="text-xl md:text-3xl text-gray-300 mb-8 animate-fade-in-up animation-delay-400 font-light"
           >
             Développeur Web Full-Stack
           </p>
@@ -308,7 +284,7 @@
           >
             <a
               href="#projects"
-              class="group relative bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white font-semibold px-8 py-4 rounded-xl transition-all duration-300 shadow-lg shadow-blue-500/50 hover:shadow-2xl hover:shadow-blue-600/50 transform hover:-translate-y-1 overflow-hidden focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-purple-900"
+              class="group relative bg-gradient-to-r from-gray-700 to-gray-600 hover:from-gray-600 hover:to-gray-500 text-white font-semibold px-8 py-4 rounded-xl transition-all duration-300 shadow-lg shadow-gray-700/50 hover:shadow-2xl hover:shadow-gray-600/50 transform hover:-translate-y-1 overflow-hidden focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-slate-900"
               aria-label="Voir mes projets"
             >
               <span class="relative z-10 flex items-center">
@@ -322,7 +298,7 @@
             </a>
             <a
               href="#contact"
-              class="group relative bg-white/10 backdrop-blur-sm hover:bg-white/20 text-white font-semibold px-8 py-4 rounded-xl transition-all duration-300 shadow-lg hover:shadow-xl border-2 border-white/20 hover:border-white/40 transform hover:-translate-y-1 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-purple-900"
+              class="group relative bg-white/10 backdrop-blur-sm hover:bg-white/20 text-white font-semibold px-8 py-4 rounded-xl transition-all duration-300 shadow-lg hover:shadow-xl border-2 border-white/20 hover:border-white/40 transform hover:-translate-y-1 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-slate-900"
               aria-label="Me contacter"
             >
               <span class="flex items-center">
@@ -373,7 +349,7 @@
     <main id="main-content">
       <section
         id="about"
-        class="py-20 bg-gradient-to-br from-slate-800 via-slate-900 to-purple-900 relative overflow-hidden"
+        class="py-20 bg-gradient-to-br from-slate-800 via-slate-900 to-slate-950 relative overflow-hidden"
         aria-labelledby="about-heading"
       >
         <div
@@ -389,7 +365,7 @@
               À propos de moi
             </h2>
             <div
-              class="w-20 h-1 bg-gradient-to-r from-blue-500 to-purple-500 mx-auto"
+              class="w-20 h-1 bg-gradient-to-r from-gray-400 to-gray-600 mx-auto"
               aria-hidden="true"
             ></div>
           </div>
@@ -412,13 +388,13 @@
                 <div
                   class="text-center p-4 bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl hover:bg-white/15 transition-all"
                 >
-                  <div class="text-3xl font-bold text-blue-400 mb-2">1+</div>
+                  <div class="text-3xl font-bold text-gray-400 mb-2">1+</div>
                   <div class="text-gray-300">Année de formation</div>
                 </div>
                 <div
                   class="text-center p-4 bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl hover:bg-white/15 transition-all"
                 >
-                  <div class="text-3xl font-bold text-purple-400 mb-2">3+</div>
+                  <div class="text-3xl font-bold text-gray-400 mb-2">3+</div>
                   <div class="text-gray-300">Projets réalisés</div>
                 </div>
               </div>
@@ -426,12 +402,12 @@
 
             <div class="space-y-4">
               <div
-                class="bg-white/10 backdrop-blur-sm border border-white/20 p-6 rounded-xl hover:bg-white/15 hover:shadow-lg hover:shadow-purple-500/20 transition-all"
+                class="bg-white/10 backdrop-blur-sm border border-white/20 p-6 rounded-xl hover:bg-white/15 hover:shadow-lg hover:shadow-gray-500/20 transition-all"
               >
                 <div class="flex items-start">
                   <div class="flex-shrink-0">
                     <div
-                      class="w-12 h-12 bg-gradient-to-br from-blue-500 to-purple-600 rounded-xl flex items-center justify-center"
+                      class="w-12 h-12 bg-gradient-to-br from-gray-600 to-gray-700 rounded-xl flex items-center justify-center"
                     >
                       <i class="fas fa-code text-xl text-white"></i>
                     </div>
@@ -449,12 +425,12 @@
               </div>
 
               <div
-                class="bg-white/10 backdrop-blur-sm border border-white/20 p-6 rounded-xl hover:bg-white/15 hover:shadow-lg hover:shadow-purple-500/20 transition-all"
+                class="bg-white/10 backdrop-blur-sm border border-white/20 p-6 rounded-xl hover:bg-white/15 hover:shadow-lg hover:shadow-gray-500/20 transition-all"
               >
                 <div class="flex items-start">
                   <div class="flex-shrink-0">
                     <div
-                      class="w-12 h-12 bg-gradient-to-br from-purple-500 to-pink-600 rounded-xl flex items-center justify-center"
+                      class="w-12 h-12 bg-gradient-to-br from-gray-500 to-gray-600 rounded-xl flex items-center justify-center"
                     >
                       <i class="fas fa-mobile-alt text-xl text-white"></i>
                     </div>
@@ -472,12 +448,12 @@
               </div>
 
               <div
-                class="bg-white/10 backdrop-blur-sm border border-white/20 p-6 rounded-xl hover:bg-white/15 hover:shadow-lg hover:shadow-purple-500/20 transition-all"
+                class="bg-white/10 backdrop-blur-sm border border-white/20 p-6 rounded-xl hover:bg-white/15 hover:shadow-lg hover:shadow-gray-500/20 transition-all"
               >
                 <div class="flex items-start">
                   <div class="flex-shrink-0">
                     <div
-                      class="w-12 h-12 bg-gradient-to-br from-pink-500 to-red-600 rounded-xl flex items-center justify-center"
+                      class="w-12 h-12 bg-gradient-to-br from-gray-400 to-gray-500 rounded-xl flex items-center justify-center"
                     >
                       <i class="fas fa-database text-xl text-white"></i>
                     </div>
@@ -501,7 +477,7 @@
       <!-- Section Compétences -->
       <section
         id="skills"
-        class="py-20 bg-gradient-to-br from-indigo-900 via-slate-900 to-slate-800 relative overflow-hidden"
+        class="py-20 bg-gradient-to-br from-slate-800 via-slate-900 to-slate-950 relative overflow-hidden"
         aria-labelledby="skills-heading"
       >
         <div
@@ -509,15 +485,15 @@
           aria-hidden="true"
         ></div>
         <div
-          class="absolute top-0 left-0 w-72 h-72 bg-purple-500/30 rounded-full filter blur-3xl opacity-50 animate-blob"
+          class="absolute top-0 left-0 w-72 h-72 bg-gray-600/30 rounded-full filter blur-3xl opacity-50 animate-blob"
           aria-hidden="true"
         ></div>
         <div
-          class="absolute top-0 right-0 w-72 h-72 bg-blue-500/30 rounded-full filter blur-3xl opacity-50 animate-blob animation-delay-2000"
+          class="absolute top-0 right-0 w-72 h-72 bg-gray-500/30 rounded-full filter blur-3xl opacity-50 animate-blob animation-delay-2000"
           aria-hidden="true"
         ></div>
         <div
-          class="absolute bottom-0 left-1/2 w-72 h-72 bg-pink-500/30 rounded-full filter blur-3xl opacity-50 animate-blob animation-delay-4000"
+          class="absolute bottom-0 left-1/2 w-72 h-72 bg-gray-400/30 rounded-full filter blur-3xl opacity-50 animate-blob animation-delay-4000"
           aria-hidden="true"
         ></div>
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -526,7 +502,7 @@
               Compétences
             </h2>
             <div
-              class="w-20 h-1 bg-gradient-to-r from-blue-500 to-purple-500 mx-auto"
+              class="w-20 h-1 bg-gradient-to-r from-gray-400 to-gray-600 mx-auto"
               aria-hidden="true"
             ></div>
           </div>
@@ -534,11 +510,11 @@
           <div class="grid md:grid-cols-3 gap-8">
             <!-- Carte Front-End -->
             <div
-              class="bg-white/10 backdrop-blur-sm border border-white/20 p-8 rounded-2xl shadow-lg hover:bg-white/15 hover:shadow-2xl hover:shadow-blue-500/20 transition-all transform hover:-translate-y-2"
+              class="bg-white/10 backdrop-blur-sm border border-white/20 p-8 rounded-2xl shadow-lg hover:bg-white/15 hover:shadow-2xl hover:shadow-gray-500/20 transition-all transform hover:-translate-y-2"
             >
               <div class="text-center mb-6">
                 <div
-                  class="inline-block p-4 bg-gradient-to-br from-blue-500 to-purple-600 rounded-2xl mb-4"
+                  class="inline-block p-4 bg-gradient-to-br from-gray-600 to-gray-700 rounded-2xl mb-4"
                 >
                   <i class="fas fa-laptop-code text-4xl text-white"></i>
                 </div>
@@ -552,7 +528,7 @@
                   </div>
                   <div class="w-full bg-white/20 rounded-full h-2">
                     <div
-                      class="bg-gradient-to-r from-blue-500 to-purple-600 h-2 rounded-full shadow-lg shadow-blue-500/50"
+                      class="bg-gradient-to-r from-gray-300 to-gray-400 h-2 rounded-full shadow-lg shadow-gray-400/50"
                       style="width: 75%"
                     ></div>
                   </div>
@@ -564,7 +540,7 @@
                   </div>
                   <div class="w-full bg-white/20 rounded-full h-2">
                     <div
-                      class="bg-gradient-to-r from-blue-500 to-purple-600 h-2 rounded-full shadow-lg shadow-blue-500/50"
+                      class="bg-gradient-to-r from-gray-300 to-gray-400 h-2 rounded-full shadow-lg shadow-gray-400/50"
                       style="width: 65%"
                     ></div>
                   </div>
@@ -576,7 +552,7 @@
                   </div>
                   <div class="w-full bg-white/20 rounded-full h-2">
                     <div
-                      class="bg-gradient-to-r from-blue-500 to-purple-600 h-2 rounded-full shadow-lg shadow-blue-500/50"
+                      class="bg-gradient-to-r from-gray-300 to-gray-400 h-2 rounded-full shadow-lg shadow-gray-400/50"
                       style="width: 70%"
                     ></div>
                   </div>
@@ -588,7 +564,7 @@
                   </div>
                   <div class="w-full bg-white/20 rounded-full h-2">
                     <div
-                      class="bg-gradient-to-r from-blue-500 to-purple-600 h-2 rounded-full shadow-lg shadow-blue-500/50"
+                      class="bg-gradient-to-r from-gray-300 to-gray-400 h-2 rounded-full shadow-lg shadow-gray-400/50"
                       style="width: 80%"
                     ></div>
                   </div>
@@ -598,11 +574,11 @@
 
             <!-- Carte Back-End -->
             <div
-              class="bg-white/10 backdrop-blur-sm border border-white/20 p-8 rounded-2xl shadow-lg hover:bg-white/15 hover:shadow-2xl hover:shadow-purple-500/20 transition-all transform hover:-translate-y-2"
+              class="bg-white/10 backdrop-blur-sm border border-white/20 p-8 rounded-2xl shadow-lg hover:bg-white/15 hover:shadow-2xl hover:shadow-gray-500/20 transition-all transform hover:-translate-y-2"
             >
               <div class="text-center mb-6">
                 <div
-                  class="inline-block p-4 bg-gradient-to-br from-purple-500 to-pink-600 rounded-2xl mb-4"
+                  class="inline-block p-4 bg-gradient-to-br from-gray-500 to-gray-600 rounded-2xl mb-4"
                 >
                   <i class="fas fa-server text-4xl text-white"></i>
                 </div>
@@ -616,7 +592,7 @@
                   </div>
                   <div class="w-full bg-white/20 rounded-full h-2">
                     <div
-                      class="bg-gradient-to-r from-purple-500 to-pink-600 h-2 rounded-full shadow-lg shadow-purple-500/50"
+                      class="bg-gradient-to-r from-gray-300 to-gray-400 h-2 rounded-full shadow-lg shadow-gray-400/50"
                       style="width: 70%"
                     ></div>
                   </div>
@@ -628,7 +604,7 @@
                   </div>
                   <div class="w-full bg-white/20 rounded-full h-2">
                     <div
-                      class="bg-gradient-to-r from-purple-500 to-pink-600 h-2 rounded-full shadow-lg shadow-purple-500/50"
+                      class="bg-gradient-to-r from-gray-300 to-gray-400 h-2 rounded-full shadow-lg shadow-gray-400/50"
                       style="width: 70%"
                     ></div>
                   </div>
@@ -640,7 +616,7 @@
                   </div>
                   <div class="w-full bg-white/20 rounded-full h-2">
                     <div
-                      class="bg-gradient-to-r from-purple-500 to-pink-600 h-2 rounded-full shadow-lg shadow-purple-500/50"
+                      class="bg-gradient-to-r from-gray-300 to-gray-400 h-2 rounded-full shadow-lg shadow-gray-400/50"
                       style="width: 65%"
                     ></div>
                   </div>
@@ -652,7 +628,7 @@
                   </div>
                   <div class="w-full bg-white/20 rounded-full h-2">
                     <div
-                      class="bg-gradient-to-r from-purple-500 to-pink-600 h-2 rounded-full shadow-lg shadow-purple-500/50"
+                      class="bg-gradient-to-r from-gray-300 to-gray-400 h-2 rounded-full shadow-lg shadow-gray-400/50"
                       style="width: 55%"
                     ></div>
                   </div>
@@ -662,11 +638,11 @@
 
             <!-- Carte Outils -->
             <div
-              class="bg-white/10 backdrop-blur-sm border border-white/20 p-8 rounded-2xl shadow-lg hover:bg-white/15 hover:shadow-2xl hover:shadow-pink-500/20 transition-all transform hover:-translate-y-2"
+              class="bg-white/10 backdrop-blur-sm border border-white/20 p-8 rounded-2xl shadow-lg hover:bg-white/15 hover:shadow-2xl hover:shadow-gray-500/20 transition-all transform hover:-translate-y-2"
             >
               <div class="text-center mb-6">
                 <div
-                  class="inline-block p-4 bg-gradient-to-br from-pink-500 to-red-600 rounded-2xl mb-4"
+                  class="inline-block p-4 bg-gradient-to-br from-gray-400 to-gray-500 rounded-2xl mb-4"
                 >
                   <i class="fas fa-tools text-4xl text-white"></i>
                 </div>
@@ -680,7 +656,7 @@
                   </div>
                   <div class="w-full bg-white/20 rounded-full h-2">
                     <div
-                      class="bg-gradient-to-r from-pink-500 to-red-600 h-2 rounded-full shadow-lg shadow-pink-500/50"
+                      class="bg-gradient-to-r from-gray-300 to-gray-400 h-2 rounded-full shadow-lg shadow-gray-400/50"
                       style="width: 75%"
                     ></div>
                   </div>
@@ -692,7 +668,7 @@
                   </div>
                   <div class="w-full bg-white/20 rounded-full h-2">
                     <div
-                      class="bg-gradient-to-r from-pink-500 to-red-600 h-2 rounded-full shadow-lg shadow-pink-500/50"
+                      class="bg-gradient-to-r from-gray-300 to-gray-400 h-2 rounded-full shadow-lg shadow-gray-400/50"
                       style="width: 70%"
                     ></div>
                   </div>
@@ -704,7 +680,7 @@
                   </div>
                   <div class="w-full bg-white/20 rounded-full h-2">
                     <div
-                      class="bg-gradient-to-r from-pink-500 to-red-600 h-2 rounded-full shadow-lg shadow-pink-500/50"
+                      class="bg-gradient-to-r from-gray-300 to-gray-400 h-2 rounded-full shadow-lg shadow-gray-400/50"
                       style="width: 80%"
                     ></div>
                   </div>
@@ -716,7 +692,7 @@
                   </div>
                   <div class="w-full bg-white/20 rounded-full h-2">
                     <div
-                      class="bg-gradient-to-r from-pink-500 to-red-600 h-2 rounded-full shadow-lg shadow-pink-500/50"
+                      class="bg-gradient-to-r from-gray-300 to-gray-400 h-2 rounded-full shadow-lg shadow-gray-400/50"
                       style="width: 60%"
                     ></div>
                   </div>
@@ -730,7 +706,7 @@
       <!-- Section Projets -->
       <section
         id="projects"
-        class="py-20 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-800 relative overflow-hidden"
+        class="py-20 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-800 relative overflow-hidden"
         aria-labelledby="projects-heading"
       >
         <div
@@ -750,7 +726,7 @@
               Mes Projets
             </h2>
             <div
-              class="w-20 h-1 bg-gradient-to-r from-blue-500 to-purple-500 mx-auto mb-4"
+              class="w-20 h-1 bg-gradient-to-r from-gray-400 to-gray-600 mx-auto mb-4"
               aria-hidden="true"
             ></div>
             <p class="text-gray-300 max-w-2xl mx-auto">
@@ -775,7 +751,7 @@
                   height="300"
                 />
                 <div
-                  class="absolute inset-0 bg-gradient-to-br from-blue-500 to-purple-600 opacity-0 group-hover:opacity-95 transition-opacity duration-300 flex items-center justify-center p-4"
+                  class="absolute inset-0 bg-gradient-to-br from-gray-500 to-gray-700 opacity-0 group-hover:opacity-95 transition-opacity duration-300 flex items-center justify-center p-4"
                   aria-hidden="true"
                 >
                   <div class="flex flex-col gap-3 w-full max-w-xs">
@@ -806,19 +782,19 @@
                 </p>
                 <div class="flex flex-wrap gap-2">
                   <span
-                    class="px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-sm font-medium"
+                    class="px-3 py-1 bg-gray-200 text-gray-700 rounded-full text-sm font-medium"
                     >React</span
                   >
                   <span
-                    class="px-3 py-1 bg-cyan-100 text-cyan-700 rounded-full text-sm font-medium"
+                    class="px-3 py-1 bg-gray-200 text-gray-700 rounded-full text-sm font-medium"
                     >TypeScript</span
                   >
                   <span
-                    class="px-3 py-1 bg-green-100 text-green-700 rounded-full text-sm font-medium"
+                    class="px-3 py-1 bg-gray-200 text-gray-700 rounded-full text-sm font-medium"
                     >Node.js</span
                   >
                   <span
-                    class="px-3 py-1 bg-purple-100 text-purple-700 rounded-full text-sm font-medium"
+                    class="px-3 py-1 bg-gray-200 text-gray-700 rounded-full text-sm font-medium"
                     >SQL</span
                   >
                 </div>
@@ -839,7 +815,7 @@
                   height="300"
                 />
                 <div
-                  class="absolute inset-0 bg-gradient-to-br from-blue-500 to-purple-600 opacity-0 group-hover:opacity-95 transition-opacity duration-300 flex items-center justify-center p-4"
+                  class="absolute inset-0 bg-gradient-to-br from-gray-500 to-gray-700 opacity-0 group-hover:opacity-95 transition-opacity duration-300 flex items-center justify-center p-4"
                   aria-hidden="true"
                 >
                   <div class="flex flex-col gap-3 w-full max-w-xs">
@@ -874,19 +850,19 @@
                 </p>
                 <div class="flex flex-wrap gap-2">
                   <span
-                    class="px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-sm font-medium"
+                    class="px-3 py-1 bg-gray-200 text-gray-700 rounded-full text-sm font-medium"
                     >React</span
                   >
                   <span
-                    class="px-3 py-1 bg-cyan-100 text-cyan-700 rounded-full text-sm font-medium"
+                    class="px-3 py-1 bg-gray-200 text-gray-700 rounded-full text-sm font-medium"
                     >TypeScript</span
                   >
                   <span
-                    class="px-3 py-1 bg-green-100 text-green-700 rounded-full text-sm font-medium"
+                    class="px-3 py-1 bg-gray-200 text-gray-700 rounded-full text-sm font-medium"
                     >Node.js</span
                   >
                   <span
-                    class="px-3 py-1 bg-purple-100 text-purple-700 rounded-full text-sm font-medium"
+                    class="px-3 py-1 bg-gray-200 text-gray-700 rounded-full text-sm font-medium"
                     >Express</span
                   >
                 </div>
@@ -901,13 +877,13 @@
                 <img
                   src="favicon.svg"
                   alt="Logo Portfolio Aurélien Thébault"
-                  class="w-full h-full object-contain bg-gradient-to-br from-purple-900 via-slate-800 to-purple-800 transition-transform duration-300 group-hover:scale-110 p-12"
+                  class="w-full h-full object-contain bg-gradient-to-br from-slate-700 via-slate-600 to-slate-800 transition-transform duration-300 group-hover:scale-110 p-12"
                   loading="lazy"
                   width="400"
                   height="300"
                 />
                 <div
-                  class="absolute inset-0 bg-gradient-to-br from-blue-500 to-purple-600 opacity-0 group-hover:opacity-95 transition-opacity duration-300 flex items-center justify-center p-4"
+                  class="absolute inset-0 bg-gradient-to-br from-gray-500 to-gray-700 opacity-0 group-hover:opacity-95 transition-opacity duration-300 flex items-center justify-center p-4"
                   aria-hidden="true"
                 >
                   <div class="flex flex-col gap-3 w-full max-w-xs">
@@ -935,19 +911,19 @@
                 </p>
                 <div class="flex flex-wrap gap-2">
                   <span
-                    class="px-3 py-1 bg-orange-100 text-orange-700 rounded-full text-sm font-medium"
+                    class="px-3 py-1 bg-gray-200 text-gray-700 rounded-full text-sm font-medium"
                     >HTML5</span
                   >
                   <span
-                    class="px-3 py-1 bg-cyan-100 text-cyan-700 rounded-full text-sm font-medium"
+                    class="px-3 py-1 bg-gray-200 text-gray-700 rounded-full text-sm font-medium"
                     >Tailwind CSS</span
                   >
                   <span
-                    class="px-3 py-1 bg-yellow-100 text-yellow-700 rounded-full text-sm font-medium"
+                    class="px-3 py-1 bg-gray-200 text-gray-700 rounded-full text-sm font-medium"
                     >JavaScript</span
                   >
                   <span
-                    class="px-3 py-1 bg-purple-100 text-purple-700 rounded-full text-sm font-medium"
+                    class="px-3 py-1 bg-gray-200 text-gray-700 rounded-full text-sm font-medium"
                     >Accessibility</span
                   >
                 </div>
@@ -960,7 +936,7 @@
       <!-- Section Contact -->
       <section
         id="contact"
-        class="py-20 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden"
+        class="py-20 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 relative overflow-hidden"
         aria-labelledby="contact-heading"
       >
         <div
@@ -977,7 +953,7 @@
               Me Contacter
             </h2>
             <div
-              class="w-20 h-1 bg-gradient-to-r from-blue-500 to-purple-500 mx-auto mb-4"
+              class="w-20 h-1 bg-gradient-to-r from-gray-400 to-gray-600 mx-auto mb-4"
               aria-hidden="true"
             ></div>
             <p class="text-gray-300 max-w-2xl mx-auto">
@@ -991,7 +967,7 @@
               <div class="flex items-start space-x-4 group">
                 <div class="flex-shrink-0">
                   <div
-                    class="w-12 h-12 bg-gradient-to-br from-blue-500 to-purple-600 rounded-xl flex items-center justify-center shadow-lg group-hover:shadow-blue-500/50 transition-all duration-300 transform group-hover:scale-110"
+                    class="w-12 h-12 bg-gradient-to-br from-gray-500 to-gray-700 rounded-xl flex items-center justify-center shadow-lg group-hover:shadow-gray-500/50 transition-all duration-300 transform group-hover:scale-110"
                   >
                     <i
                       class="fas fa-envelope text-white text-xl"
@@ -1006,7 +982,7 @@
                     id="email-link"
                     target="_blank"
                     rel="noopener noreferrer"
-                    class="text-gray-300 hover:text-blue-400 transition-colors"
+                    class="text-gray-300 hover:text-gray-400 transition-colors"
                     aria-label="Envoyer un email"
                     ><span id="email-display"></span
                   ></a>
@@ -1016,7 +992,7 @@
               <div class="flex items-start space-x-4 group">
                 <div class="flex-shrink-0">
                   <div
-                    class="w-12 h-12 bg-gradient-to-br from-purple-500 to-pink-600 rounded-xl flex items-center justify-center shadow-lg group-hover:shadow-purple-500/50 transition-all duration-300 transform group-hover:scale-110"
+                    class="w-12 h-12 bg-gradient-to-br from-gray-600 to-gray-500 rounded-xl flex items-center justify-center shadow-lg group-hover:shadow-gray-500/50 transition-all duration-300 transform group-hover:scale-110"
                   >
                     <i
                       class="fas fa-phone text-white text-xl"
@@ -1037,7 +1013,7 @@
               <div class="flex items-start space-x-4 group">
                 <div class="flex-shrink-0">
                   <div
-                    class="w-12 h-12 bg-gradient-to-br from-pink-500 to-red-600 rounded-xl flex items-center justify-center shadow-lg group-hover:shadow-pink-500/50 transition-all duration-300 transform group-hover:scale-110"
+                    class="w-12 h-12 bg-gradient-to-br from-gray-600 to-gray-500 rounded-xl flex items-center justify-center shadow-lg group-hover:shadow-gray-500/50 transition-all duration-300 transform group-hover:scale-110"
                   >
                     <i
                       class="fas fa-map-marker-alt text-white text-xl"
@@ -1169,7 +1145,7 @@
 
                 <button
                   type="submit"
-                  class="group relative w-full bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white font-semibold px-8 py-4 rounded-xl transition-all duration-300 shadow-lg shadow-blue-500/50 hover:shadow-2xl hover:shadow-blue-600/50 transform hover:-translate-y-1 overflow-hidden focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-slate-900"
+                  class="group relative w-full bg-gradient-to-r from-gray-500 to-gray-700 hover:from-gray-600 hover:to-gray-800 text-white font-semibold px-8 py-4 rounded-xl transition-all duration-300 shadow-lg shadow-gray-500/50 hover:shadow-2xl hover:shadow-gray-600/50 transform hover:-translate-y-1 overflow-hidden focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-slate-900"
                   aria-label="Envoyer le formulaire de contact"
                 >
                   <span class="relative z-10 flex items-center justify-center">
@@ -1249,27 +1225,27 @@
             <h4 class="text-lg font-semibold mb-4">Stack Technique</h4>
             <div class="flex flex-wrap gap-2">
               <span
-                class="px-3 py-1 bg-blue-500/20 text-blue-300 rounded-lg text-sm border border-blue-500/30"
+                class="px-3 py-1 bg-gray-500/20 text-gray-300 rounded-lg text-sm border border-gray-500/30"
                 >React</span
               >
               <span
-                class="px-3 py-1 bg-cyan-500/20 text-cyan-300 rounded-lg text-sm border border-cyan-500/30"
+                class="px-3 py-1 bg-gray-500/20 text-gray-300 rounded-lg text-sm border border-gray-500/30"
                 >TypeScript</span
               >
               <span
-                class="px-3 py-1 bg-green-500/20 text-green-300 rounded-lg text-sm border border-green-500/30"
+                class="px-3 py-1 bg-gray-500/20 text-gray-300 rounded-lg text-sm border border-gray-500/30"
                 >Node.js</span
               >
               <span
-                class="px-3 py-1 bg-purple-500/20 text-purple-300 rounded-lg text-sm border border-purple-500/30"
+                class="px-3 py-1 bg-gray-500/20 text-gray-300 rounded-lg text-sm border border-gray-500/30"
                 >Tailwind CSS</span
               >
               <span
-                class="px-3 py-1 bg-yellow-500/20 text-yellow-300 rounded-lg text-sm border border-yellow-500/30"
+                class="px-3 py-1 bg-gray-500/20 text-gray-300 rounded-lg text-sm border border-gray-500/30"
                 >JavaScript</span
               >
               <span
-                class="px-3 py-1 bg-pink-500/20 text-pink-300 rounded-lg text-sm border border-pink-500/30"
+                class="px-3 py-1 bg-gray-500/20 text-gray-300 rounded-lg text-sm border border-gray-500/30"
                 >SQL</span
               >
             </div>
@@ -1283,7 +1259,7 @@
           <p class="text-sm text-gray-500">
             <a
               href="mentions-legales.html"
-              class="hover:text-blue-400 transition-colors"
+              class="hover:text-gray-400 transition-colors"
             >
               Mentions légales
             </a>
@@ -1295,7 +1271,7 @@
     <!-- Bouton de retour en haut -->
     <button
       id="scroll-top"
-      class="fixed bottom-8 right-8 bg-primary hover:bg-secondary text-white w-12 h-12 rounded-full shadow-lg opacity-0 invisible transition-all duration-300 z-50 focus:outline-none focus:ring-2 focus:ring-white"
+      class="fixed bottom-8 right-8 bg-gray-700 hover:bg-gray-600 text-white w-12 h-12 rounded-full shadow-lg opacity-0 invisible transition-all duration-300 z-50 focus:outline-none focus:ring-2 focus:ring-white"
       aria-label="Retour en haut de la page"
     >
       <i class="fas fa-arrow-up" aria-hidden="true"></i>

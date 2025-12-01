@@ -60,7 +60,7 @@
 .blob-1 {
   width: 400px;
   height: 400px;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: linear-gradient(135deg, #3f3f46 0%, #27272a 100%);
   top: -100px;
   left: -100px;
   animation-delay: 0s;
@@ -69,7 +69,7 @@
 .blob-2 {
   width: 500px;
   height: 500px;
-  background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+  background: linear-gradient(135deg, #52525b 0%, #3f3f46 100%);
   top: 50%;
   right: -150px;
   animation-delay: 4s;
@@ -78,7 +78,7 @@
 .blob-3 {
   width: 450px;
   height: 450px;
-  background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+  background: linear-gradient(135deg, #71717a 0%, #52525b 100%);
   bottom: -100px;
   left: 50%;
   animation-delay: 8s;
@@ -87,7 +87,7 @@
 .blob-4 {
   width: 350px;
   height: 350px;
-  background: linear-gradient(135deg, #a18cd1 0%, #fbc2eb 100%);
+  background: linear-gradient(135deg, #52525b 0%, #3f3f46 100%);
   top: 20%;
   left: 10%;
   animation-delay: 2s;
@@ -96,7 +96,7 @@
 .blob-5 {
   width: 400px;
   height: 400px;
-  background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);
+  background: linear-gradient(135deg, #3f3f46 0%, #27272a 100%);
   bottom: 20%;
   right: 10%;
   animation-delay: 6s;
@@ -105,7 +105,7 @@
 .blob-6 {
   width: 500px;
   height: 500px;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: linear-gradient(135deg, #52525b 0%, #3f3f46 100%);
   top: 10%;
   right: 5%;
   animation-delay: 3s;
@@ -114,7 +114,7 @@
 .blob-7 {
   width: 450px;
   height: 450px;
-  background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+  background: linear-gradient(135deg, #3f3f46 0%, #27272a 100%);
   top: 30%;
   left: 10%;
   animation-delay: 5s;
@@ -123,7 +123,7 @@
 .blob-8 {
   width: 380px;
   height: 380px;
-  background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+  background: linear-gradient(135deg, #52525b 0%, #3f3f46 100%);
   bottom: 10%;
   right: 15%;
   animation-delay: 7s;
@@ -152,7 +152,7 @@
 
 /* Texte dégradé - Optimisé */
 .gradient-text-hero {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: linear-gradient(135deg, #a1a1aa 0%, #71717a 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -234,22 +234,22 @@ html {
 }
 
 ::-webkit-scrollbar-track {
-  background: linear-gradient(180deg, #1e293b 0%, #0f172a 100%);
+  background: linear-gradient(180deg, #27272a 0%, #18181b 100%);
 }
 
 ::-webkit-scrollbar-thumb {
-  background: linear-gradient(180deg, #667eea 0%, #764ba2 100%);
+  background: linear-gradient(180deg, #71717a 0%, #52525b 100%);
   border-radius: 10px;
-  border: 2px solid #1e293b;
+  border: 2px solid #27272a;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: linear-gradient(180deg, #764ba2 0%, #667eea 100%);
+  background: linear-gradient(180deg, #a1a1aa 0%, #71717a 100%);
 }
 
 /* Lien actif de la navbar */
 .nav-link.active {
-  color: #c084fc;
+  color: #ffffff;
   font-weight: 600;
 }
 
@@ -264,7 +264,7 @@ html {
 
 /* Animation de toutes les barres de progression au survol */
 .skill-item:hover .bg-gradient-to-r {
-  box-shadow: 0 4px 20px rgba(102, 126, 234, 0.5);
+  box-shadow: 0 4px 20px rgba(113, 113, 122, 0.5);
   transform: scaleX(1.02);
   transition: all 0.3s ease;
 }
