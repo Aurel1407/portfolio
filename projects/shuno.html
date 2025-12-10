@@ -282,48 +282,50 @@
             Captures d'écran
           </h2>
           <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            <!-- Placeholder pour les images -->
-            <div class="bg-gray-200 rounded-xl aspect-video flex items-center justify-center">
-              <div class="text-center">
-                <i class="fas fa-image text-gray-400 text-4xl mb-2"></i>
-                <p class="text-gray-500 text-sm">Page d'accueil</p>
-              </div>
-            </div>
-            <div class="bg-gray-200 rounded-xl aspect-video flex items-center justify-center">
-              <div class="text-center">
-                <i class="fas fa-image text-gray-400 text-4xl mb-2"></i>
-                <p class="text-gray-500 text-sm">Recherche de gîtes</p>
-              </div>
-            </div>
-            <div class="bg-gray-200 rounded-xl aspect-video flex items-center justify-center">
-              <div class="text-center">
-                <i class="fas fa-image text-gray-400 text-4xl mb-2"></i>
-                <p class="text-gray-500 text-sm">Détails d'un gîte</p>
-              </div>
-            </div>
-            <div class="bg-gray-200 rounded-xl aspect-video flex items-center justify-center">
-              <div class="text-center">
-                <i class="fas fa-image text-gray-400 text-4xl mb-2"></i>
-                <p class="text-gray-500 text-sm">Calendrier de réservation</p>
-              </div>
-            </div>
-            <div class="bg-gray-200 rounded-xl aspect-video flex items-center justify-center">
-              <div class="text-center">
-                <i class="fas fa-image text-gray-400 text-4xl mb-2"></i>
-                <p class="text-gray-500 text-sm">Dashboard Admin</p>
-              </div>
-            </div>
-            <div class="bg-gray-200 rounded-xl aspect-video flex items-center justify-center">
-              <div class="text-center">
-                <i class="fas fa-image text-gray-400 text-4xl mb-2"></i>
-                <p class="text-gray-500 text-sm">Gestion des propriétés</p>
-              </div>
-            </div>
+            <!-- Images du projet -->
+            <img
+              src="../images/projects/shuno/accueil.webp"
+              alt="Page d'accueil Shu-no"
+              class="rounded-xl shadow-lg w-full aspect-video object-cover object-top cursor-pointer hover:opacity-90 transition-opacity"
+              loading="lazy"
+              onclick="openLightbox(this.src, this.alt)"
+            />
+            <img
+              src="../images/projects/shuno/recherche-gites.webp"
+              alt="Recherche de gîtes Shu-no"
+              class="rounded-xl shadow-lg w-full aspect-video object-cover object-top cursor-pointer hover:opacity-90 transition-opacity"
+              loading="lazy"
+              onclick="openLightbox(this.src, this.alt)"
+            />
+            <img
+              src="../images/projects/shuno/details-gite.webp"
+              alt="Détails d'un gîte Shu-no"
+              class="rounded-xl shadow-lg w-full aspect-video object-cover object-top cursor-pointer hover:opacity-90 transition-opacity"
+              loading="lazy"
+              onclick="openLightbox(this.src, this.alt)"
+            />
+            <img
+              src="../images/projects/shuno/calendrier-reservation.webp"
+              alt="Calendrier de réservation Shu-no"
+              class="rounded-xl shadow-lg w-full aspect-video object-cover object-top cursor-pointer hover:opacity-90 transition-opacity"
+              loading="lazy"
+              onclick="openLightbox(this.src, this.alt)"
+            />
+            <img
+              src="../images/projects/shuno/dashboard-admin.webp"
+              alt="Dashboard Admin Shu-no"
+              class="rounded-xl shadow-lg w-full aspect-video object-cover object-top cursor-pointer hover:opacity-90 transition-opacity"
+              loading="lazy"
+              onclick="openLightbox(this.src, this.alt)"
+            />
+            <img
+              src="../images/projects/shuno/gestion-proprietes.webp"
+              alt="Gestion des propriétés Shu-no"
+              class="rounded-xl shadow-lg w-full aspect-video object-cover object-top cursor-pointer hover:opacity-90 transition-opacity"
+              loading="lazy"
+              onclick="openLightbox(this.src, this.alt)"
+            />
           </div>
-          <p class="text-sm text-gray-500 mt-4 text-center italic">
-            <i class="fas fa-info-circle mr-1"></i>
-            Les captures d'écran seront ajoutées prochainement
-          </p>
         </section>
 
         <!-- Liens du projet -->
@@ -348,6 +350,14 @@
       </div>
     </main>
 
+    <!-- Lightbox pour les images -->
+    <div id="lightbox" class="fixed inset-0 bg-black bg-opacity-90 z-50 hidden flex items-center justify-center p-4" onclick="closeLightbox()">
+      <button class="absolute top-4 right-4 text-white text-4xl hover:text-gray-300 transition-colors" onclick="closeLightbox()" aria-label="Fermer">
+        <i class="fas fa-times"></i>
+      </button>
+      <img id="lightbox-img" src="" alt="" class="max-w-full max-h-full rounded-lg shadow-2xl" onclick="event.stopPropagation()">
+    </div>
+
     <!-- Footer -->
     <footer class="bg-slate-900 text-white py-8">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -359,5 +369,31 @@
 
     <!-- JavaScript -->
     <script src="../script.js"></script>
+    <script>
+      // Lightbox
+      function openLightbox(src, alt) {
+        const lightbox = document.getElementById('lightbox');
+        const lightboxImg = document.getElementById('lightbox-img');
+        lightboxImg.src = src;
+        lightboxImg.alt = alt;
+        lightbox.classList.remove('hidden');
+        lightbox.classList.add('flex');
+        document.body.style.overflow = 'hidden';
+      }
+
+      function closeLightbox() {
+        const lightbox = document.getElementById('lightbox');
+        lightbox.classList.add('hidden');
+        lightbox.classList.remove('flex');
+        document.body.style.overflow = 'auto';
+      }
+
+      // Fermer avec la touche Échap
+      document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape') {
+          closeLightbox();
+        }
+      });
+    </script>
   </body>
 </html>
