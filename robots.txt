@@ -1,0 +1,6 @@
+# Autoriser tous les robots d'exploration
+User-agent: *
+Allow: /
+
+# Référence au sitemap
+Sitemap: https://aurel1407.github.io/portfolio/sitemap.xml
