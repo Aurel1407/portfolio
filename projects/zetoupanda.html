@@ -31,10 +31,17 @@
     <meta name="twitter:description" content="Application e-commerce développée en React et Node.js" />
     <meta name="twitter:image" content="https://aurel1407.github.io/portfolio/images/zetoupanda-logo.svg" />
 
-    <title>ZetouPanda - Projet E-commerce | Aurélien Thébault</title>
+    <title>ZetouPanda | E-commerce React, Node.js, MongoDB | Aurélien Thébault</title>
 
     <!-- Favicon -->
     <link rel="icon" type="image/svg+xml" href="../favicon.svg" />
+    <link rel="icon" type="image/x-icon" href="../favicon.ico" />
+
+    <!-- Manifest PWA -->
+    <link rel="manifest" href="../manifest.json" />
+
+    <!-- Humans.txt -->
+    <link rel="author" href="../humans.txt" />
 
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -75,6 +82,34 @@
         },
         "programmingLanguage": ["React", "TypeScript", "Node.js", "JavaScript"],
         "datePublished": "2024"
+      }
+    </script>
+
+    <!-- Breadcrumb Schema -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Accueil",
+            "item": "https://aurel1407.github.io/portfolio/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Projets",
+            "item": "https://aurel1407.github.io/portfolio/#projects"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "ZetouPanda",
+            "item": "https://aurel1407.github.io/portfolio/projects/zetoupanda.html"
+          }
+        ]
       }
     </script>
   </head>

@@ -1,0 +1,16 @@
+/* TEAM */
+Développeur & Designer : Aurélien Thébault
+Contact : aurelien.thebault.pro [at] gmail.com
+Localisation : Mayenne, France
+GitHub : https://github.com/Aurel1407
+LinkedIn : https://www.linkedin.com/in/aurélien-thébault-244b84336
+
+/* SITE */
+Dernière mise à jour : 2026/01/27
+Standards : HTML5, CSS3, ES6+
+Composants : Tailwind CSS, Font Awesome
+Logiciels : VS Code, Git, GitHub Pages
+Langues : Français
+
+/* THANKS */
+Merci à tous ceux qui visitent mon portfolio !
