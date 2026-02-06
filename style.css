@@ -582,3 +582,17 @@ textarea:focus-visible {
 .reveal {
   transition: none;
 }
+
+/* Uniformiser la hauteur des cartes projets */
+#projects article {
+  min-height: 580px;
+  display: flex;
+  flex-direction: column;
+}
+
+#projects article > div:last-child {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
