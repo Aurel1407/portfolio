@@ -1,16 +1,16 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="fr" class="scroll-smooth">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="Portfolio professionnel d'Aurélien Thébault, Développeur Web Full-Stack à Mayenne. Spécialisé en React, Node.js, TypeScript et création d'applications web modernes. Découvrez mes projets e-commerce, plateformes de réservation et sites vitrines."
+      content="Portfolio professionnel d'Aurélien Thébault, développeur web freelance en micro-entreprise à Mayenne. Création de sites vitrines, refonte et maintenance web pour indépendants, artisans et TPE."
     />
     <meta name="author" content="Aurélien Thébault" />
     <meta
       name="keywords"
-      content="Aurélien Thébault, développeur web, développeur full-stack, React, Node.js, JavaScript, TypeScript, MongoDB, Express.js, PostgreSQL, Tailwind CSS, portfolio développeur, développeur web Mayenne, développeur React Mayenne, développeur freelance, création site web, application web, e-commerce, plateforme réservation, développeur front-end, développeur back-end, API REST, développement web moderne"
+      content="Aurélien Thébault, développeur web freelance, micro-entreprise, entrepreneur individuel, création site vitrine, refonte site web, maintenance web, développeur Mayenne, développeur La Croixille, React, Node.js, JavaScript, TypeScript"
     />
 
     <!-- Canonical URL -->
@@ -27,21 +27,21 @@
     <meta property="og:locale" content="fr_FR" />
     <meta
       property="og:title"
-      content="Aurélien Thébault - Développeur Web Full-Stack"
+      content="Aurélien Thébault - Développeur Web Freelance"
     />
     <meta
       property="og:description"
       content="Portfolio professionnel présentant mes projets et compétences en développement web"
     />
-    <meta
-      property="og:url"
-      content="https://aurel1407.github.io/portfolio/"
-    />
+    <meta property="og:url" content="https://aurel1407.github.io/portfolio/" />
     <meta
       property="og:image"
       content="https://aurel1407.github.io/portfolio/images/profile-photo.jpg"
     />
-    <meta property="og:image:alt" content="Photo de profil d'Aurélien Thébault" />
+    <meta
+      property="og:image:alt"
+      content="Photo de profil d'Aurélien Thébault"
+    />
     <meta property="og:site_name" content="Aurélien Thébault Portfolio" />
 
     <!-- Twitter -->
@@ -55,12 +55,17 @@
       name="twitter:image"
       content="https://aurel1407.github.io/portfolio/images/profile-photo.jpg"
     />
-    <meta name="twitter:image:alt" content="Photo de profil d'Aurélien Thébault" />
+    <meta
+      name="twitter:image:alt"
+      content="Photo de profil d'Aurélien Thébault"
+    />
 
     <!-- Icônes de favori -->
+    <link rel="icon" type="image/png" href="images/brand/favicon.png?v=2" />
+    <link rel="shortcut icon" href="images/brand/favicon.png?v=2" />
     <link rel="icon" type="image/svg+xml" href="favicon.svg" />
     <link rel="icon" type="image/x-icon" href="favicon.ico" />
-    <link rel="apple-touch-icon" href="images/profile-photo.jpg" />
+    <link rel="apple-touch-icon" href="images/brand/favicon.png?v=2" />
 
     <!-- Manifest PWA -->
     <link rel="manifest" href="manifest.json" />
@@ -68,7 +73,9 @@
     <!-- Humans.txt -->
     <link rel="author" href="humans.txt" />
 
-    <title>Aurélien Thébault - Développeur Web Full-Stack | Portfolio Professionnel</title>
+    <title>
+      Aurélien Thébault - Développeur Web Freelance | Micro-entreprise
+    </title>
 
     <!-- CDN Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -99,7 +106,7 @@
         "@context": "https://schema.org",
         "@type": "Person",
         "name": "Aurélien Thébault",
-        "jobTitle": "Développeur Web Full-Stack",
+        "jobTitle": "Développeur Web Freelance",
         "url": "https://aurel1407.github.io/portfolio/",
         "sameAs": [
           "https://github.com/Aurel1407",
@@ -144,10 +151,16 @@
           <div class="flex-shrink-0">
             <a
               href="#home"
-              class="text-2xl font-bold text-gray-400"
+              class="inline-flex items-center"
               aria-label="Retour à l'accueil"
-              >AT</a
             >
+              <img
+                src="images/brand/logo-nom.png"
+                alt="Auvielno"
+                class="h-10 w-auto object-contain"
+                loading="eager"
+              />
+            </a>
           </div>
 
           <!-- Menu version bureau (≥768px) -->
@@ -172,6 +185,11 @@
                 href="#projects"
                 class="nav-link text-gray-300 hover:text-white transition-colors"
                 >Projets</a
+              >
+              <a
+                href="#services"
+                class="nav-link text-gray-300 hover:text-white transition-colors"
+                >Services</a
               >
               <a
                 href="#contact"
@@ -236,6 +254,11 @@
             >Projets</a
           >
           <a
+            href="#services"
+            class="block px-3 py-2 text-gray-300 hover:text-white hover:bg-slate-700 rounded-md"
+            >Services</a
+          >
+          <a
             href="#contact"
             class="block px-3 py-2 text-gray-300 hover:text-white hover:bg-slate-700 rounded-md"
             >Contact</a
@@ -295,14 +318,13 @@
           <p
             class="text-xl md:text-3xl text-gray-300 mb-8 animate-fade-in-up animation-delay-400 font-light"
           >
-            Développeur Web Full-Stack
+            Développeur Web Freelance
           </p>
           <p
             class="text-lg text-gray-300 max-w-2xl mx-auto mb-10 animate-fade-in-up animation-delay-600"
           >
-            Passionné par la création d'expériences web modernes et
-            performantes. Spécialisé dans le développement front-end et
-            back-end.
+            Micro-entreprise immatriculée en Mayenne, spécialisée dans la
+            création de sites web modernes, performants et maintenables.
           </p>
           <div
             class="flex flex-wrap justify-center gap-4 animate-fade-in-up animation-delay-800"
@@ -324,11 +346,11 @@
             <a
               href="#contact"
               class="group relative bg-white/10 backdrop-blur-sm hover:bg-white/20 text-white font-semibold px-8 py-4 rounded-xl transition-all duration-300 shadow-lg hover:shadow-xl border-2 border-white/20 hover:border-white/40 transform hover:-translate-y-1 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-slate-900"
-              aria-label="Me contacter"
+              aria-label="Demander un devis"
             >
               <span class="flex items-center">
                 <i class="fas fa-envelope mr-2"></i>
-                Me contacter
+                Demander un devis
               </span>
             </a>
           </div>
@@ -402,6 +424,15 @@
                 formation en développement web full-stack. Je combine créativité
                 et rigueur technique pour donner vie à des projets web modernes
                 et innovants.
+              </p>
+              <p class="text-lg text-gray-300 leading-relaxed">
+                Aujourd'hui, j'accompagne également mes clients en tant
+                qu'entrepreneur individuel (micro-entreprise) pour concevoir,
+                améliorer et maintenir leurs sites web professionnels.
+              </p>
+              <p class="text-lg text-gray-300 leading-relaxed">
+                J'exerce sous le nom commercial <strong>Auvielno</strong>, une
+                identité dédiée à mon activité de développement web.
               </p>
               <p class="text-lg text-gray-300 leading-relaxed">
                 Mon approche se concentre sur l'écriture de code propre, la
@@ -764,6 +795,79 @@
         </div>
       </section>
 
+      <!-- Section Services -->
+      <section
+        id="services"
+        class="py-20 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 relative overflow-hidden"
+        aria-labelledby="services-heading"
+      >
+        <div
+          class="absolute inset-0 bg-grid-pattern opacity-20"
+          aria-hidden="true"
+        ></div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <div class="text-center mb-16">
+            <h2
+              id="services-heading"
+              class="text-4xl font-bold text-white mb-4"
+            >
+              Services
+            </h2>
+            <div
+              class="w-20 h-1 bg-gradient-to-r from-gray-400 to-gray-600 mx-auto mb-4"
+              aria-hidden="true"
+            ></div>
+            <p class="text-gray-300 max-w-2xl mx-auto">
+              J'accompagne les indépendants, artisans et TPE sur des projets web
+              clairs, efficaces et livrés avec devis.
+            </p>
+          </div>
+
+          <div class="grid md:grid-cols-3 gap-8 mb-10">
+            <article
+              class="bg-white/10 backdrop-blur-sm border border-white/20 p-8 rounded-2xl"
+            >
+              <h3 class="text-2xl font-bold text-white mb-3">Site vitrine</h3>
+              <p class="text-gray-300">
+                Création de site vitrine responsive pour présenter votre
+                activité, vos services et vos coordonnées professionnelles.
+              </p>
+            </article>
+
+            <article
+              class="bg-white/10 backdrop-blur-sm border border-white/20 p-8 rounded-2xl"
+            >
+              <h3 class="text-2xl font-bold text-white mb-3">Refonte</h3>
+              <p class="text-gray-300">
+                Modernisation de site existant : design, performance,
+                accessibilité et optimisation SEO technique de base.
+              </p>
+            </article>
+
+            <article
+              class="bg-white/10 backdrop-blur-sm border border-white/20 p-8 rounded-2xl"
+            >
+              <h3 class="text-2xl font-bold text-white mb-3">Maintenance</h3>
+              <p class="text-gray-300">
+                Corrections, évolutions et suivi pour garder un site fiable,
+                rapide et sécurisé dans le temps.
+              </p>
+            </article>
+          </div>
+
+          <div class="text-center">
+            <a
+              href="#contact"
+              class="inline-flex items-center justify-center bg-gradient-to-r from-gray-600 to-gray-700 hover:from-gray-500 hover:to-gray-600 text-white font-semibold px-8 py-4 rounded-xl transition-all duration-300 shadow-lg shadow-gray-500/40"
+              aria-label="Aller au formulaire pour demander un devis"
+            >
+              <i class="fas fa-file-invoice-dollar mr-2" aria-hidden="true"></i>
+              Demander un devis
+            </a>
+          </div>
+        </div>
+      </section>
+
       <!-- Section Projets -->
       <section
         id="projects"
@@ -863,7 +967,8 @@
                   href="projects/zetoupanda.html"
                   class="inline-block text-center bg-gray-800 text-white px-6 py-3 rounded-xl font-semibold hover:bg-gray-700 transition-colors focus:outline-none focus:ring-2 focus:ring-gray-500"
                 >
-                  <i class="fas fa-info-circle mr-2" aria-hidden="true"></i>Voir les détails
+                  <i class="fas fa-info-circle mr-2" aria-hidden="true"></i>Voir
+                  les détails
                 </a>
               </div>
             </article>
@@ -937,7 +1042,8 @@
                   href="projects/shuno.html"
                   class="inline-block text-center bg-gray-800 text-white px-6 py-3 rounded-xl font-semibold hover:bg-gray-700 transition-colors focus:outline-none focus:ring-2 focus:ring-gray-500"
                 >
-                  <i class="fas fa-info-circle mr-2" aria-hidden="true"></i>Voir les détails
+                  <i class="fas fa-info-circle mr-2" aria-hidden="true"></i>Voir
+                  les détails
                 </a>
               </div>
             </article>
@@ -1004,7 +1110,8 @@
                   href="projects/portfolio.html"
                   class="inline-block text-center bg-gray-800 text-white px-6 py-3 rounded-xl font-semibold hover:bg-gray-700 transition-colors focus:outline-none focus:ring-2 focus:ring-gray-500"
                 >
-                  <i class="fas fa-info-circle mr-2" aria-hidden="true"></i>Voir les détails
+                  <i class="fas fa-info-circle mr-2" aria-hidden="true"></i>Voir
+                  les détails
                 </a>
               </div>
             </article>
@@ -1027,29 +1134,51 @@
                   aria-hidden="true"
                 >
                   <div class="flex flex-col gap-3 w-full max-w-xs">
-                    <div class="bg-green-500/90 text-white px-4 py-2 rounded-xl font-semibold text-center">
-                      <i class="fas fa-check mr-2" aria-hidden="true"></i>En ligne
+                    <div
+                      class="bg-green-500/90 text-white px-4 py-2 rounded-xl font-semibold text-center"
+                    >
+                      <i class="fas fa-check mr-2" aria-hidden="true"></i>En
+                      ligne
                     </div>
                     <a
                       href="projects/climatserv17.html"
                       class="block bg-white/10 backdrop-blur-sm border-2 border-white text-white px-6 py-3 rounded-xl font-semibold hover:bg-white/20 transition-colors focus:outline-none focus:ring-2 focus:ring-white text-center"
                       aria-label="Voir la page ClimatServ17"
                     >
-                      <i class="fas fa-info-circle mr-2" aria-hidden="true"></i>Voir le projet
+                      <i class="fas fa-info-circle mr-2" aria-hidden="true"></i
+                      >Voir le projet
                     </a>
                   </div>
                 </div>
               </div>
               <div class="p-6 flex flex-col flex-grow">
-                <h3 class="text-xl font-bold text-gray-900 mb-2">ClimatServ17 - Services Climatiques</h3>
-                <p class="text-gray-600 mb-4 flex-grow">Application Next.js pour gérer interventions et contrats de maintenance en climatisation (dépannage, entretien, PAC).</p>
+                <h3 class="text-xl font-bold text-gray-900 mb-2">
+                  ClimatServ17 - Services Climatiques
+                </h3>
+                <p class="text-gray-600 mb-4 flex-grow">
+                  Application Next.js pour gérer interventions et contrats de
+                  maintenance en climatisation (dépannage, entretien, PAC).
+                </p>
                 <div class="flex flex-wrap gap-2 mb-4">
-                  <span class="px-3 py-1 bg-gray-200 text-gray-700 rounded-full text-sm font-medium">Next.js</span>
-                  <span class="px-3 py-1 bg-gray-200 text-gray-700 rounded-full text-sm font-medium">TypeScript</span>
-                  <span class="px-3 py-1 bg-gray-200 text-gray-700 rounded-full text-sm font-medium">Tailwind CSS</span>
+                  <span
+                    class="px-3 py-1 bg-gray-200 text-gray-700 rounded-full text-sm font-medium"
+                    >Next.js</span
+                  >
+                  <span
+                    class="px-3 py-1 bg-gray-200 text-gray-700 rounded-full text-sm font-medium"
+                    >TypeScript</span
+                  >
+                  <span
+                    class="px-3 py-1 bg-gray-200 text-gray-700 rounded-full text-sm font-medium"
+                    >Tailwind CSS</span
+                  >
                 </div>
-                <a href="projects/climatserv17.html" class="inline-block text-center bg-gray-800 text-white px-6 py-3 rounded-xl font-semibold hover:bg-gray-700 transition-colors focus:outline-none focus:ring-2 focus:ring-gray-500">
-                  <i class="fas fa-info-circle mr-2" aria-hidden="true"></i>Voir les détails
+                <a
+                  href="projects/climatserv17.html"
+                  class="inline-block text-center bg-gray-800 text-white px-6 py-3 rounded-xl font-semibold hover:bg-gray-700 transition-colors focus:outline-none focus:ring-2 focus:ring-gray-500"
+                >
+                  <i class="fas fa-info-circle mr-2" aria-hidden="true"></i>Voir
+                  les détails
                 </a>
               </div>
             </article>
@@ -1081,7 +1210,8 @@
               aria-hidden="true"
             ></div>
             <p class="text-gray-300 max-w-2xl mx-auto">
-              Une question, un projet ? N'hésitez pas à me contacter !
+              Une question ou un besoin de site web ? Demandez un devis, je
+              réponds sous 24 à 48h.
             </p>
           </div>
 
@@ -1270,11 +1400,11 @@
                 <button
                   type="submit"
                   class="group relative w-full bg-gradient-to-r from-gray-500 to-gray-700 hover:from-gray-600 hover:to-gray-800 text-white font-semibold px-8 py-4 rounded-xl transition-all duration-300 shadow-lg shadow-gray-500/50 hover:shadow-2xl hover:shadow-gray-600/50 transform hover:-translate-y-1 overflow-hidden focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-slate-900"
-                  aria-label="Envoyer le formulaire de contact"
+                  aria-label="Envoyer une demande de devis"
                 >
                   <span class="relative z-10 flex items-center justify-center">
                     <i class="fas fa-paper-plane mr-2" aria-hidden="true"></i
-                    >Envoyer le message
+                    >Envoyer la demande
                   </span>
                   <div
                     class="absolute inset-0 bg-white/20 transform -skew-x-12 -translate-x-full group-hover:translate-x-full transition-transform duration-700"
@@ -1304,10 +1434,15 @@
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="grid md:grid-cols-3 gap-8 mb-8">
           <div>
-            <h3 class="text-2xl font-bold mb-4">AT</h3>
+            <img
+              src="images/brand/logo-nom.png"
+              alt="Auvielno"
+              class="h-10 w-auto object-contain mb-4"
+              loading="lazy"
+            />
             <p class="text-gray-400">
-              Développeur web junior en quête de nouvelles opportunités pour
-              grandir et contribuer à des projets innovants.
+              Développeur web freelance en micro-entreprise, j'accompagne mes
+              clients sur la création et l'évolution de leurs projets web.
             </p>
           </div>
 
@@ -1333,6 +1468,13 @@
                   href="#projects"
                   class="text-gray-400 hover:text-white transition-colors"
                   >Projets</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#services"
+                  class="text-gray-400 hover:text-white transition-colors"
+                  >Services</a
                 >
               </li>
               <li>
@@ -1378,7 +1520,7 @@
 
         <div class="border-t border-gray-800 pt-8 text-center">
           <p class="text-gray-400 mb-2">
-            &copy; 2025 Aurélien Thébault. Tous droits réservés.
+            &copy; 2025 Auvielno. Tous droits réservés.
           </p>
           <p class="text-sm text-gray-500">
             <a
