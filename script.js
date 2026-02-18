@@ -351,8 +351,8 @@ document.addEventListener('DOMContentLoaded', () => {
     
     if (emailDisplay && emailLink) {
         // Parties de l'email divisées pour l'obfuscation
-        const user = ['aurel', '140783'].join('');
-        const domain = ['gmail', 'com'].join('.');
+        const user = ['cont', 'act'].join('');
+        const domain = ['auvielno', 'fr'].join('.');
         const email = user + '@' + domain;
         
         emailDisplay.textContent = email;
@@ -361,8 +361,8 @@ document.addEventListener('DOMContentLoaded', () => {
     }
     
     if (emailLinkHero) {
-        const user = ['aurel', '140783'].join('');
-        const domain = ['gmail', 'com'].join('.');
+        const user = ['cont', 'act'].join('');
+        const domain = ['auvielno', 'fr'].join('.');
         const email = user + '@' + domain;
         
         emailLinkHero.href = 'mailto:' + email;
