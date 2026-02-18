@@ -1,0 +1,10 @@
+Emplacements images APE La Croixille (formats conseillés: .webp, ratio 16:9)
+
+ape-01-home.webp
+ape-02-evenements.webp
+ape-03-actualites.webp
+ape-04-admin-dashboard.webp
+ape-05-admin-articles.webp
+ape-06-mobile.webp
+
+Placez vos captures dans ce dossier puis remplacez les slots dans projects/ape-la-croixille.html si besoin.
