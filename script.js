@@ -334,17 +334,7 @@ window.addEventListener('load', () => {
     document.body.classList.add('loaded');
 });
 
-// Affichage du numéro de téléphone anti-spam - obfusqué
-document.addEventListener('DOMContentLoaded', () => {
-    const phoneElement = document.getElementById('phone-number');
-    if (phoneElement) {
-        // Numéro de téléphone divisé pour l'obfuscation
-        const parts = ['06', '19', '63', '44', '14'];
-        const phone = parts.join(' ');
-        phoneElement.textContent = phone;
-    }
-    
-    // Affichage de l'email anti-spam - obfusqué
+// Affichage de l'email anti-spam - obfusqué
     const emailDisplay = document.getElementById('email-display');
     const emailLink = document.getElementById('email-link');
     const emailLinkHero = document.getElementById('email-link-hero');

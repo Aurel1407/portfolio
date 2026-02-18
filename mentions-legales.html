@@ -124,10 +124,7 @@
                 class="text-gray-400 hover:text-gray-300"
               ></a>
             </p>
-            <p class="mb-2">
-              <strong class="text-white">Téléphone :</strong>
-              <span id="phone-legal"></span>
-            </p>
+
           </section>
 
           <!-- Hébergeur -->
@@ -373,13 +370,6 @@
           emailRgpd.textContent = email;
         }
 
-        // Protection du téléphone
-        const phoneParts = ["06", "19", "63", "44", "14"];
-        const phone = phoneParts.join(" ");
-        const phoneElement = document.getElementById("phone-legal");
-        if (phoneElement) {
-          phoneElement.textContent = phone;
-        }
       });
     </script>
 
