@@ -32,7 +32,7 @@ Portfolio professionnel de développeur web full-stack. Design moderne, animatio
 │   ├── profile-photo.webp
 │   ├── zetoupanda-logo.svg
 │   └── shuno-logo.svg
-└── favicon.svg         # Icône du site
+└── images/brand/favicon.png  # Icône du site
 ```
 
 ## Installation Locale

@@ -3,4 +3,4 @@ User-agent: *
 Allow: /
 
 # Référence au sitemap
-Sitemap: https://aurel1407.github.io/portfolio/sitemap.xml
+Sitemap: https://auvielno.fr/sitemap.xml

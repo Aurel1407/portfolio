@@ -2,8 +2,8 @@
   "name": "Portfolio Aurélien Thébault",
   "short_name": "Portfolio AT",
   "description": "Portfolio professionnel d'Aurélien Thébault - Développeur Web Full-Stack spécialisé en React, Node.js et applications web modernes",
-  "start_url": "/portfolio/",
-  "scope": "/portfolio/",
+  "start_url": "/",
+  "scope": "/",
   "display": "standalone",
   "theme_color": "#1f2937",
   "background_color": "#111827",
@@ -12,9 +12,9 @@
   "dir": "ltr",
   "icons": [
     {
-      "src": "favicon.svg",
+      "src": "images/brand/favicon.png",
       "sizes": "any",
-      "type": "image/svg+xml",
+      "type": "image/png",
       "purpose": "any maskable"
     },
     {
