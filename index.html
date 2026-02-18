@@ -78,7 +78,9 @@
     <!-- Humans.txt -->
     <link rel="author" href="humans.txt" />
 
-    <title>Auvielno - Développeur Web Freelance en Mayenne | Devis Gratuit</title>
+    <title>
+      Auvielno - Développeur Web Freelance en Mayenne | Devis Gratuit
+    </title>
 
     <!-- CDN Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -107,11 +109,13 @@
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
-        "@type": "ProfessionalService",
+        "@type": ["ProfessionalService", "LocalBusiness"],
+        "@id": "https://auvielno.fr/#business",
         "name": "Auvielno",
         "legalName": "Aurélien Thébault",
         "description": "Développeur web freelance en micro-entreprise à Mayenne. Création de sites vitrines, refonte et maintenance web.",
         "url": "https://auvielno.fr/",
+        "logo": "https://auvielno.fr/images/brand/logo-nom.png",
         "email": "contact@auvielno.fr",
         "founder": {
           "@type": "Person",
@@ -122,24 +126,37 @@
           "https://github.com/Aurel1407",
           "https://www.linkedin.com/in/aurélien-thébault-244b84336"
         ],
-        "areaServed": {
-          "@type": "AdministrativeArea",
-          "name": "Mayenne"
-        },
+        "areaServed": [
+          {
+            "@type": "AdministrativeArea",
+            "name": "Mayenne"
+          },
+          {
+            "@type": "Country",
+            "name": "France"
+          }
+        ],
         "address": {
           "@type": "PostalAddress",
           "streetAddress": "5 Route de Laval",
           "postalCode": "53380",
           "addressLocality": "La Croixille",
+          "addressRegion": "Pays de la Loire",
           "addressCountry": "FR"
         },
+        "hasMap": "https://maps.google.com/?q=5+Route+de+Laval,+53380+La+Croixille",
         "contactPoint": {
           "@type": "ContactPoint",
           "contactType": "customer support",
           "email": "contact@auvielno.fr",
           "areaServed": "FR",
-          "availableLanguage": ["French"]
+          "availableLanguage": ["fr-FR"]
         },
+        "serviceType": [
+          "Création de site vitrine",
+          "Refonte de site web",
+          "Maintenance de site web"
+        ],
         "knowsAbout": [
           "Création de site vitrine",
           "Refonte web",
