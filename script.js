@@ -335,13 +335,14 @@ window.addEventListener('load', () => {
 });
 
 // Affichage de l'email anti-spam - obfusqué
+document.addEventListener('DOMContentLoaded', function() {
     const emailDisplay = document.getElementById('email-display');
     const emailLink = document.getElementById('email-link');
     const emailLinkHero = document.getElementById('email-link-hero');
     
     if (emailDisplay && emailLink) {
         // Parties de l'email divisées pour l'obfuscation
-        const user = ['cont', 'act'].join('');
+        const user = ['conta', 'ct'].join('');
         const domain = ['auvielno', 'fr'].join('.');
         const email = user + '@' + domain;
         
@@ -351,7 +352,7 @@ window.addEventListener('load', () => {
     }
     
     if (emailLinkHero) {
-        const user = ['cont', 'act'].join('');
+        const user = ['conta', 'ct'].join('');
         const domain = ['auvielno', 'fr'].join('.');
         const email = user + '@' + domain;
         
