@@ -454,6 +454,11 @@ console.log('%c💡 Astuce: Essayez le code Konami légendaire dans la console !
 document.addEventListener('DOMContentLoaded', () => {
     const form = document.getElementById('contact-form');
     const formStatus = document.getElementById('form-status');
+    const formspreeEndpoint = 'https://formspree.io/f/mvgnlgow';
+
+    if (form) {
+        form.setAttribute('action', formspreeEndpoint);
+    }
     
     if (form) {
         form.addEventListener('submit', async (e) => {
@@ -472,7 +477,7 @@ document.addEventListener('DOMContentLoaded', () => {
             
             try {
                 const formData = new FormData(form);
-                const response = await fetch(form.action, {
+                const response = await fetch(formspreeEndpoint, {
                     method: 'POST',
                     body: formData,
                     headers: {
@@ -500,7 +505,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 if (error.name === 'AbortError') {
                     return;
                 }
-                
+
                 // Erreur réseau
                 formStatus.className = 'block text-center p-4 rounded-xl bg-red-500/20 border border-red-500/50 text-red-300';
                 formStatus.innerHTML = '<i class="fas fa-exclamation-circle mr-2"></i>Erreur de connexion. Vérifiez votre connexion internet.';

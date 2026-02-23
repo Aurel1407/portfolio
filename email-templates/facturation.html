@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Facture - Auvielno</title>
+  </head>
+  <body style="margin:0;padding:0;background-color:#f8fafc;font-family:Inter,Arial,sans-serif;color:#0f172a;">
+    <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background-color:#f8fafc;padding:24px 12px;">
+      <tr>
+        <td align="center">
+          <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="max-width:640px;background:#ffffff;border:1px solid #e2e8f0;border-radius:16px;overflow:hidden;">
+            <tr>
+              <td style="background:linear-gradient(135deg,#0f172a 0%,#1e293b 100%);padding:24px;text-align:center;">
+                <img src="https://auvielno.fr/images/brand/logo-nom.png" alt="Auvielno" width="170" style="display:block;margin:0 auto 12px auto;max-width:170px;height:auto;" />
+                <p style="margin:0;color:#cbd5e1;font-size:14px;line-height:1.4;">Facturation de prestations web</p>
+              </td>
+            </tr>
+            <tr>
+              <td style="padding:28px 24px 12px 24px;">
+                <p style="margin:0 0 8px 0;font-size:14px;color:#64748b;">Bonjour {{client_name}},</p>
+                <h1 style="margin:0 0 16px 0;font-size:24px;line-height:1.3;color:#0f172a;">Votre facture {{invoice_number}}</h1>
+                <p style="margin:0 0 20px 0;font-size:15px;line-height:1.7;color:#334155;">
+                  Merci pour votre confiance. Voici les informations liées à votre facture.
+                </p>
+              </td>
+            </tr>
+            <tr>
+              <td style="padding:0 24px 20px 24px;">
+                <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background:#f8fafc;border:1px solid #e2e8f0;border-radius:12px;">
+                  <tr>
+                    <td style="padding:16px;">
+                      <p style="margin:0 0 8px 0;font-size:14px;color:#64748b;"><strong style="color:#334155;">N° facture :</strong> {{invoice_number}}</p>
+                      <p style="margin:0 0 8px 0;font-size:14px;color:#64748b;"><strong style="color:#334155;">Date d’émission :</strong> {{invoice_date}}</p>
+                      <p style="margin:0 0 8px 0;font-size:14px;color:#64748b;"><strong style="color:#334155;">Échéance :</strong> {{due_date}}</p>
+                      <p style="margin:0;font-size:14px;color:#64748b;"><strong style="color:#334155;">Total à régler :</strong> {{invoice_total}}</p>
+                    </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+            <tr>
+              <td style="padding:0 24px 24px 24px;">
+                <p style="margin:0 0 14px 0;font-size:14px;line-height:1.7;color:#334155;">
+                  <strong>Objet :</strong> {{invoice_description}}
+                </p>
+                <p style="margin:0 0 18px 0;font-size:14px;line-height:1.7;color:#334155;">
+                  Mode de règlement : <strong>{{payment_method}}</strong><br />
+                  Référence de paiement : <strong>{{payment_reference}}</strong>
+                </p>
+                <table role="presentation" cellpadding="0" cellspacing="0">
+                  <tr>
+                    <td style="background:#1e293b;border-radius:10px;">
+                      <a href="{{invoice_link}}" style="display:inline-block;padding:12px 18px;font-size:14px;font-weight:600;color:#ffffff;text-decoration:none;">Télécharger la facture</a>
+                    </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+            <tr>
+              <td style="padding:20px 24px;border-top:1px solid #e2e8f0;background:#f8fafc;">
+                <p style="margin:0 0 8px 0;font-size:13px;color:#64748b;">Aurélien Thébault · Auvielno</p>
+                <p style="margin:0 0 4px 0;font-size:13px;color:#64748b;">contact@auvielno.fr · 06 10 52 94 30</p>
+                <p style="margin:0;font-size:13px;color:#64748b;">SIRET : {{siret_number}}</p>
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+    </table>
+  </body>
+</html>

@@ -468,13 +468,48 @@
       >
         <i class="fas fa-times"></i>
       </button>
-      <img
-        id="lightbox-img"
-        src=""
-        alt=""
-        class="max-w-full max-h-full rounded-lg shadow-2xl"
-        onclick="event.stopPropagation()"
-      />
+      
+      <!-- Contrôles de zoom -->
+      <div class="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex gap-2 bg-black/60 p-2 rounded-lg">
+        <button
+          onclick="zoomOut()"
+          class="text-white px-3 py-2 hover:bg-white/20 rounded transition-colors"
+          aria-label="Dézoomer"
+        >
+          <i class="fas fa-minus"></i>
+        </button>
+        <span id="zoom-level" class="text-white px-3 py-2">100%</span>
+        <button
+          onclick="zoomIn()"
+          class="text-white px-3 py-2 hover:bg-white/20 rounded transition-colors"
+          aria-label="Zoomer"
+        >
+          <i class="fas fa-plus"></i>
+        </button>
+        <button
+          onclick="resetZoom()"
+          class="text-white px-3 py-2 hover:bg-white/20 rounded transition-colors"
+          aria-label="Réinitialiser le zoom"
+        >
+          <i class="fas fa-expand"></i>
+        </button>
+      </div>
+
+      <!-- Conteneur image avec scroll pour panoramique -->
+      <div
+        id="lightbox-container"
+        class="relative max-w-4xl max-h-full overflow-auto cursor-move"
+        onwheel="handleZoom(event)"
+      >
+        <img
+          id="lightbox-img"
+          src=""
+          alt=""
+          class="rounded-lg shadow-2xl select-none"
+          style="transform-origin: center center;"
+          onclick="event.stopPropagation()"
+        />
+      </div>
     </div>
 
     <!-- Footer -->
@@ -489,7 +524,13 @@
     <!-- JavaScript -->
     <script src="../script.js"></script>
     <script>
-      // Lightbox
+      // Variables pour le zoom
+      let currentZoom = 100;
+      const MIN_ZOOM = 100;
+      const MAX_ZOOM = 400;
+      const ZOOM_STEP = 25;
+
+      // Lightbox avec zoom
       function openLightbox(src, alt) {
         const lightbox = document.getElementById("lightbox");
         const lightboxImg = document.getElementById("lightbox-img");
@@ -498,6 +539,8 @@
         lightbox.classList.remove("hidden");
         lightbox.classList.add("flex");
         document.body.style.overflow = "hidden";
+        currentZoom = 100;
+        updateZoomDisplay();
       }
 
       function closeLightbox() {
@@ -505,6 +548,42 @@
         lightbox.classList.add("hidden");
         lightbox.classList.remove("flex");
         document.body.style.overflow = "auto";
+        currentZoom = 100;
+      }
+
+      function zoomIn() {
+        if (currentZoom < MAX_ZOOM) {
+          currentZoom += ZOOM_STEP;
+          updateZoomDisplay();
+        }
+      }
+
+      function zoomOut() {
+        if (currentZoom > MIN_ZOOM) {
+          currentZoom -= ZOOM_STEP;
+          updateZoomDisplay();
+        }
+      }
+
+      function resetZoom() {
+        currentZoom = 100;
+        updateZoomDisplay();
+      }
+
+      function updateZoomDisplay() {
+        const img = document.getElementById("lightbox-img");
+        const zoomLevel = document.getElementById("zoom-level");
+        img.style.transform = `scale(${currentZoom / 100})`;
+        zoomLevel.textContent = `${currentZoom}%`;
+      }
+
+      function handleZoom(event) {
+        event.preventDefault();
+        if (event.deltaY < 0) {
+          zoomIn();
+        } else {
+          zoomOut();
+        }
       }
 
       // Fermer avec la touche Échap

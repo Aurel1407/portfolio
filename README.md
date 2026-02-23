@@ -43,6 +43,7 @@ git clone https://github.com/Aurel1407/new_portfolio.git
 
 # Ouvrir index.html dans un navigateur
 # Ou utiliser un serveur local (Live Server, http-server, etc.)
+
 ```
 
 ## Déploiement

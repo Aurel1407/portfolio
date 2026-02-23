@@ -325,62 +325,50 @@
           <h2 class="text-3xl font-bold text-gray-900 mb-6">
             Captures d'écran
           </h2>
-          <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
-            <div
-              class="bg-gradient-to-br from-gray-50 to-gray-100 p-5 rounded-xl border-2 border-dashed border-gray-300"
-            >
-              <p class="text-sm font-semibold text-gray-700 mb-1">Slot 01</p>
-              <p class="text-xs text-gray-500">
-                images/projects/climatserv/gallery/climatserv17-01-home.webp
-              </p>
-            </div>
-            <div
-              class="bg-gradient-to-br from-gray-50 to-gray-100 p-5 rounded-xl border-2 border-dashed border-gray-300"
-            >
-              <p class="text-sm font-semibold text-gray-700 mb-1">Slot 02</p>
-              <p class="text-xs text-gray-500">
-                images/projects/climatserv/gallery/climatserv17-02-services.webp
-              </p>
-            </div>
-            <div
-              class="bg-gradient-to-br from-gray-50 to-gray-100 p-5 rounded-xl border-2 border-dashed border-gray-300"
-            >
-              <p class="text-sm font-semibold text-gray-700 mb-1">Slot 03</p>
-              <p class="text-xs text-gray-500">
-                images/projects/climatserv/gallery/climatserv17-03-rdv.webp
-              </p>
-            </div>
-            <div
-              class="bg-gradient-to-br from-gray-50 to-gray-100 p-5 rounded-xl border-2 border-dashed border-gray-300"
-            >
-              <p class="text-sm font-semibold text-gray-700 mb-1">Slot 04</p>
-              <p class="text-xs text-gray-500">
-                images/projects/climatserv/gallery/climatserv17-04-contact.webp
-              </p>
-            </div>
-            <div
-              class="bg-gradient-to-br from-gray-50 to-gray-100 p-5 rounded-xl border-2 border-dashed border-gray-300"
-            >
-              <p class="text-sm font-semibold text-gray-700 mb-1">Slot 05</p>
-              <p class="text-xs text-gray-500">
-                images/projects/climatserv/gallery/climatserv17-05-carte.webp
-              </p>
-            </div>
-            <div
-              class="bg-gradient-to-br from-gray-50 to-gray-100 p-5 rounded-xl border-2 border-dashed border-gray-300"
-            >
-              <p class="text-sm font-semibold text-gray-700 mb-1">Slot 06</p>
-              <p class="text-xs text-gray-500">
-                images/projects/climatserv/gallery/climatserv17-06-mobile.webp
-              </p>
-            </div>
+          <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <img
+              src="../images/projects/climatserv/gallery/climatserv17-01-home.webp"
+              alt="Accueil ClimatServ17"
+              class="rounded-xl shadow-lg w-full aspect-video object-cover object-top cursor-pointer hover:opacity-90 transition-opacity"
+              loading="lazy"
+              onclick="openLightbox(this.src, this.alt)"
+            />
+            <img
+              src="../images/projects/climatserv/gallery/climatserv17-02-services.webp"
+              alt="Services ClimatServ17"
+              class="rounded-xl shadow-lg w-full aspect-video object-cover object-top cursor-pointer hover:opacity-90 transition-opacity"
+              loading="lazy"
+              onclick="openLightbox(this.src, this.alt)"
+            />
+            <img
+              src="../images/projects/climatserv/gallery/climatserv17-03-rdv.webp"
+              alt="Prise de rendez-vous ClimatServ17"
+              class="rounded-xl shadow-lg w-full aspect-video object-cover object-top cursor-pointer hover:opacity-90 transition-opacity"
+              loading="lazy"
+              onclick="openLightbox(this.src, this.alt)"
+            />
+            <img
+              src="../images/projects/climatserv/gallery/climatserv17-04-contact.webp"
+              alt="Formulaire de contact ClimatServ17"
+              class="rounded-xl shadow-lg w-full aspect-video object-cover object-top cursor-pointer hover:opacity-90 transition-opacity"
+              loading="lazy"
+              onclick="openLightbox(this.src, this.alt)"
+            />
+            <img
+              src="../images/projects/climatserv/gallery/climatserv17-05-carte.webp"
+              alt="Carte ClimatServ17"
+              class="rounded-xl shadow-lg w-full aspect-video object-cover object-top cursor-pointer hover:opacity-90 transition-opacity"
+              loading="lazy"
+              onclick="openLightbox(this.src, this.alt)"
+            />
+            <img
+              src="../images/projects/climatserv/gallery/climatserv17-06-mobile.webp"
+              alt="Vue mobile ClimatServ17"
+              class="rounded-xl shadow-lg w-full aspect-video object-cover object-top cursor-pointer hover:opacity-90 transition-opacity"
+              loading="lazy"
+              onclick="openLightbox(this.src, this.alt)"
+            />
           </div>
-          <p class="text-sm text-gray-500 mt-4 italic">
-            <i class="fas fa-folder-open mr-1"></i>
-            Déposez vos captures dans
-            <strong>images/projects/climatserv/gallery/</strong> en gardant ces
-            noms de fichiers.
-          </p>
         </section>
 
         <!-- Liens du projet -->
@@ -418,13 +406,48 @@
       >
         <i class="fas fa-times"></i>
       </button>
-      <img
-        id="lightbox-img"
-        src=""
-        alt=""
-        class="max-w-full max-h-full rounded-lg shadow-2xl"
-        onclick="event.stopPropagation()"
-      />
+      
+      <!-- Contrôles de zoom -->
+      <div class="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex gap-2 bg-black/60 p-2 rounded-lg">
+        <button
+          onclick="zoomOut()"
+          class="text-white px-3 py-2 hover:bg-white/20 rounded transition-colors"
+          aria-label="Dézoomer"
+        >
+          <i class="fas fa-minus"></i>
+        </button>
+        <span id="zoom-level" class="text-white px-3 py-2">100%</span>
+        <button
+          onclick="zoomIn()"
+          class="text-white px-3 py-2 hover:bg-white/20 rounded transition-colors"
+          aria-label="Zoomer"
+        >
+          <i class="fas fa-plus"></i>
+        </button>
+        <button
+          onclick="resetZoom()"
+          class="text-white px-3 py-2 hover:bg-white/20 rounded transition-colors"
+          aria-label="Réinitialiser le zoom"
+        >
+          <i class="fas fa-expand"></i>
+        </button>
+      </div>
+
+      <!-- Conteneur image avec scroll pour panoramique -->
+      <div
+        id="lightbox-container"
+        class="relative max-w-4xl max-h-full overflow-auto cursor-move"
+        onwheel="handleZoom(event)"
+      >
+        <img
+          id="lightbox-img"
+          src=""
+          alt=""
+          class="rounded-lg shadow-2xl select-none"
+          style="transform-origin: center center;"
+          onclick="event.stopPropagation()"
+        />
+      </div>
     </div>
 
     <footer class="bg-slate-900 text-white py-8">
@@ -437,7 +460,13 @@
 
     <script src="../script.js"></script>
     <script>
-      // Lightbox
+      // Variables pour le zoom
+      let currentZoom = 100;
+      const MIN_ZOOM = 100;
+      const MAX_ZOOM = 400;
+      const ZOOM_STEP = 25;
+
+      // Lightbox avec zoom
       function openLightbox(src, alt) {
         const lightbox = document.getElementById("lightbox");
         const lightboxImg = document.getElementById("lightbox-img");
@@ -446,6 +475,8 @@
         lightbox.classList.remove("hidden");
         lightbox.classList.add("flex");
         document.body.style.overflow = "hidden";
+        currentZoom = 100;
+        updateZoomDisplay();
       }
 
       function closeLightbox() {
@@ -453,6 +484,42 @@
         lightbox.classList.add("hidden");
         lightbox.classList.remove("flex");
         document.body.style.overflow = "auto";
+        currentZoom = 100;
+      }
+
+      function zoomIn() {
+        if (currentZoom < MAX_ZOOM) {
+          currentZoom += ZOOM_STEP;
+          updateZoomDisplay();
+        }
+      }
+
+      function zoomOut() {
+        if (currentZoom > MIN_ZOOM) {
+          currentZoom -= ZOOM_STEP;
+          updateZoomDisplay();
+        }
+      }
+
+      function resetZoom() {
+        currentZoom = 100;
+        updateZoomDisplay();
+      }
+
+      function updateZoomDisplay() {
+        const img = document.getElementById("lightbox-img");
+        const zoomLevel = document.getElementById("zoom-level");
+        img.style.transform = `scale(${currentZoom / 100})`;
+        zoomLevel.textContent = `${currentZoom}%`;
+      }
+
+      function handleZoom(event) {
+        event.preventDefault();
+        if (event.deltaY < 0) {
+          zoomIn();
+        } else {
+          zoomOut();
+        }
       }
 
       // Fermer avec la touche Échap

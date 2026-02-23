@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Réponse à votre demande - Auvielno</title>
+  </head>
+  <body style="margin:0;padding:0;background-color:#f8fafc;font-family:Inter,Arial,sans-serif;color:#0f172a;">
+    <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background-color:#f8fafc;padding:24px 12px;">
+      <tr>
+        <td align="center">
+          <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="max-width:640px;background:#ffffff;border:1px solid #e2e8f0;border-radius:16px;overflow:hidden;">
+            <tr>
+              <td style="background:linear-gradient(135deg,#0f172a 0%,#1e293b 100%);padding:24px;text-align:center;">
+                <img src="https://auvielno.fr/images/brand/logo-nom.png" alt="Auvielno" width="170" style="display:block;margin:0 auto 12px auto;max-width:170px;height:auto;" />
+                <p style="margin:0;color:#cbd5e1;font-size:14px;line-height:1.4;">Réponse à votre demande envoyée sur auvielno.fr</p>
+              </td>
+            </tr>
+            <tr>
+              <td style="padding:28px 24px 12px 24px;">
+                <h1 style="margin:0 0 16px 0;font-size:24px;line-height:1.3;color:#0f172a;">Réponse à votre demande de contact</h1>
+                <p style="margin:0 0 20px 0;font-size:15px;line-height:1.7;color:#334155;">
+                  Bonjour {{sender_name}},
+                  <br /><br />
+                  Merci pour votre message. Voici notre retour concernant votre demande envoyée via le formulaire de contact.
+                </p>
+              </td>
+            </tr>
+            <tr>
+              <td style="padding:0 24px 20px 24px;">
+                <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background:#f8fafc;border:1px solid #e2e8f0;border-radius:12px;">
+                  <tr>
+                    <td style="padding:16px;">
+                      <p style="margin:0 0 8px 0;font-size:14px;color:#64748b;"><strong style="color:#334155;">Nom :</strong> {{sender_name}}</p>
+                      <p style="margin:0 0 8px 0;font-size:14px;color:#64748b;"><strong style="color:#334155;">Email :</strong> {{sender_email}}</p>
+                      <p style="margin:0 0 8px 0;font-size:14px;color:#64748b;"><strong style="color:#334155;">Téléphone :</strong> {{sender_phone}}</p>
+                      <p style="margin:0;font-size:14px;color:#64748b;"><strong style="color:#334155;">Sujet :</strong> {{contact_subject}}</p>
+                    </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+            <tr>
+              <td style="padding:0 24px 24px 24px;">
+                <p style="margin:0 0 10px 0;font-size:14px;color:#334155;"><strong>Notre réponse :</strong></p>
+                <div style="background:#f8fafc;border:1px solid #e2e8f0;border-radius:12px;padding:14px;font-size:14px;line-height:1.7;color:#334155;white-space:pre-line;">
+                  {{contact_message}}
+                </div>
+                <p style="margin:14px 0 0 0;font-size:13px;color:#64748b;">
+                  En réponse à votre demande reçue le {{received_at}} depuis {{source_url}}
+                </p>
+              </td>
+            </tr>
+            <tr>
+              <td style="padding:20px 24px;border-top:1px solid #e2e8f0;background:#f8fafc;">
+                <p style="margin:0;font-size:13px;color:#64748b;">Auvielno · contact@auvielno.fr · https://auvielno.fr</p>
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+    </table>
+  </body>
+</html>
