@@ -397,10 +397,10 @@
     <div
       id="lightbox"
       class="fixed inset-0 bg-black bg-opacity-90 z-50 hidden flex items-center justify-center p-4"
-      onclick="closeLightbox()"
+      onclick="if (event.target === this) closeLightbox()"
     >
       <button
-        class="absolute top-4 right-4 text-white text-4xl hover:text-gray-300 transition-colors"
+        class="absolute top-4 right-4 z-20 text-white text-4xl hover:text-gray-300 transition-colors"
         onclick="closeLightbox()"
         aria-label="Fermer"
       >
@@ -408,7 +408,7 @@
       </button>
       
       <!-- Contrôles de zoom -->
-      <div class="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex gap-2 bg-black/60 p-2 rounded-lg">
+      <div class="absolute bottom-4 left-1/2 z-10 transform -translate-x-1/2 flex gap-2 bg-black/60 p-2 rounded-lg" onclick="event.stopPropagation()">
         <button
           onclick="zoomOut()"
           class="text-white px-3 py-2 hover:bg-white/20 rounded transition-colors"
@@ -425,9 +425,9 @@
           <i class="fas fa-plus"></i>
         </button>
         <button
-          onclick="resetZoom()"
+          onclick="toggleFullscreen()"
           class="text-white px-3 py-2 hover:bg-white/20 rounded transition-colors"
-          aria-label="Réinitialiser le zoom"
+          aria-label="Basculer en plein écran"
         >
           <i class="fas fa-expand"></i>
         </button>
@@ -437,6 +437,7 @@
       <div
         id="lightbox-container"
         class="relative max-w-4xl max-h-full overflow-auto cursor-move"
+        onclick="event.stopPropagation()"
         onwheel="handleZoom(event)"
       >
         <img
@@ -462,21 +463,32 @@
     <script>
       // Variables pour le zoom
       let currentZoom = 100;
+      let baseImageWidth = 0;
       const MIN_ZOOM = 100;
       const MAX_ZOOM = 400;
       const ZOOM_STEP = 25;
+      let isDragging = false;
+      let dragStartX = 0;
+      let dragStartY = 0;
+      let scrollStartX = 0;
+      let scrollStartY = 0;
 
       // Lightbox avec zoom
       function openLightbox(src, alt) {
         const lightbox = document.getElementById("lightbox");
         const lightboxImg = document.getElementById("lightbox-img");
+        baseImageWidth = 0;
         lightboxImg.src = src;
         lightboxImg.alt = alt;
         lightbox.classList.remove("hidden");
         lightbox.classList.add("flex");
         document.body.style.overflow = "hidden";
         currentZoom = 100;
-        updateZoomDisplay();
+
+        lightboxImg.onload = () => {
+          baseImageWidth = lightboxImg.clientWidth || lightboxImg.naturalWidth;
+          updateZoomDisplay();
+        };
       }
 
       function closeLightbox() {
@@ -485,31 +497,78 @@
         lightbox.classList.remove("flex");
         document.body.style.overflow = "auto";
         currentZoom = 100;
+        baseImageWidth = 0;
+
+        if (document.fullscreenElement) {
+          document.exitFullscreen();
+        }
       }
 
       function zoomIn() {
         if (currentZoom < MAX_ZOOM) {
+          const previousZoom = currentZoom;
           currentZoom += ZOOM_STEP;
-          updateZoomDisplay();
+          updateZoomDisplay(previousZoom);
         }
       }
 
       function zoomOut() {
         if (currentZoom > MIN_ZOOM) {
+          const previousZoom = currentZoom;
           currentZoom -= ZOOM_STEP;
-          updateZoomDisplay();
+          updateZoomDisplay(previousZoom);
         }
       }
 
       function resetZoom() {
+        const previousZoom = currentZoom;
         currentZoom = 100;
-        updateZoomDisplay();
+        updateZoomDisplay(previousZoom);
       }
 
-      function updateZoomDisplay() {
+      function toggleFullscreen() {
+        const lightbox = document.getElementById("lightbox");
+
+        if (document.fullscreenElement) {
+          document.exitFullscreen();
+        } else {
+          lightbox.requestFullscreen();
+        }
+      }
+
+      function updateZoomDisplay(previousZoom = currentZoom) {
         const img = document.getElementById("lightbox-img");
         const zoomLevel = document.getElementById("zoom-level");
-        img.style.transform = `scale(${currentZoom / 100})`;
+        const container = document.getElementById("lightbox-container");
+
+        img.style.transform = "none";
+        img.style.height = "auto";
+
+        if (!baseImageWidth) {
+          baseImageWidth = img.clientWidth || img.naturalWidth;
+        }
+
+        const targetWidth = Math.max(
+          1,
+          Math.round((baseImageWidth * currentZoom) / 100)
+        );
+
+        const centerX = container.scrollLeft + container.clientWidth / 2;
+        const centerY = container.scrollTop + container.clientHeight / 2;
+        const zoomRatio = currentZoom / Math.max(previousZoom, 1);
+
+        img.style.width = `${targetWidth}px`;
+        img.style.maxWidth = "none";
+
+        container.scrollLeft = Math.max(
+          0,
+          centerX * zoomRatio - container.clientWidth / 2
+        );
+        container.scrollTop = Math.max(
+          0,
+          centerY * zoomRatio - container.clientHeight / 2
+        );
+
         zoomLevel.textContent = `${currentZoom}%`;
       }
 
@@ -522,12 +581,66 @@
         }
       }
 
+      function handleDragStart(event) {
+        const container = document.getElementById("lightbox-container");
+        const img = document.getElementById("lightbox-img");
+        
+        // Activer le drag seulement si l'image est plus grande que le conteneur (zoomée)
+        if (img.clientWidth <= container.clientWidth && img.clientHeight <= container.clientHeight) {
+          return;
+        }
+
+        isDragging = true;
+        dragStartX = event.clientX || event.touches[0].clientX;
+        dragStartY = event.clientY || event.touches[0].clientY;
+        scrollStartX = container.scrollLeft;
+        scrollStartY = container.scrollTop;
+        container.style.cursor = "grabbing";
+      }
+
+      function handleDragMove(event) {
+        if (!isDragging) return;
+        event.preventDefault();
+
+        const container = document.getElementById("lightbox-container");
+        const currentX = event.clientX || event.touches[0].clientX;
+        const currentY = event.clientY || event.touches[0].clientY;
+
+        const deltaX = dragStartX - currentX;
+        const deltaY = dragStartY - currentY;
+
+        container.scrollLeft = scrollStartX + deltaX;
+        container.scrollTop = scrollStartY + deltaY;
+      }
+
+      function handleDragEnd() {
+        isDragging = false;
+        const container = document.getElementById("lightbox-container");
+        container.style.cursor = "move";
+      }
+
       // Fermer avec la touche Échap
       document.addEventListener("keydown", function (e) {
         if (e.key === "Escape") {
+          if (document.fullscreenElement) {
+            return;
+          }
+
           closeLightbox();
         }
       });
+
+      // Event listeners pour le drag/pan sur le lightbox-container
+      const lightboxContainer = document.getElementById("lightbox-container");
+      lightboxContainer.addEventListener("mousedown", handleDragStart);
+      lightboxContainer.addEventListener("mousemove", handleDragMove);
+      lightboxContainer.addEventListener("mouseup", handleDragEnd);
+      lightboxContainer.addEventListener("mouseleave", handleDragEnd);
+      
+      // Touch events pour mobile/tablet
+      lightboxContainer.addEventListener("touchstart", handleDragStart);
+      lightboxContainer.addEventListener("touchmove", handleDragMove);
+      lightboxContainer.addEventListener("touchend", handleDragEnd);
     </script>
   </body>
 </html>
