@@ -1,10 +1,11 @@
 Emplacements images ClimatServ17 (formats conseillés: .webp, ratio 16:9)
+REORGANISÉ: Elimine doublon services, ajoute page climatisation
 
-climatserv17-01-home.webp
-climatserv17-02-services.webp
-climatserv17-03-rdv.webp
-climatserv17-04-contact.webp
-climatserv17-05-carte.webp
-climatserv17-06-mobile.webp
+climatserv17-01-home.webp (Accueil)
+climatserv17-02-service-pac.webp (Service PAC)
+climatserv17-03-service-clim.webp (Service climatisation)
+climatserv17-04-rdv.webp (Prise de rendez-vous)
+climatserv17-05-contact.webp (Formulaire de contact)
+climatserv17-06-mobile.webp (Vue mobile)
 
 Placez vos captures dans ce dossier puis remplacez les slots dans projects/climatserv17.html si besoin.
