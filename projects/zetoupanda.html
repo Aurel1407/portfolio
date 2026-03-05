@@ -468,9 +468,11 @@
       >
         <i class="fas fa-times"></i>
       </button>
-      
+
       <!-- Contrôles de zoom -->
-      <div class="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex gap-2 bg-black/60 p-2 rounded-lg">
+      <div
+        class="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex gap-2 bg-black/60 p-2 rounded-lg"
+      >
         <button
           onclick="zoomOut()"
           class="text-white px-3 py-2 hover:bg-white/20 rounded transition-colors"
@@ -506,7 +508,7 @@
           src=""
           alt=""
           class="rounded-lg shadow-2xl select-none"
-          style="transform-origin: center center; display: block; margin: auto;"
+          style="transform-origin: center center; display: block; margin: auto"
           onclick="event.stopPropagation()"
         />
       </div>
@@ -603,8 +605,8 @@
       // Gestion du drag/panoramique avec pointer events
       const container = document.getElementById("lightbox-container");
       const img = document.getElementById("lightbox-img");
-      
-      container.addEventListener("pointerdown", function(e) {
+
+      container.addEventListener("pointerdown", function (e) {
         isDragging = true;
         startX = e.clientX;
         startY = e.clientY;
@@ -612,32 +614,32 @@
         e.preventDefault();
       });
 
-      container.addEventListener("pointermove", function(e) {
+      container.addEventListener("pointermove", function (e) {
         if (!isDragging) return;
-        
+
         const moveX = e.clientX - startX;
         const moveY = e.clientY - startY;
-        
+
         offsetX += moveX / 2;
         offsetY += moveY / 2;
-        
+
         startX = e.clientX;
         startY = e.clientY;
-        
+
         updateZoomDisplay();
       });
 
-      container.addEventListener("pointerup", function() {
+      container.addEventListener("pointerup", function () {
         isDragging = false;
         container.style.cursor = "move";
       });
 
-      container.addEventListener("pointercancel", function() {
+      container.addEventListener("pointercancel", function () {
         isDragging = false;
         container.style.cursor = "move";
       });
 
-      container.addEventListener("pointerleave", function() {
+      container.addEventListener("pointerleave", function () {
         isDragging = false;
         container.style.cursor = "move";
       });
