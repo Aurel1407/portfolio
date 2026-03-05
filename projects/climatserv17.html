@@ -274,7 +274,8 @@
                 Formulaire sécurisé
               </h3>
               <p class="text-gray-600 text-sm">
-                Sécurité formulaire : honeypot, timing check, rate limiting et envoi automatique d'emails
+                Sécurité formulaire : honeypot, timing check, rate limiting et
+                envoi automatique d'emails
               </p>
             </div>
 
@@ -376,7 +377,7 @@
           <h2 class="text-3xl font-bold text-gray-900 mb-6">Liens</h2>
           <div class="flex flex-wrap gap-4">
             <a
-              href="https://climatserv17.netlify.app"
+              href="https://climatserv17.fr"
               target="_blank"
               rel="noopener noreferrer"
               class="inline-flex items-center px-6 py-3 bg-gray-900 text-white rounded-xl hover:bg-gray-800 transition-colors"
@@ -446,7 +447,7 @@
           src=""
           alt=""
           class="rounded-lg shadow-2xl select-none"
-          style="transform-origin: center center; display: block; margin: auto;"
+          style="transform-origin: center center; display: block; margin: auto"
           onclick="event.stopPropagation()"
         />
       </div>
@@ -541,8 +542,8 @@
       // Gestion du drag/panoramique avec pointer events
       const container = document.getElementById("lightbox-container");
       const img = document.getElementById("lightbox-img");
-      
-      container.addEventListener("pointerdown", function(e) {
+
+      container.addEventListener("pointerdown", function (e) {
         isDragging = true;
         startX = e.clientX;
         startY = e.clientY;
@@ -550,32 +551,32 @@
         e.preventDefault();
       });
 
-      container.addEventListener("pointermove", function(e) {
+      container.addEventListener("pointermove", function (e) {
         if (!isDragging) return;
-        
+
         const moveX = e.clientX - startX;
         const moveY = e.clientY - startY;
-        
+
         offsetX += moveX / 2;
         offsetY += moveY / 2;
-        
+
         startX = e.clientX;
         startY = e.clientY;
-        
+
         updateZoomDisplay();
       });
 
-      container.addEventListener("pointerup", function() {
+      container.addEventListener("pointerup", function () {
         isDragging = false;
         container.style.cursor = "move";
       });
 
-      container.addEventListener("pointercancel", function() {
+      container.addEventListener("pointercancel", function () {
         isDragging = false;
         container.style.cursor = "move";
       });
 
-      container.addEventListener("pointerleave", function() {
+      container.addEventListener("pointerleave", function () {
         isDragging = false;
         container.style.cursor = "move";
       });
