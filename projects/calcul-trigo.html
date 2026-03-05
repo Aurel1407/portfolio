@@ -1,0 +1,325 @@
+<!doctype html>
+<html lang="fr" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Calcul Trigo — Plateforme éducative interactive pour maîtriser la trigonométrie et identifier les côtés du triangle rectangle."
+    />
+    <meta name="author" content="Aurélien Thébault" />
+    <meta
+      name="keywords"
+      content="calcul-trigo, trigonométrie, triangle rectangle, éducation, apprentissage interactif, HTML, CSS, JavaScript"
+    />
+
+    <link
+      rel="canonical"
+      href="https://auvielno.fr/projects/calcul-trigo.html"
+    />
+
+    <meta property="og:type" content="article" />
+    <meta property="og:locale" content="fr_FR" />
+    <meta
+      property="og:title"
+      content="Calcul Trigo - Plateforme éducative de trigonométrie | Aurélien Thébault"
+    />
+    <meta
+      property="og:description"
+      content="Apprenez la trigonométrie de manière interactive : cours, exercices d'identification des côtés, et calculs trigonométriques avec visualisation SVG dynamique."
+    />
+    <meta
+      property="og:url"
+      content="https://auvielno.fr/projects/calcul-trigo.html"
+    />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="Calcul Trigo - Plateforme éducative de trigonométrie"
+    />
+    <meta
+      name="twitter:description"
+      content="Maîtrisez les côtés du triangle rectangle et la trigonométrie avec cours, exercices interactifs et visualisations dynamiques."
+    />
+
+    <title>
+      Calcul Trigo | Plateforme éducative de trigonométrie | Aurélien Thébault
+    </title>
+
+    <link rel="icon" type="image/png" href="../images/brand/favicon.png?v=3" />
+    <link rel="shortcut icon" href="../images/brand/favicon.png?v=3" />
+    <link rel="manifest" href="../manifest.json" />
+    <link rel="author" href="../humans.txt" />
+
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="../style.css" />
+  </head>
+
+  <body class="bg-gray-50 font-sans">
+    <nav
+      class="fixed top-0 w-full bg-slate-900/95 backdrop-blur-sm shadow-lg z-50"
+    >
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between items-center h-16">
+          <a
+            href="../index.html"
+            class="inline-flex items-center"
+            aria-label="Retour au portfolio"
+          >
+            <img
+              src="../images/brand/logo-nom.png"
+              alt="Auvielno"
+              class="h-10 w-auto object-contain"
+              loading="eager"
+            />
+          </a>
+          <a
+            href="../index.html#projects"
+            class="text-gray-300 hover:text-white"
+            ><i class="fas fa-arrow-left mr-2"></i>Retour aux projets</a
+          >
+        </div>
+      </div>
+    </nav>
+
+    <section
+      class="pt-24 pb-12 bg-gradient-to-br from-indigo-700 via-purple-700 to-purple-900"
+    >
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <div
+          class="inline-block p-4 bg-gradient-to-br from-indigo-800 via-purple-800 to-purple-900 rounded-2xl mb-6"
+        >
+          <img
+            src="../images/projects/calcul-trigo/favicon.svg"
+            alt="Logo Calcul Trigo"
+            class="w-32 h-32 object-contain"
+          />
+        </div>
+        <h1 class="text-4xl md:text-5xl font-bold text-white mb-4">
+          Calcul Trigo
+        </h1>
+        <p class="text-xl text-gray-100 mb-6">
+          Plateforme éducative interactive pour maîtriser la trigonométrie et
+          les triangles rectangles.
+        </p>
+        <div class="flex flex-wrap justify-center gap-3">
+          <span
+            class="px-4 py-2 bg-green-500/90 text-white rounded-xl font-semibold"
+            ><i class="fas fa-check-circle mr-2"></i>En ligne</span
+          >
+          <span class="px-4 py-2 bg-gray-700 text-white rounded-xl"
+            ><i class="fas fa-calendar mr-2"></i>2025</span
+          >
+          <span class="px-4 py-2 bg-amber-700 text-white rounded-xl"
+            ><i class="fas fa-graduation-cap mr-2"></i>Projet éducatif</span
+          >
+        </div>
+      </div>
+    </section>
+
+    <main class="py-12">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <!-- Description -->
+        <section class="mb-12">
+          <h2 class="text-3xl font-bold text-gray-900 mb-6">
+            À propos du projet
+          </h2>
+          <div class="prose prose-lg max-w-none">
+            <p class="text-gray-700 leading-relaxed mb-4">
+              Calcul Trigo est une plateforme éducative interactive conçue pour
+              faciliter l'apprentissage de la trigonométrie. Elle propose un
+              parcours pédagogique complet : des définitions illustrées aux
+              exercices pratiques, avec une visualisation dynamique des concepts
+              mathématiques.
+            </p>
+            <p class="text-gray-700 leading-relaxed">
+              Le projet utilise la programmation géométrique en SVG pour
+              générer des triangles aléatoires et offrir une expérience
+              d'apprentissage variée et engageante. Chaque exercice fournit un
+              feedback immédiat, renforçant la mémorisation des concepts clés
+              (hypoténuse, côté adjacent, côté opposé).
+            </p>
+          </div>
+        </section>
+
+        <!-- Fonctionnalités -->
+        <section class="mb-12">
+          <h2 class="text-3xl font-bold text-gray-900 mb-6">
+            Fonctionnalités clés
+          </h2>
+          <div class="grid md:grid-cols-2 gap-6">
+            <div class="bg-white p-6 rounded-xl shadow-md">
+              <div
+                class="w-12 h-12 bg-gray-200 rounded-lg flex items-center justify-center mb-4"
+              >
+                <i class="fas fa-book text-gray-700 text-xl"></i>
+              </div>
+              <h3 class="text-lg font-bold text-gray-900 mb-2">Cours interactif</h3>
+              <p class="text-gray-600 text-sm">
+                Définitions illustrées des trois côtés du triangle rectangle avec
+                explications visuelles et formules trigonométriques (sin, cos,
+                tan).
+              </p>
+            </div>
+            <div class="bg-white p-6 rounded-xl shadow-md">
+              <div
+                class="w-12 h-12 bg-gray-200 rounded-lg flex items-center justify-center mb-4"
+              >
+                <i class="fas fa-check text-gray-700 text-xl"></i>
+              </div>
+              <h3 class="text-lg font-bold text-gray-900 mb-2">
+                Exercices d'identification
+              </h3>
+              <p class="text-gray-600 text-sm">
+                Identifiez les côtés du triangle (adjacent, opposé, hypoténuse)
+                avec triangles générés aléatoirement à différentes orientations.
+              </p>
+            </div>
+            <div class="bg-white p-6 rounded-xl shadow-md">
+              <div
+                class="w-12 h-12 bg-gray-200 rounded-lg flex items-center justify-center mb-4"
+              >
+                <i class="fas fa-calculator text-gray-700 text-xl"></i>
+              </div>
+              <h3 class="text-lg font-bold text-gray-900 mb-2">
+                Calculs trigonométriques
+              </h3>
+              <p class="text-gray-600 text-sm">
+                Pratiquez les calculs de sinus, cosinus et tangente avec
+                validation des réponses et explications détaillées.
+              </p>
+            </div>
+            <div class="bg-white p-6 rounded-xl shadow-md">
+              <div
+                class="w-12 h-12 bg-gray-200 rounded-lg flex items-center justify-center mb-4"
+              >
+                <i class="fas fa-chart-line text-gray-700 text-xl"></i>
+              </div>
+              <h3 class="text-lg font-bold text-gray-900 mb-2">
+                Suivi de progression
+              </h3>
+              <p class="text-gray-600 text-sm">
+                Système de score, streak de bonnes réponses et statistiques pour
+                suivre votre progression.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <!-- Technologies -->
+        <section class="mb-12">
+          <h2 class="text-3xl font-bold text-gray-900 mb-6">
+            Technologies utilisées
+          </h2>
+          <div class="grid md:grid-cols-2 gap-6">
+            <div class="bg-white p-6 rounded-xl shadow-md">
+              <h3
+                class="text-xl font-bold text-gray-900 mb-4 flex items-center"
+              >
+                <i class="fas fa-laptop-code text-gray-600 mr-3"></i>
+                Frontend
+              </h3>
+              <div class="flex flex-wrap gap-2">
+                <span class="px-3 py-1 bg-gray-200 text-gray-700 rounded-full text-sm">HTML5</span>
+                <span class="px-3 py-1 bg-gray-200 text-gray-700 rounded-full text-sm">CSS3</span>
+                <span class="px-3 py-1 bg-gray-200 text-gray-700 rounded-full text-sm">JavaScript vanilla</span>
+                <span class="px-3 py-1 bg-gray-200 text-gray-700 rounded-full text-sm">SVG dynamique</span>
+              </div>
+            </div>
+
+            <div class="bg-white p-6 rounded-xl shadow-md">
+              <h3
+                class="text-xl font-bold text-gray-900 mb-4 flex items-center"
+              >
+                <i class="fas fa-server text-gray-600 mr-3"></i>
+                Déploiement
+              </h3>
+              <div class="flex flex-wrap gap-2">
+                <span class="px-3 py-1 bg-gray-200 text-gray-700 rounded-full text-sm">Vercel (production)</span>
+                <span class="px-3 py-1 bg-gray-200 text-gray-700 rounded-full text-sm">Repository Git privé</span>
+                <span class="px-3 py-1 bg-gray-200 text-gray-700 rounded-full text-sm">Déploiement continu</span>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Aspects Techniques -->
+        <section class="mb-12">
+          <h2 class="text-3xl font-bold text-gray-900 mb-6">
+            Points techniques intéressants
+          </h2>
+          <div class="grid md:grid-cols-1 gap-6">
+            <div class="bg-white p-6 rounded-xl shadow-md">
+              <h3 class="text-xl font-bold text-gray-900 mb-3">
+                Programmation géométrique en SVG
+              </h3>
+              <p class="text-gray-600 mb-3">
+                Classe Triangle avec génération procédurale d'orientations
+                aléatoires, calcul dynamique de côtés relatifs (adjacent,
+                opposé) et rendu SVG adaptatif. Les triangles se génèrent avec
+                4 orientations différentes pour éviter les patterns prévisibles.
+              </p>
+              <p class="text-gray-600">
+                Gestion des vecteurs pour les angles, détection automatique de
+                l'angle droit et labellisation dynamique des côtés en fonction
+                de l'angle étudié.
+              </p>
+            </div>
+
+            <div class="bg-white p-6 rounded-xl shadow-md">
+              <h3 class="text-xl font-bold text-gray-900 mb-3">
+                Système interactif de feedback
+              </h3>
+              <p class="text-gray-600">
+                Validation immédiate des réponses, système de score et streak
+                pour gamifier l'apprentissage. Animations et messages de
+                retour pour renforcer l'engagement et la motivation de
+                l'utilisateur.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <!-- Liens -->
+        <section class="mb-12">
+          <h2 class="text-3xl font-bold text-gray-900 mb-6">Liens</h2>
+          <div class="flex flex-wrap gap-4">
+            <a
+              href="https://calcul-trigo.vercel.app"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="inline-flex items-center px-6 py-3 bg-gray-900 text-white rounded-xl hover:bg-gray-800 transition-colors"
+            >
+              <i class="fas fa-external-link-alt mr-2"></i>
+              Visiter le site
+            </a>
+          </div>
+          <p class="text-sm text-gray-500 italic mt-4">
+            <i class="fas fa-info-circle mr-1"></i>
+            Projet personnel en ligne — Code source privé.
+          </p>
+        </section>
+      </div>
+    </main>
+
+    <footer class="bg-slate-900 text-white py-8">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <p class="text-gray-400">
+          &copy; 2025 Aurélien Thébault. Tous droits réservés.
+        </p>
+      </div>
+    </footer>
+
+    <script src="../script.js"></script>
+  </body>
+</html>
