@@ -471,48 +471,84 @@
           </h2>
           <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             <!-- Images du projet -->
-            <img
-              src="../images/projects/shuno/accueil.webp"
-              alt="Page d'accueil Shu-no"
-              class="rounded-xl shadow-lg w-full aspect-video object-cover object-top cursor-pointer hover:opacity-90 transition-opacity"
-              loading="lazy"
-              onclick="openLightbox(this.src, this.alt)"
-            />
-            <img
-              src="../images/projects/shuno/recherche-gites.webp"
-              alt="Recherche de gîtes Shu-no"
-              class="rounded-xl shadow-lg w-full aspect-video object-cover object-top cursor-pointer hover:opacity-90 transition-opacity"
-              loading="lazy"
-              onclick="openLightbox(this.src, this.alt)"
-            />
-            <img
-              src="../images/projects/shuno/details-gite.webp"
-              alt="Détails d'un gîte Shu-no"
-              class="rounded-xl shadow-lg w-full aspect-video object-cover object-top cursor-pointer hover:opacity-90 transition-opacity"
-              loading="lazy"
-              onclick="openLightbox(this.src, this.alt)"
-            />
-            <img
-              src="../images/projects/shuno/calendrier-reservation.webp"
-              alt="Calendrier de réservation Shu-no"
-              class="rounded-xl shadow-lg w-full aspect-video object-cover object-top cursor-pointer hover:opacity-90 transition-opacity"
-              loading="lazy"
-              onclick="openLightbox(this.src, this.alt)"
-            />
-            <img
-              src="../images/projects/shuno/dashboard-admin.webp"
-              alt="Dashboard Admin Shu-no"
-              class="rounded-xl shadow-lg w-full aspect-video object-cover object-top cursor-pointer hover:opacity-90 transition-opacity"
-              loading="lazy"
-              onclick="openLightbox(this.src, this.alt)"
-            />
-            <img
-              src="../images/projects/shuno/gestion-proprietes.webp"
-              alt="Gestion des propriétés Shu-no"
-              class="rounded-xl shadow-lg w-full aspect-video object-cover object-top cursor-pointer hover:opacity-90 transition-opacity"
-              loading="lazy"
-              onclick="openLightbox(this.src, this.alt)"
-            />
+            <button
+              type="button"
+              class="rounded-xl focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2"
+              onclick="openLightbox('../images/projects/shuno/accueil.webp', \"Page d'accueil Shu-no\")"
+              aria-label="Ouvrir la capture : Page d'accueil Shu-no"
+            >
+              <img
+                src="../images/projects/shuno/accueil.webp"
+                alt="Page d'accueil Shu-no"
+                class="rounded-xl shadow-lg w-full aspect-video object-cover object-top hover:opacity-90 transition-opacity"
+                loading="lazy"
+              />
+            </button>
+            <button
+              type="button"
+              class="rounded-xl focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2"
+              onclick="openLightbox('../images/projects/shuno/recherche-gites.webp', 'Recherche de gîtes Shu-no')"
+              aria-label="Ouvrir la capture : Recherche de gîtes Shu-no"
+            >
+              <img
+                src="../images/projects/shuno/recherche-gites.webp"
+                alt="Recherche de gîtes Shu-no"
+                class="rounded-xl shadow-lg w-full aspect-video object-cover object-top hover:opacity-90 transition-opacity"
+                loading="lazy"
+              />
+            </button>
+            <button
+              type="button"
+              class="rounded-xl focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2"
+              onclick="openLightbox('../images/projects/shuno/details-gite.webp', \"Détails d'un gîte Shu-no\")"
+              aria-label="Ouvrir la capture : Détails d'un gîte Shu-no"
+            >
+              <img
+                src="../images/projects/shuno/details-gite.webp"
+                alt="Détails d'un gîte Shu-no"
+                class="rounded-xl shadow-lg w-full aspect-video object-cover object-top hover:opacity-90 transition-opacity"
+                loading="lazy"
+              />
+            </button>
+            <button
+              type="button"
+              class="rounded-xl focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2"
+              onclick="openLightbox('../images/projects/shuno/calendrier-reservation.webp', 'Calendrier de réservation Shu-no')"
+              aria-label="Ouvrir la capture : Calendrier de réservation Shu-no"
+            >
+              <img
+                src="../images/projects/shuno/calendrier-reservation.webp"
+                alt="Calendrier de réservation Shu-no"
+                class="rounded-xl shadow-lg w-full aspect-video object-cover object-top hover:opacity-90 transition-opacity"
+                loading="lazy"
+              />
+            </button>
+            <button
+              type="button"
+              class="rounded-xl focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2"
+              onclick="openLightbox('../images/projects/shuno/dashboard-admin.webp', 'Dashboard Admin Shu-no')"
+              aria-label="Ouvrir la capture : Dashboard Admin Shu-no"
+            >
+              <img
+                src="../images/projects/shuno/dashboard-admin.webp"
+                alt="Dashboard Admin Shu-no"
+                class="rounded-xl shadow-lg w-full aspect-video object-cover object-top hover:opacity-90 transition-opacity"
+                loading="lazy"
+              />
+            </button>
+            <button
+              type="button"
+              class="rounded-xl focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2"
+              onclick="openLightbox('../images/projects/shuno/gestion-proprietes.webp', 'Gestion des propriétés Shu-no')"
+              aria-label="Ouvrir la capture : Gestion des propriétés Shu-no"
+            >
+              <img
+                src="../images/projects/shuno/gestion-proprietes.webp"
+                alt="Gestion des propriétés Shu-no"
+                class="rounded-xl shadow-lg w-full aspect-video object-cover object-top hover:opacity-90 transition-opacity"
+                loading="lazy"
+              />
+            </button>
           </div>
         </section>
 
@@ -540,13 +576,20 @@
     </main>
 
     <!-- Lightbox pour les images -->
-    <div
+    <dialog
       id="lightbox"
       class="fixed inset-0 bg-black bg-opacity-90 z-50 hidden flex items-center justify-center p-4"
-      onclick="closeLightbox()"
+      aria-label="Visionneuse d'image"
     >
       <button
-        class="absolute top-4 right-4 text-white text-4xl hover:text-gray-300 transition-colors"
+        type="button"
+        class="absolute inset-0 w-full h-full"
+        onclick="closeLightbox()"
+        aria-label="Fermer la visionneuse"
+      ></button>
+
+      <button
+        class="absolute top-4 right-4 z-10 text-white text-4xl hover:text-gray-300 transition-colors"
         onclick="closeLightbox()"
         aria-label="Fermer"
       >
@@ -555,7 +598,7 @@
 
       <!-- Contrôles de zoom -->
       <div
-        class="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex gap-2 bg-black/60 p-2 rounded-lg"
+        class="absolute bottom-4 left-1/2 z-10 transform -translate-x-1/2 flex gap-2 bg-black/60 p-2 rounded-lg"
       >
         <button
           onclick="zoomOut()"
@@ -593,10 +636,9 @@
           alt=""
           class="rounded-lg shadow-2xl select-none"
           style="transform-origin: center center; display: block; margin: auto"
-          onclick="event.stopPropagation()"
         />
       </div>
-    </div>
+    </dialog>
 
     <!-- Footer -->
     <footer class="bg-slate-900 text-white py-8">
