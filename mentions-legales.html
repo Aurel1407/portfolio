@@ -356,7 +356,7 @@
     <footer
       class="bg-slate-900/50 border-t border-white/10 py-8 text-center text-gray-400"
     >
-      <p>&copy; 2025 Auvielno. Tous droits réservés.</p>
+      <p>&copy; <span data-current-year>2025</span> Auvielno. Tous droits réservés.</p>
       <p class="mt-2">
         <a href="index.html" class="text-gray-400 hover:text-gray-300"
           >Retour au portfolio</a
@@ -367,6 +367,11 @@
     <!-- Protection anti-spam -->
     <script>
       document.addEventListener("DOMContentLoaded", function () {
+        const currentYear = new Date().getFullYear();
+        document.querySelectorAll("[data-current-year]").forEach(function (element) {
+          element.textContent = currentYear;
+        });
+
         // Protection de l'email
         const userParts = ["cont", "act"];
         const domainParts = ["auvielno", "fr"];

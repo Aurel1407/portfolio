@@ -2,12 +2,12 @@
 
 Portfolio professionnel de développeur web full-stack. Design moderne, animations fluides, accessibilité WCAG 2.1 AA.
 
-**[Voir le site en ligne](https://aurel1407.github.io/new_portfolio/)**
+**[Voir le site en ligne](https://auvielno.fr/)**
 
 ## Stack Technique
 
 - **Frontend** : HTML5, Tailwind CSS, JavaScript (Vanilla)
-- **Outils** : Git, GitHub Pages, Font Awesome, Google Fonts
+- **Outils** : Git, GitHub Pages (domaine personnalisé), Font Awesome, Google Fonts
 - **Accessibilité** : ARIA labels, navigation clavier, contraste optimisé
 - **Performance** : Images WebP, lazy loading, animations GPU
 
@@ -25,14 +25,15 @@ Portfolio professionnel de développeur web full-stack. Design moderne, animatio
 
 ```
 .
-├── index.html          # Page principale
-├── style.css           # Animations et styles personnalisés
-├── script.js           # Interactivité et protection anti-spam
-├── images/             # Ressources visuelles
-│   ├── profile-photo.webp
-│   ├── zetoupanda-logo.svg
-│   └── shuno-logo.svg
-└── images/brand/favicon.png  # Icône du site
+├── index.html
+├── projects/           # Pages projets détaillées
+├── images/
+├── style.css
+├── script.js
+├── sitemap.xml
+├── robots.txt
+├── manifest.json
+└── mentions-legales.html
 ```
 
 ## Installation Locale
@@ -48,7 +49,7 @@ git clone https://github.com/Aurel1407/new_portfolio.git
 
 ## Déploiement
 
-Le site est automatiquement déployé sur **GitHub Pages** depuis la branche `main` (répertoire root).
+Le site est déployé sur **GitHub Pages** avec domaine personnalisé **auvielno.fr**.
 
 Toute modification poussée sur `main` déclenche un redéploiement automatique.
 
@@ -57,6 +58,9 @@ Toute modification poussée sur `main` déclenche un redéploiement automatique.
 - **ZetouPanda** : Application e-commerce (React, TypeScript, Node.js, SQL)
 - **Shu-no** : Plateforme de réservation de gîtes (React, TypeScript, Node.js, Express)
 - **Portfolio** : Site personnel (HTML5, Tailwind CSS, JavaScript)
+- **ClimatServ17** : Site vitrine pour services climatiques
+- **APE La Croixille** : Site associatif full-stack
+- **Calcul Trigo** : Plateforme éducative de trigonométrie
 
 ## Optimisations Sécurité
 
@@ -72,4 +76,4 @@ Toute modification poussée sur `main` déclenche un redéploiement automatique.
 
 ## Licence
 
-© 2025 Aurélien Thébault - Tous droits réservés
+© 2026 Aurélien Thébault - Tous droits réservés

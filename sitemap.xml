@@ -1,39 +1,74 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://auvielno.fr/</loc>
-    <lastmod>2026-02-18</lastmod>
+    <lastmod>2026-03-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://auvielno.fr/images/profile-photo.jpg</image:loc>
+      <image:title>Photo de profil d'Aurélien Thébault - Développeur Web Freelance</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://auvielno.fr/images/brand/logo-nom.png</image:loc>
+      <image:title>Logo Auvielno - Développeur Web Freelance Mayenne</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://auvielno.fr/projects/zetoupanda.html</loc>
-    <lastmod>2026-02-17</lastmod>
+    <lastmod>2026-03-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://auvielno.fr/images/zetoupanda-logo.svg</image:loc>
+      <image:title>Logo ZetouPanda - Application E-commerce Full-Stack</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://auvielno.fr/projects/shuno.html</loc>
-    <lastmod>2026-02-17</lastmod>
+    <lastmod>2026-03-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://auvielno.fr/images/shuno-logo.svg</image:loc>
+      <image:title>Logo Shu-no - Plateforme de Réservation de Gîtes</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://auvielno.fr/projects/portfolio.html</loc>
-    <lastmod>2026-02-17</lastmod>
+    <lastmod>2026-03-14</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://auvielno.fr/projects/climatserv17.html</loc>
-    <lastmod>2026-02-17</lastmod>
+    <lastmod>2026-03-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://auvielno.fr/images/projects/climatserv/new-logo-seul-sans-fond.png</image:loc>
+      <image:title>Logo ClimatServ17 - Site Vitrine Services Climatiques</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://auvielno.fr/projects/ape-la-croixille.html</loc>
-    <lastmod>2026-02-18</lastmod>
+    <lastmod>2026-03-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://auvielno.fr/images/projects/ape/ape-logo-contour.png</image:loc>
+      <image:title>Logo APE La Croixille - Site Associatif Full-Stack</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://auvielno.fr/projects/calcul-trigo.html</loc>
+    <lastmod>2026-03-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://auvielno.fr/images/projects/calcul-trigo/favicon.svg</image:loc>
+      <image:title>Logo Calcul Trigo - Plateforme Éducative Trigonométrie</image:title>
+    </image:image>
   </url>
 </urlset>
