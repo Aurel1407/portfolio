@@ -58,9 +58,9 @@ Toute modification poussée sur `main` déclenche un redéploiement automatique.
 - **ZetouPanda** : Application e-commerce (React, TypeScript, Node.js, SQL)
 - **Shu-no** : Plateforme de réservation de gîtes (React, TypeScript, Node.js, Express)
 - **Portfolio** : Site personnel (HTML5, Tailwind CSS, JavaScript)
-- **ClimatServ17** : Site vitrine pour services climatiques
-- **APE La Croixille** : Site associatif full-stack
-- **Calcul Trigo** : Plateforme éducative de trigonométrie
+- **ClimatServ17** : Site vitrine (Next.js, TypeScript, Tailwind CSS, React)
+- **APE La Croixille** : Site associatif full-stack (React, TypeScript, Node.js, Express, PostgreSQL, Sequelize)
+- **Calcul Trigo** : Plateforme éducative de trigonométrie (HTML5, CSS3, JavaScript Vanilla)
 
 ## Optimisations Sécurité
 
