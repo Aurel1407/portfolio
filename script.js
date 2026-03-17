@@ -3,6 +3,13 @@ let activeIntervals = [];
 let activeTimeouts = [];
 let activeFetchControllers = [];
 
+document.addEventListener('DOMContentLoaded', () => {
+    const currentYear = new Date().getFullYear();
+    document.querySelectorAll('[data-current-year]').forEach(element => {
+        element.textContent = currentYear;
+    });
+});
+
 // Menu mobile
 const mobileMenuBtn = document.getElementById('mobile-menu-btn');
 const mobileMenu = document.getElementById('mobile-menu');

@@ -20,6 +20,16 @@
     <!-- Canonical URL -->
     <link rel="canonical" href="https://auvielno.fr/" />
 
+    <!-- Hreflang -->
+    <link rel="alternate" hreflang="fr" href="https://auvielno.fr/" />
+    <link rel="alternate" hreflang="x-default" href="https://auvielno.fr/" />
+
+    <!-- Géolocalisation (SEO local) -->
+    <meta name="geo.region" content="FR-53" />
+    <meta name="geo.placename" content="La Croixille, Mayenne" />
+    <meta name="geo.position" content="48.1333;-1.0333" />
+    <meta name="ICBM" content="48.1333, -1.0333" />
+
     <!-- Politique de sécurité du contenu -->
     <meta
       http-equiv="Content-Security-Policy"
@@ -46,7 +56,11 @@
       property="og:image:alt"
       content="Photo de profil d'Aurélien Thébault"
     />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:type" content="image/jpeg" />
     <meta property="og:site_name" content="Auvielno" />
+    <meta property="og:locale:alternate" content="fr_FR" />
 
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image" />
@@ -67,6 +81,12 @@
       content="Photo de profil d'Aurélien Thébault"
     />
 
+    <!-- Couleur du thème (barre du navigateur) -->
+    <meta name="theme-color" content="#0f172a" />
+    <meta name="msapplication-TileColor" content="#0f172a" />
+    <meta name="apple-mobile-web-app-title" content="Auvielno" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+
     <!-- Icônes de favori -->
     <link rel="icon" type="image/png" href="images/brand/favicon.png?v=3" />
     <link rel="shortcut icon" href="images/brand/favicon.png?v=3" />
@@ -81,6 +101,22 @@
     <title>
       Auvielno - Développeur Web Freelance en Mayenne | Devis Gratuit
     </title>
+
+    <!-- Préchargement de l'image LCP (photo profil) -->
+    <link
+      rel="preload"
+      as="image"
+      href="images/profile-photo.webp"
+      type="image/webp"
+      fetchpriority="high"
+    />
+
+    <!-- DNS Prefetch pour ressources externes -->
+    <link rel="dns-prefetch" href="https://cdn.tailwindcss.com" />
+    <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com" />
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
+    <link rel="dns-prefetch" href="https://fonts.gstatic.com" />
+    <link rel="dns-prefetch" href="https://formspree.io" />
 
     <!-- CDN Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -172,6 +208,177 @@
         ]
       }
     </script>
+
+    <!-- Schema.org WebSite avec SearchAction (Sitelinks Searchbox) -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "@id": "https://auvielno.fr/#website",
+        "url": "https://auvielno.fr/",
+        "name": "Auvielno - Développeur Web Freelance",
+        "description": "Portfolio d'Aurélien Thébault, développeur web full-stack freelance en Mayenne.",
+        "inLanguage": "fr-FR",
+        "publisher": {
+          "@id": "https://auvielno.fr/#business"
+        },
+        "potentialAction": {
+          "@type": "SearchAction",
+          "target": {
+            "@type": "EntryPoint",
+            "urlTemplate": "https://auvielno.fr/#projects?q={search_term_string}"
+          },
+          "query-input": "required name=search_term_string"
+        }
+      }
+    </script>
+
+    <!-- Schema.org Person -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "@id": "https://auvielno.fr/#person",
+        "name": "Aurélien Thébault",
+        "givenName": "Aurélien",
+        "familyName": "Thébault",
+        "jobTitle": "Développeur Web Freelance Full-Stack",
+        "url": "https://auvielno.fr/",
+        "image": "https://auvielno.fr/images/profile-photo.jpg",
+        "email": "contact@auvielno.fr",
+        "worksFor": {
+          "@id": "https://auvielno.fr/#business"
+        },
+        "knowsAbout": [
+          "Développement Web",
+          "React.js",
+          "Next.js",
+          "TypeScript",
+          "Node.js",
+          "PostgreSQL",
+          "Tailwind CSS",
+          "SEO technique",
+          "Accessibilité web"
+        ],
+        "sameAs": [
+          "https://github.com/Aurel1407",
+          "https://www.linkedin.com/in/aurélien-thébault-244b84336"
+        ],
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "La Croixille",
+          "addressRegion": "Pays de la Loire",
+          "postalCode": "53380",
+          "addressCountry": "FR"
+        }
+      }
+    </script>
+
+    <!-- Schema.org FAQPage -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Quel est votre tarif pour la création d'un site vitrine ?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Le tarif dépend de vos besoins spécifiques : nombre de pages, fonctionnalités, formulaires, animations... Je fournis systématiquement un devis personnalisé et gratuit sous 24 à 48h après échange sur votre projet."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Combien de temps faut-il pour créer un site web ?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Un site vitrine est généralement livré en 2 à 6 semaines, en fonction du nombre de pages et des fonctionnalités demandées. Un planning clair est défini dès le démarrage du projet."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Travaillez-vous uniquement en Mayenne ?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Non, je travaille à distance pour toute la France. Basé à La Croixille en Mayenne (53), je peux intervenir pour tout client, quelle que soit sa localisation. La majorité des échanges se fait par email, visioconférence ou téléphone."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Proposez-vous de la maintenance après la mise en ligne ?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Oui, je propose des prestations de maintenance web : corrections de bugs, mises à jour de contenu, évolutions fonctionnelles et suivi de la performance."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Mon site sera-t-il bien référencé sur Google (SEO) ?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Chaque site que je livre intègre les bases du SEO technique : balises méta optimisées, structure HTML sémantique, performances, accessibilité et données structurées Schema.org. Pour aller plus loin, je peux accompagner la stratégie de contenu et de mots-clés."
+            }
+          }
+        ]
+      }
+    </script>
+
+    <!-- Schema.org ItemList des projets -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "ItemList",
+        "name": "Projets web réalisés par Aurélien Thébault",
+        "description": "Sélection de projets web full-stack conçus pour des besoins métier concrets.",
+        "url": "https://auvielno.fr/#projects",
+        "numberOfItems": 6,
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "ZetouPanda - Application E-commerce",
+            "url": "https://auvielno.fr/projects/zetoupanda.html",
+            "description": "Application e-commerce full-stack avec catalogue, panier, commandes et gestion des utilisateurs."
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Shu-no - Plateforme de Réservation de Gîtes",
+            "url": "https://auvielno.fr/projects/shuno.html",
+            "description": "Plateforme full-stack de réservation de gîtes avec recherche avancée et gestion des disponibilités."
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Portfolio Professionnel Aurélien Thébault",
+            "url": "https://auvielno.fr/projects/portfolio.html",
+            "description": "Site vitrine personnel avec interface sobre, performances optimisées et accessibilité WCAG."
+          },
+          {
+            "@type": "ListItem",
+            "position": 4,
+            "name": "ClimatServ17 - Site Vitrine Services Climatiques",
+            "url": "https://auvielno.fr/projects/climatserv17.html",
+            "description": "Site vitrine Next.js pour un spécialiste en climatisation avec prise de rendez-vous et formulaire sécurisé."
+          },
+          {
+            "@type": "ListItem",
+            "position": 5,
+            "name": "APE La Croixille - Plateforme Associative",
+            "url": "https://auvielno.fr/projects/ape-la-croixille.html",
+            "description": "Plateforme full-stack pour l'Association des Parents d'Élèves de La Croixille avec espace administrateur."
+          },
+          {
+            "@type": "ListItem",
+            "position": 6,
+            "name": "Calcul Trigo - Apprentissage Interactif Trigonométrie",
+            "url": "https://auvielno.fr/projects/calcul-trigo.html",
+            "description": "Plateforme éducative interactive pour maîtriser la trigonométrie avec visualisations SVG dynamiques."
+          }
+        ]
+      }
+    </script>
   </head>
   <body class="bg-gray-50 font-sans">
     <!-- Lien pour passer au contenu principal (accessibilité) -->
@@ -231,6 +438,11 @@
                 href="#projects"
                 class="nav-link text-gray-300 hover:text-white transition-colors"
                 >Projets</a
+              >
+              <a
+                href="#faq"
+                class="nav-link text-gray-300 hover:text-white transition-colors"
+                >FAQ</a
               >
               <a
                 href="#contact"
@@ -300,6 +512,11 @@
             >Projets</a
           >
           <a
+            href="#faq"
+            class="block px-3 py-2 text-gray-300 hover:text-white hover:bg-slate-700 rounded-md"
+            >FAQ</a
+          >
+          <a
             href="#contact"
             class="block px-3 py-2 text-gray-300 hover:text-white hover:bg-slate-700 rounded-md"
             >Contact</a
@@ -343,7 +560,8 @@
                   src="images/profile-photo.jpg"
                   alt="Photo de profil d'Aurélien Thébault"
                   class="w-48 h-48 rounded-full mx-auto shadow-2xl border-2 border-white/20 backdrop-blur-sm relative z-10 object-cover"
-                  loading="lazy"
+                  loading="eager"
+                  fetchpriority="high"
                   width="192"
                   height="192"
                 />
@@ -1378,6 +1596,160 @@
         </div>
       </section>
 
+      <!-- Section FAQ -->
+      <section
+        id="faq"
+        class="py-20 bg-gradient-to-br from-slate-800 via-slate-900 to-slate-950 relative overflow-hidden"
+        aria-labelledby="faq-heading"
+      >
+        <div
+          class="absolute inset-0 bg-grid-pattern opacity-20"
+          aria-hidden="true"
+        ></div>
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <div class="text-center mb-16">
+            <h2 id="faq-heading" class="text-4xl font-bold text-white mb-4">
+              Questions fréquentes
+            </h2>
+            <div
+              class="w-20 h-1 bg-gradient-to-r from-gray-400 to-gray-600 mx-auto mb-4"
+              aria-hidden="true"
+            ></div>
+            <p class="text-gray-300 max-w-2xl mx-auto">
+              Les questions que l'on me pose le plus souvent avant de démarrer
+              un projet.
+            </p>
+          </div>
+
+          <div class="space-y-4" itemscope itemtype="https://schema.org/FAQPage">
+
+            <details
+              class="bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl overflow-hidden group"
+              itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"
+            >
+              <summary
+                class="flex justify-between items-center p-6 cursor-pointer list-none text-white font-semibold text-lg hover:bg-white/5 transition-colors"
+                itemprop="name"
+              >
+                Quel est votre tarif pour la création d'un site vitrine ?
+                <i class="fas fa-chevron-down text-gray-400 transition-transform group-open:rotate-180 flex-shrink-0 ml-4" aria-hidden="true"></i>
+              </summary>
+              <div
+                class="px-6 pb-6 text-gray-300"
+                itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"
+              >
+                <p itemprop="text">
+                  Le tarif dépend de vos besoins spécifiques : nombre de pages,
+                  fonctionnalités, formulaires, animations... Je fournis
+                  systématiquement un <strong>devis personnalisé et gratuit
+                  sous 24 à 48h</strong> après échange sur votre projet.
+                  N'hésitez pas à me contacter pour en discuter.
+                </p>
+              </div>
+            </details>
+
+            <details
+              class="bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl overflow-hidden group"
+              itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"
+            >
+              <summary
+                class="flex justify-between items-center p-6 cursor-pointer list-none text-white font-semibold text-lg hover:bg-white/5 transition-colors"
+                itemprop="name"
+              >
+                Combien de temps faut-il pour créer un site web ?
+                <i class="fas fa-chevron-down text-gray-400 transition-transform group-open:rotate-180 flex-shrink-0 ml-4" aria-hidden="true"></i>
+              </summary>
+              <div
+                class="px-6 pb-6 text-gray-300"
+                itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"
+              >
+                <p itemprop="text">
+                  Un site vitrine est généralement livré en <strong>2 à 6
+                  semaines</strong>, en fonction du nombre de pages et des
+                  fonctionnalités demandées. Un planning clair est défini dès
+                  le démarrage du projet.
+                </p>
+              </div>
+            </details>
+
+            <details
+              class="bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl overflow-hidden group"
+              itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"
+            >
+              <summary
+                class="flex justify-between items-center p-6 cursor-pointer list-none text-white font-semibold text-lg hover:bg-white/5 transition-colors"
+                itemprop="name"
+              >
+                Travaillez-vous uniquement en Mayenne ?
+                <i class="fas fa-chevron-down text-gray-400 transition-transform group-open:rotate-180 flex-shrink-0 ml-4" aria-hidden="true"></i>
+              </summary>
+              <div
+                class="px-6 pb-6 text-gray-300"
+                itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"
+              >
+                <p itemprop="text">
+                  Non, je travaille <strong>à distance pour toute la
+                  France</strong>. Basé à La Croixille en Mayenne (53), je
+                  peux intervenir pour tout client, quelle que soit sa
+                  localisation. La majorité des échanges se fait par email,
+                  visioconférence ou téléphone.
+                </p>
+              </div>
+            </details>
+
+            <details
+              class="bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl overflow-hidden group"
+              itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"
+            >
+              <summary
+                class="flex justify-between items-center p-6 cursor-pointer list-none text-white font-semibold text-lg hover:bg-white/5 transition-colors"
+                itemprop="name"
+              >
+                Proposez-vous de la maintenance après la mise en ligne ?
+                <i class="fas fa-chevron-down text-gray-400 transition-transform group-open:rotate-180 flex-shrink-0 ml-4" aria-hidden="true"></i>
+              </summary>
+              <div
+                class="px-6 pb-6 text-gray-300"
+                itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"
+              >
+                <p itemprop="text">
+                  Oui, je propose des <strong>prestations de maintenance
+                  web</strong> : corrections de bugs, mises à jour de contenu,
+                  évolutions fonctionnelles et suivi de la performance. Cela
+                  garantit un site fiable, rapide et sécurisé dans la durée.
+                </p>
+              </div>
+            </details>
+
+            <details
+              class="bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl overflow-hidden group"
+              itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"
+            >
+              <summary
+                class="flex justify-between items-center p-6 cursor-pointer list-none text-white font-semibold text-lg hover:bg-white/5 transition-colors"
+                itemprop="name"
+              >
+                Mon site sera-t-il bien référencé sur Google (SEO) ?
+                <i class="fas fa-chevron-down text-gray-400 transition-transform group-open:rotate-180 flex-shrink-0 ml-4" aria-hidden="true"></i>
+              </summary>
+              <div
+                class="px-6 pb-6 text-gray-300"
+                itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"
+              >
+                <p itemprop="text">
+                  Chaque site que je livre intègre les <strong>bases du SEO
+                  technique</strong> : balises méta optimisées, structure HTML
+                  sémantique, performances, accessibilité et données structurées
+                  Schema.org. Pour aller plus loin, je peux accompagner la
+                  stratégie de contenu et de mots-clés.
+                </p>
+              </div>
+            </details>
+
+          </div>
+        </div>
+      </section>
+
       <!-- Section Contact -->
       <section
         id="contact"
@@ -1650,6 +2022,13 @@
               </li>
               <li>
                 <a
+                  href="#faq"
+                  class="text-gray-400 hover:text-white transition-colors"
+                  >FAQ</a
+                >
+              </li>
+              <li>
+                <a
                   href="#contact"
                   class="text-gray-400 hover:text-white transition-colors"
                   >Contact</a
@@ -1691,7 +2070,7 @@
 
         <div class="border-t border-gray-800 pt-8 text-center">
           <p class="text-gray-400 mb-2">
-            &copy; 2025 Auvielno. Tous droits réservés.
+            &copy; <span data-current-year>2026</span> Auvielno. Tous droits réservés.
           </p>
           <p class="text-sm text-gray-500">
             <a
