@@ -361,15 +361,13 @@ html {
 }
 
 /* Espace réservé pour la barre de CTAs collants sur mobile */
-body {
-  padding-bottom: 8rem;
-}
-
-@media (min-width: 768px) {
-  body {
-    padding-bottom: 0;
+@media (max-width: 767px) {
+  body > footer:last-of-type,
+  footer[role="contentinfo"] {
+    padding-bottom: 8rem;
   }
 }
+
 
 .sticky-cta-group {
   position: fixed;
