@@ -247,15 +247,9 @@ if (typingText) {
     typeWriter();
 }
 
-// Effet parallaxe pour la section hero
-window.addEventListener('scroll', () => {
-    const scrolled = window.pageYOffset;
-    const parallax = document.querySelector('#home');
-    
-    if (parallax && scrolled < parallax.offsetHeight) {
-        parallax.style.transform = `translateY(${scrolled * 0.5}px)`;
-    }
-});
+// Effet parallaxe désactivé sur #home
+// Le déplacement de toute la section Hero au scroll causait un recouvrement
+// visuel des sections suivantes.
 
 // Effet de curseur 
 const cursor = document.createElement('div');
@@ -391,14 +385,14 @@ document.addEventListener('DOMContentLoaded', function() {
     
     if (linkedinLinkHero) {
         // Profil LinkedIn divisé pour l'obfuscation
-        const profile = ['aurélien-thébault-', '244b84336'].join('');
+        const profile = ['aurelien-thebault-', '244b84336'].join('');
         const linkedinUrl = 'https://www.linkedin.com/in/' + profile;
         
         linkedinLinkHero.href = linkedinUrl;
     }
     
     if (linkedinLinkContact) {
-        const profile = ['aurélien-thébault-', '244b84336'].join('');
+        const profile = ['aurelien-thebault-', '244b84336'].join('');
         const linkedinUrl = 'https://www.linkedin.com/in/' + profile;
         
         linkedinLinkContact.href = linkedinUrl;

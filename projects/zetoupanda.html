@@ -5,7 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="ZetouPanda - Application e-commerce développée en React et Node.js"
+      content="Étude de cas ZetouPanda : projet e-commerce orienté conversion pour attirer plus de visiteurs et transformer les visites en actions."
+    />
+    <meta
+      name="robots"
+      content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"
     />
     <meta name="author" content="Aurélien Thébault" />
     <meta
@@ -21,11 +25,11 @@
     <meta property="og:locale" content="fr_FR" />
     <meta
       property="og:title"
-      content="ZetouPanda - Projet E-commerce | Aurélien Thébault"
+      content="ZetouPanda - Étude de cas e-commerce orienté conversion | Auvielno"
     />
     <meta
       property="og:description"
-      content="Application e-commerce complète développée en React, TypeScript et Node.js avec gestion de panier, authentification et paiement sécurisé"
+      content="Projet e-commerce conçu pour attirer, rassurer et convertir : parcours panier simplifié et expérience utilisateur optimisée."
     />
     <meta
       property="og:url"
@@ -35,14 +39,14 @@
       property="og:image"
       content="https://auvielno.fr/images/zetoupanda-logo.svg"
     />
-    <meta property="og:site_name" content="Aurélien Thébault Portfolio" />
+    <meta property="og:site_name" content="Auvielno" />
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary" />
-    <meta name="twitter:title" content="ZetouPanda - Projet E-commerce" />
+    <meta name="twitter:title" content="ZetouPanda - Étude de cas e-commerce conversion" />
     <meta
       name="twitter:description"
-      content="Application e-commerce développée en React et Node.js"
+      content="Comment un parcours e-commerce plus clair peut améliorer la conversion et l'image de marque."
     />
     <meta
       name="twitter:image"
@@ -50,7 +54,7 @@
     />
 
     <title>
-      ZetouPanda | E-commerce React, Node.js, MySQL | Aurélien Thébault
+      ZetouPanda | Étude de cas e-commerce orienté conversion | Auvielno
     </title>
 
     <!-- Favicon -->
@@ -90,18 +94,32 @@
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
-        "@type": "SoftwareApplication",
-        "name": "ZetouPanda",
-        "applicationCategory": "E-commerce Application",
-        "description": "Application e-commerce complète développée en React, TypeScript et Node.js avec gestion de panier, authentification et paiement sécurisé",
-        "operatingSystem": "Web",
+        "@type": "Article",
+        "headline": "ZetouPanda - Étude de cas e-commerce orienté conversion",
+        "description": "Étude de cas e-commerce : attirer plus de visiteurs et améliorer la conversion avec un parcours d'achat plus clair.",
+        "mainEntityOfPage": {
+          "@type": "WebPage",
+          "@id": "https://auvielno.fr/projects/zetoupanda.html"
+        },
+        "inLanguage": "fr-FR",
         "author": {
           "@type": "Person",
           "name": "Aurélien Thébault",
           "url": "https://auvielno.fr/"
         },
-        "programmingLanguage": ["React", "TypeScript", "Node.js", "JavaScript"],
-        "datePublished": "2024"
+        "publisher": {
+          "@type": "Organization",
+          "name": "Auvielno",
+          "url": "https://auvielno.fr/",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://auvielno.fr/images/brand/logo-nom.png"
+          }
+        },
+        "datePublished": "2024",
+        "dateModified": "2026-05-05",
+        "url": "https://auvielno.fr/projects/zetoupanda.html",
+        "image": "https://auvielno.fr/images/zetoupanda-logo.svg"
       }
     </script>
 
@@ -178,10 +196,10 @@
             />
           </div>
           <h1 class="text-4xl md:text-5xl font-bold text-white mb-4">
-            ZetouPanda
+            Un projet e-commerce conçu pour attirer, rassurer et convertir
           </h1>
           <p class="text-xl text-gray-300 mb-6">
-            Plateforme e-commerce full-stack orientée expérience client
+            Projet e-commerce pensé pour attirer, rassurer et convertir.
           </p>
           <div class="flex flex-wrap justify-center gap-3">
             <span
@@ -192,6 +210,17 @@
             <span class="px-4 py-2 bg-gray-700 text-white rounded-xl">
               <i class="fas fa-calendar mr-2"></i>2025
             </span>
+            <span class="px-4 py-2 bg-blue-600 text-white rounded-xl">📍 Plus de visibilité</span>
+            <span class="px-4 py-2 bg-indigo-600 text-white rounded-xl">📞 Plus d'actions</span>
+            <span class="px-4 py-2 bg-cyan-600 text-white rounded-xl">📨 Plus de conversion</span>
+          </div>
+          <div class="mt-8">
+            <a
+              href="#resultats"
+              class="inline-flex items-center px-6 py-3 bg-white text-slate-900 rounded-xl font-semibold hover:bg-gray-100 transition-colors"
+            >
+              <i class="fas fa-chart-line mr-2"></i>Voir le résultat du projet
+            </a>
           </div>
         </div>
       </div>
@@ -200,31 +229,83 @@
     <!-- Contenu principal -->
     <main class="py-12">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <section class="mb-12">
+          <h2 class="text-3xl font-bold text-gray-900 mb-6">
+            Problème initial
+          </h2>
+          <div class="bg-white p-6 rounded-xl shadow-md">
+            <ul class="text-gray-700 space-y-3">
+              <li>❌ Parcours d'achat trop complexe</li>
+              <li>❌ Friction entre visite et panier</li>
+              <li>❌ Difficulté à transformer le trafic en ventes</li>
+            </ul>
+          </div>
+        </section>
+
         <!-- Description -->
         <section class="mb-12">
           <h2 class="text-3xl font-bold text-gray-900 mb-6">
-            À propos du projet
+            Solution mise en place
           </h2>
           <div class="prose prose-lg max-w-none">
             <p class="text-gray-700 leading-relaxed mb-4">
               ZetouPanda est une application e-commerce complète développée pour
               consolider mes compétences full-stack. Le projet associe une
-              interface client moderne à un back-office dédié à la gestion
+              interface client claire à un back-office dédié à la gestion
               opérationnelle.
             </p>
             <p class="text-gray-700 leading-relaxed">
               L'application couvre l'ensemble du cycle de vente : navigation du
               catalogue, panier, commande et administration des produits, des
-              utilisateurs et des commandes.
+              utilisateurs et des commandes, avec une logique orientée
+              conversion.
             </p>
           </div>
         </section>
 
-        <!-- Technologies utilisées -->
-        <section class="mb-12">
+        <section id="resultats" class="mb-12">
           <h2 class="text-3xl font-bold text-gray-900 mb-6">
-            Technologies utilisées
+            Avant / Après : impact business
           </h2>
+          <div class="grid md:grid-cols-3 gap-6 mb-4">
+            <article class="bg-white p-6 rounded-xl shadow-md">
+              <h3 class="text-lg font-bold text-gray-900 mb-2">Avant</h3>
+              <ul class="text-gray-600 text-sm space-y-2">
+                <li>- Parcours de vente peu fluide</li>
+                <li>- Navigation moins orientée conversion</li>
+                <li>- Friction sur mobile</li>
+              </ul>
+            </article>
+            <article class="bg-white p-6 rounded-xl shadow-md">
+              <h3 class="text-lg font-bold text-gray-900 mb-2">Solution</h3>
+              <ul class="text-gray-600 text-sm space-y-2">
+                <li>- Parcours panier simplifié</li>
+                <li>- Tunnel d'achat clair</li>
+                <li>- Expérience mobile optimisée</li>
+              </ul>
+            </article>
+            <article class="bg-white p-6 rounded-xl shadow-md">
+              <h3 class="text-lg font-bold text-gray-900 mb-2">Après</h3>
+              <ul class="text-gray-600 text-sm space-y-2">
+                <li>- +10% à +35% de conversion estimée selon trafic</li>
+                <li>- Plus d'actions panier/commande</li>
+                <li>- Image de marque renforcée</li>
+              </ul>
+            </article>
+          </div>
+          <p class="text-sm text-gray-500 italic">
+            Estimations indicatives selon trafic, qualité de l'offre et concurrence.
+          </p>
+        </section>
+
+        <!-- Technologies utilisées -->
+        <section class="mb-12 hidden" aria-hidden="true">
+          <h2 class="text-3xl font-bold text-gray-900 mb-6">
+            Détails techniques (pour transparence)
+          </h2>
+          <p class="text-gray-600 mb-4">
+            La technique sert un objectif simple : améliorer la conversion.
+          </p>
           <div class="grid md:grid-cols-2 gap-6">
             <!-- Frontend -->
             <div class="bg-white p-6 rounded-xl shadow-md">
@@ -490,6 +571,31 @@
             <i class="fas fa-info-circle mr-1"></i>
             Projet personnel en développement — Code source privé.
           </p>
+        </section>
+
+        <section class="mb-12">
+          <div class="bg-slate-900 text-white rounded-2xl p-8 text-center">
+            <h2 class="text-2xl font-bold mb-3">
+              Vous voulez le même type de résultat pour votre activité ?
+            </h2>
+            <p class="text-gray-300 mb-6">
+              Je vous propose un plan clair pour transformer votre site en outil de demandes de devis.
+            </p>
+            <div class="flex flex-wrap justify-center gap-4">
+              <a
+                href="../index.html#contact"
+                class="inline-flex items-center px-6 py-3 bg-white text-slate-900 rounded-xl font-semibold hover:bg-gray-100 transition-colors"
+              >
+                <i class="fas fa-phone mr-2"></i>Obtenir plus de clients avec un site
+              </a>
+              <a
+                href="../index.html#offer"
+                class="inline-flex items-center px-6 py-3 bg-slate-700 text-white rounded-xl font-semibold hover:bg-slate-600 transition-colors"
+              >
+                <i class="fas fa-rocket mr-2"></i>Générer des demandes de devis
+              </a>
+            </div>
+          </div>
         </section>
       </div>
     </main>
