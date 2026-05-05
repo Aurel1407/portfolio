@@ -5,7 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="Shu-no - Plateforme de réservation de gîtes en Bretagne développée en React et Node.js"
+      content="Étude de cas Shu-no : plateforme orientée conversion pour améliorer les réservations et renforcer l'image professionnelle des hébergements."
+    />
+    <meta
+      name="robots"
+      content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"
     />
     <meta name="author" content="Aurélien Thébault" />
     <meta
@@ -21,25 +25,25 @@
     <meta property="og:locale" content="fr_FR" />
     <meta
       property="og:title"
-      content="Shu-no - Plateforme de Réservation | Aurélien Thébault"
+      content="Shu-no - Étude de cas conversion réservation | Auvielno"
     />
     <meta
       property="og:description"
-      content="Plateforme de réservation de gîtes en Bretagne développée en React, TypeScript, Node.js et Express avec système de réservation et gestion utilisateurs"
+      content="Projet pensé pour convertir plus de visiteurs en réservations : parcours clair, recherche rapide et interface mobile fluide."
     />
     <meta property="og:url" content="https://auvielno.fr/projects/shuno.html" />
     <meta
       property="og:image"
       content="https://auvielno.fr/images/shuno-logo.svg"
     />
-    <meta property="og:site_name" content="Aurélien Thébault Portfolio" />
+    <meta property="og:site_name" content="Auvielno" />
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary" />
-    <meta name="twitter:title" content="Shu-no - Plateforme de Réservation" />
+    <meta name="twitter:title" content="Shu-no - Étude de cas conversion réservation" />
     <meta
       name="twitter:description"
-      content="Plateforme de réservation de gîtes développée en React et Node.js"
+      content="Cas concret : améliorer la conversion des visiteurs en réservations grâce à un parcours optimisé."
     />
     <meta
       name="twitter:image"
@@ -47,8 +51,7 @@
     />
 
     <title>
-      Shu-no | Plateforme Réservation React, Node.js, PostgreSQL | Aurélien
-      Thébault
+      Shu-no | Étude de cas conversion réservation | Auvielno
     </title>
 
     <!-- Favicon -->
@@ -88,24 +91,32 @@
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
-        "@type": "SoftwareApplication",
-        "name": "Shu-no",
-        "applicationCategory": "Booking Platform",
-        "description": "Plateforme de réservation de gîtes en Bretagne développée en React, TypeScript, Node.js et Express avec système de réservation et gestion utilisateurs",
-        "operatingSystem": "Web",
+        "@type": "Article",
+        "headline": "Shu-no - Étude de cas conversion réservation",
+        "description": "Étude de cas d'une plateforme conçue pour améliorer la conversion des visiteurs en réservations.",
+        "mainEntityOfPage": {
+          "@type": "WebPage",
+          "@id": "https://auvielno.fr/projects/shuno.html"
+        },
+        "inLanguage": "fr-FR",
         "author": {
           "@type": "Person",
           "name": "Aurélien Thébault",
           "url": "https://auvielno.fr/"
         },
-        "programmingLanguage": [
-          "React",
-          "TypeScript",
-          "Node.js",
-          "Express",
-          "JavaScript"
-        ],
-        "datePublished": "2024"
+        "publisher": {
+          "@type": "Organization",
+          "name": "Auvielno",
+          "url": "https://auvielno.fr/",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://auvielno.fr/images/brand/logo-nom.png"
+          }
+        },
+        "datePublished": "2024",
+        "dateModified": "2026-05-05",
+        "url": "https://auvielno.fr/projects/shuno.html",
+        "image": "https://auvielno.fr/images/shuno-logo.svg"
       }
     </script>
     <!-- Breadcrumb Schema -->
@@ -182,7 +193,7 @@
           </div>
           <h1 class="text-4xl md:text-5xl font-bold text-white mb-4">Shu-no</h1>
           <p class="text-xl text-gray-300 mb-6">
-            Plateforme de réservation de gîtes pensée pour les acteurs locaux
+            Plateforme pensée pour convertir plus de visiteurs en réservations.
           </p>
           <div class="flex flex-wrap justify-center gap-3">
             <span
@@ -193,6 +204,17 @@
             <span class="px-4 py-2 bg-gray-700 text-white rounded-xl">
               <i class="fas fa-calendar mr-2"></i>2025
             </span>
+            <span class="px-4 py-2 bg-blue-600 text-white rounded-xl">📍 Visibilité locale</span>
+            <span class="px-4 py-2 bg-indigo-600 text-white rounded-xl">📞 Plus de demandes</span>
+            <span class="px-4 py-2 bg-cyan-600 text-white rounded-xl">📨 Plus de réservations</span>
+          </div>
+          <div class="mt-8">
+            <a
+              href="#resultats"
+              class="inline-flex items-center px-6 py-3 bg-white text-slate-900 rounded-xl font-semibold hover:bg-gray-100 transition-colors"
+            >
+              <i class="fas fa-chart-line mr-2"></i>Voir le résultat du projet
+            </a>
           </div>
         </div>
       </div>
@@ -201,10 +223,23 @@
     <!-- Contenu principal -->
     <main class="py-12">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <section class="mb-12">
+          <h2 class="text-3xl font-bold text-gray-900 mb-6">
+            Problème initial
+          </h2>
+          <div class="bg-white p-6 rounded-xl shadow-md">
+            <ul class="text-gray-700 space-y-3">
+              <li>❌ Visiteurs qui hésitent et quittent vite</li>
+              <li>❌ Parcours de réservation parfois confus</li>
+              <li>❌ Difficulté à convertir le trafic en réservations</li>
+            </ul>
+          </div>
+        </section>
+
         <!-- Description -->
         <section class="mb-12">
           <h2 class="text-3xl font-bold text-gray-900 mb-6">
-            À propos du projet
+            Solution mise en place
           </h2>
           <div class="prose prose-lg max-w-none">
             <p class="text-gray-700 leading-relaxed mb-4">
@@ -215,29 +250,61 @@
               Brest.
             </p>
             <p class="text-gray-700 leading-relaxed mb-4">
-              L'application utilise une architecture full-stack moderne avec
-              TypeScript côté frontend (React 18) et backend (Node.js/Express),
-              garantissant une base de code robuste et maintenable. Une
-              attention particulière a été portée aux performances, à
-              l'accessibilité et à la sécurité tout au long du développement.
+              L'application a été pensée pour réduire la friction entre la
+              visite et la réservation : recherche rapide, parcours clair et
+              informations rassurantes pour passer à l'action.
             </p>
             <p class="text-gray-700 leading-relaxed">
-              Développé selon la méthodologie Agile sur 10 semaines (5 sprints
-              de 2 semaines) dans le cadre de mon stage DWWM, le projet continue
-              d'évoluer avec l'ajout de nouvelles fonctionnalités et
-              l'amélioration continue de l'expérience utilisateur.
-              L'infrastructure de déploiement a été mise en place pour la
-              soutenance de stage, et le projet est actuellement en phase
-              d'amélioration et d'ajout de fonctionnalités avancées.
+              Le projet continue d'évoluer avec l'ajout de fonctionnalités,
+              en conservant une logique simple : mieux convertir les visiteurs
+              en réservations confirmées.
             </p>
           </div>
         </section>
 
-        <!-- Technologies utilisées -->
-        <section class="mb-12">
+        <section id="resultats" class="mb-12">
           <h2 class="text-3xl font-bold text-gray-900 mb-6">
-            Technologies utilisées
+            Avant / Après : impact business
           </h2>
+          <div class="grid md:grid-cols-3 gap-6 mb-4">
+            <article class="bg-white p-6 rounded-xl shadow-md">
+              <h3 class="text-lg font-bold text-gray-900 mb-2">Avant</h3>
+              <ul class="text-gray-600 text-sm space-y-2">
+                <li>- Visiteurs qui hésitent et quittent vite</li>
+                <li>- Parcours de réservation parfois confus</li>
+                <li>- Difficulté à rassurer en quelques secondes</li>
+              </ul>
+            </article>
+            <article class="bg-white p-6 rounded-xl shadow-md">
+              <h3 class="text-lg font-bold text-gray-900 mb-2">Solution</h3>
+              <ul class="text-gray-600 text-sm space-y-2">
+                <li>- Recherche et disponibilité en temps réel</li>
+                <li>- Navigation claire sur mobile et desktop</li>
+                <li>- Interface orientée prise de décision</li>
+              </ul>
+            </article>
+            <article class="bg-white p-6 rounded-xl shadow-md">
+              <h3 class="text-lg font-bold text-gray-900 mb-2">Après</h3>
+              <ul class="text-gray-600 text-sm space-y-2">
+                <li>- +15% à +40% de conversion visite → réservation (estimé)</li>
+                <li>- Image plus professionnelle</li>
+                <li>- Plus de réservations qualifiées</li>
+              </ul>
+            </article>
+          </div>
+          <p class="text-sm text-gray-500 italic">
+            Estimations indicatives selon trafic, concurrence et saisonnalité.
+          </p>
+        </section>
+
+        <!-- Technologies utilisées -->
+        <section class="mb-12 hidden" aria-hidden="true">
+          <h2 class="text-3xl font-bold text-gray-900 mb-6">
+            Détails techniques (pour transparence)
+          </h2>
+          <p class="text-gray-600 mb-4">
+            L'objectif principal reste la conversion, la technique vient en support.
+          </p>
           <div class="grid md:grid-cols-2 gap-6">
             <!-- Frontend -->
             <div class="bg-white p-6 rounded-xl shadow-md">
@@ -571,6 +638,31 @@
             Projet en développement actif — Déploiement en production après
             finalisation.
           </p>
+        </section>
+
+        <section class="mb-12">
+          <div class="bg-slate-900 text-white rounded-2xl p-8 text-center">
+            <h2 class="text-2xl font-bold mb-3">
+              Vous voulez le même type de résultat pour votre activité ?
+            </h2>
+            <p class="text-gray-300 mb-6">
+              Je vous propose un plan clair pour transformer votre site en outil de demandes de devis.
+            </p>
+            <div class="flex flex-wrap justify-center gap-4">
+              <a
+                href="../index.html#contact"
+                class="inline-flex items-center px-6 py-3 bg-white text-slate-900 rounded-xl font-semibold hover:bg-gray-100 transition-colors"
+              >
+                <i class="fas fa-phone mr-2"></i>Obtenir plus de clients avec un site
+              </a>
+              <a
+                href="../index.html#offer"
+                class="inline-flex items-center px-6 py-3 bg-slate-700 text-white rounded-xl font-semibold hover:bg-slate-600 transition-colors"
+              >
+                <i class="fas fa-rocket mr-2"></i>Générer des demandes de devis
+              </a>
+            </div>
+          </div>
         </section>
       </div>
     </main>

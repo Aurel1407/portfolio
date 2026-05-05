@@ -5,7 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="APE La Croixille — site web associatif full-stack avec espace administrateur, gestion des événements et des actualités, développé gratuitement pour l'Association des Parents d'Élèves."
+      content="Étude de cas APE La Croixille : création d'un site local clair pour améliorer la visibilité, centraliser l'information et faciliter les contacts."
+    />
+    <meta
+      name="robots"
+      content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"
     />
     <meta name="author" content="Aurélien Thébault" />
     <meta
@@ -22,11 +26,11 @@
     <meta property="og:locale" content="fr_FR" />
     <meta
       property="og:title"
-      content="APE La Croixille - Site associatif full-stack | Aurélien Thébault"
+      content="APE La Croixille - Étude de cas visibilité locale | Auvielno"
     />
     <meta
       property="og:description"
-      content="Plateforme web pour l'Association des Parents d'Élèves de La Croixille : actualités, événements et espace administrateur sécurisé."
+      content="Projet web local orienté clarté et contact : information centralisée, accès mobile et image plus professionnelle."
     />
     <meta
       property="og:url"
@@ -36,24 +40,23 @@
       property="og:image"
       content="https://auvielno.fr/images/projects/ape/ape-logo-contour.png"
     />
+    <meta property="og:site_name" content="Auvielno" />
 
     <meta name="twitter:card" content="summary_large_image" />
     <meta
       name="twitter:title"
-      content="APE La Croixille - Site associatif full-stack"
+      content="APE La Croixille - Étude de cas web local"
     />
     <meta
       name="twitter:description"
-      content="Site web moderne pour une APE : gestion d'actualités, événements et administration sécurisée."
+      content="Cas concret : un site local mieux structuré pour renforcer visibilité et prises de contact."
     />
     <meta
       name="twitter:image"
       content="https://auvielno.fr/images/projects/ape/ape-logo-contour.png"
     />
 
-    <title>
-      APE La Croixille | Site associatif full-stack | Aurélien Thébault
-    </title>
+    <title>APE La Croixille | Étude de cas visibilité locale | Auvielno</title>
 
     <link rel="icon" type="image/png" href="../images/brand/favicon.png?v=3" />
     <link rel="shortcut icon" href="../images/brand/favicon.png?v=3" />
@@ -75,18 +78,30 @@
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
-        "@type": "SoftwareApplication",
-        "name": "APE La Croixille",
-        "applicationCategory": "Association Website",
-        "description": "Plateforme web full-stack pour l'Association des Parents d'\u00c9l\u00e8ves de La Croixille : actualit\u00e9s, \u00e9v\u00e9nements et espace administrateur s\u00e9curis\u00e9.",
-        "operatingSystem": "Web",
+        "@type": "Article",
+        "headline": "APE La Croixille - Étude de cas visibilité locale",
+        "description": "Étude de cas d'un site local conçu pour centraliser l'information et faciliter les prises de contact.",
+        "mainEntityOfPage": {
+          "@type": "WebPage",
+          "@id": "https://auvielno.fr/projects/ape-la-croixille.html"
+        },
+        "inLanguage": "fr-FR",
         "author": {
           "@type": "Person",
-          "name": "Aur\u00e9lien Th\u00e9bault",
+          "name": "Aurélien Thébault",
           "url": "https://auvielno.fr/"
         },
-        "programmingLanguage": ["React", "TypeScript", "Node.js", "PostgreSQL", "Sequelize"],
+        "publisher": {
+          "@type": "Organization",
+          "name": "Auvielno",
+          "url": "https://auvielno.fr/",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://auvielno.fr/images/brand/logo-nom.png"
+          }
+        },
         "datePublished": "2025",
+        "dateModified": "2026-05-05",
         "url": "https://auvielno.fr/projects/ape-la-croixille.html",
         "image": "https://auvielno.fr/images/projects/ape/ape-logo-contour.png"
       }
@@ -162,11 +177,11 @@
           />
         </div>
         <h1 class="text-4xl md:text-5xl font-bold text-white mb-4">
-          APE La Croixille
+          Un site local qui améliore la visibilité et facilite les contacts
         </h1>
         <p class="text-xl text-gray-300 mb-6">
-          Plateforme associative full-stack avec administration sécurisée et
-          contenus éditoriaux.
+          Cas concret : transformer une communication dispersée en présence en
+          ligne claire et utile.
         </p>
         <div class="flex flex-wrap justify-center gap-3">
           <span
@@ -180,6 +195,14 @@
             ><i class="fas fa-universal-access mr-2"></i>WCAG 2.1 AA</span
           >
         </div>
+        <div class="mt-8">
+          <a
+            href="#resultats"
+            class="inline-flex items-center px-6 py-3 bg-white text-slate-900 rounded-xl font-semibold hover:bg-gray-100 transition-colors"
+          >
+            <i class="fas fa-chart-line mr-2"></i>Voir le résultat du projet
+          </a>
+        </div>
       </div>
     </section>
 
@@ -187,29 +210,83 @@
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <section class="mb-12">
           <h2 class="text-3xl font-bold text-gray-900 mb-6">
-            À propos du projet
+            Problème initial
+          </h2>
+          <div class="bg-white p-6 rounded-xl shadow-md">
+            <ul class="text-gray-700 space-y-3">
+              <li>❌ Informations dispersées entre plusieurs canaux</li>
+              <li>❌ Faible visibilité locale sur le web</li>
+              <li>❌ Peu de points de contact simples pour les familles</li>
+            </ul>
+          </div>
+        </section>
+
+        <section class="mb-12">
+          <h2 class="text-3xl font-bold text-gray-900 mb-6">
+            Solution mise en place
           </h2>
           <div class="prose prose-lg max-w-none">
             <p class="text-gray-700 leading-relaxed mb-4">
               APE La Croixille est une plateforme web réalisée pour
               l'Association des Parents d'Élèves de l'école de La Croixille.
-              Elle centralise les informations utiles aux familles :
-              actualités, événements et communication.
+              Elle centralise les informations utiles aux familles : actualités,
+              événements et communication locale.
             </p>
             <p class="text-gray-700 leading-relaxed">
               Le projet inclut une partie publique claire et mobile-first, ainsi
               qu'un espace administrateur sécurisé permettant la gestion
               complète des contenus (articles, événements, catégories) avec une
               attention particulière portée à l'accessibilité. Le site a été
-              réalisé bénévolement pour soutenir l'association locale.
+              réalisé bénévolement pour soutenir la visibilité de l'association.
             </p>
           </div>
         </section>
 
         <section class="mb-12">
-          <h2 class="text-3xl font-bold text-gray-900 mb-6">
-            Technologies utilisées
+          <h2 id="resultats" class="text-3xl font-bold text-gray-900 mb-6">
+            Avant / Après : impact business
           </h2>
+          <div class="grid md:grid-cols-3 gap-6 mb-4">
+            <article class="bg-white p-6 rounded-xl shadow-md">
+              <h3 class="text-lg font-bold text-gray-900 mb-2">Avant</h3>
+              <ul class="text-gray-600 text-sm space-y-2">
+                <li>- Visibilité locale limitée</li>
+                <li>- Informations peu centralisées</li>
+                <li>- Peu d'interactions en ligne</li>
+              </ul>
+            </article>
+            <article class="bg-white p-6 rounded-xl shadow-md">
+              <h3 class="text-lg font-bold text-gray-900 mb-2">Solution</h3>
+              <ul class="text-gray-600 text-sm space-y-2">
+                <li>- Site clair et mobile-first</li>
+                <li>- Espace admin simple à utiliser</li>
+                <li>- Contenus organisés par rubriques</li>
+              </ul>
+            </article>
+            <article class="bg-white p-6 rounded-xl shadow-md">
+              <h3 class="text-lg font-bold text-gray-900 mb-2">Après</h3>
+              <ul class="text-gray-600 text-sm space-y-2">
+                <li>
+                  - +20% à +50% de consultations des pages locales (estimé)
+                </li>
+                <li>- Communication plus régulière et plus visible</li>
+                <li>- Plus de prises de contact via le site</li>
+              </ul>
+            </article>
+          </div>
+          <p class="text-sm text-gray-500 italic">
+            Estimations indicatives selon trafic local, saisonnalité et
+            fréquence de publication.
+          </p>
+        </section>
+
+        <section class="mb-12 hidden" aria-hidden="true">
+          <h2 class="text-3xl font-bold text-gray-900 mb-6">
+            Détails techniques (pour transparence)
+          </h2>
+          <p class="text-gray-600 mb-4">
+            Le cœur du projet reste business : améliorer visibilité et contact.
+          </p>
           <div class="grid md:grid-cols-2 gap-6">
             <div class="bg-white p-6 rounded-xl shadow-md">
               <h3
@@ -457,13 +534,41 @@
             Projet associatif développé gratuitement — Code source privé.
           </p>
         </section>
+
+        <section class="mb-12">
+          <div class="bg-slate-900 text-white rounded-2xl p-8 text-center">
+            <h2 class="text-2xl font-bold mb-3">
+              Vous voulez le même type de résultat pour votre activité ?
+            </h2>
+            <p class="text-gray-300 mb-6">
+              Je vous propose un plan clair pour transformer votre site en outil
+              de demandes de devis.
+            </p>
+            <div class="flex flex-wrap justify-center gap-4">
+              <a
+                href="../index.html#contact"
+                class="inline-flex items-center px-6 py-3 bg-white text-slate-900 rounded-xl font-semibold hover:bg-gray-100 transition-colors"
+              >
+                <i class="fas fa-phone mr-2"></i>Obtenir plus de clients avec un
+                site
+              </a>
+              <a
+                href="../index.html#offer"
+                class="inline-flex items-center px-6 py-3 bg-slate-700 text-white rounded-xl font-semibold hover:bg-slate-600 transition-colors"
+              >
+                <i class="fas fa-rocket mr-2"></i>Générer des demandes de devis
+              </a>
+            </div>
+          </div>
+        </section>
       </div>
     </main>
 
     <footer class="bg-slate-900 text-white py-8">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <p class="text-gray-400">
-          &copy; <span data-current-year>2025</span> Aurélien Thébault. Tous droits réservés.
+          &copy; <span data-current-year>2025</span> Aurélien Thébault. Tous
+          droits réservés.
         </p>
       </div>
     </footer>
