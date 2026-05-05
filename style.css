@@ -46,6 +46,23 @@
   }
 }
 
+:root {
+  --navbar-offset: 80px;
+}
+
+html {
+  scroll-padding-top: var(--navbar-offset);
+}
+
+body {
+  padding-top: var(--navbar-offset);
+}
+
+section[id],
+main[id] {
+  scroll-margin-top: var(--navbar-offset);
+}
+
 /* Blobs animés - Optimisation GPU */
 .blob {
   will-change: transform;
@@ -656,6 +673,11 @@ textarea:focus-visible {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+}
+
+#projects .project-proof-card {
+  min-height: auto !important;
+  height: auto;
 }
 
 @media (max-width: 767px) {

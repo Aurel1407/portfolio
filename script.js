@@ -13,12 +13,28 @@ document.addEventListener('DOMContentLoaded', () => {
 // Menu mobile
 const mobileMenuBtn = document.getElementById('mobile-menu-btn');
 const mobileMenu = document.getElementById('mobile-menu');
+const navbar = document.getElementById('navbar');
+
+const getNavbarOffset = () => {
+    if (!navbar) {
+        return 80;
+    }
+
+    return Math.ceil(navbar.getBoundingClientRect().height + 12);
+};
+
+const updateNavbarOffset = () => {
+    document.documentElement.style.setProperty('--navbar-offset', `${getNavbarOffset()}px`);
+};
+
+updateNavbarOffset();
 
 if (mobileMenuBtn && mobileMenu) {
     mobileMenuBtn.addEventListener('click', () => {
         const isExpanded = mobileMenuBtn.getAttribute('aria-expanded') === 'true';
         mobileMenuBtn.setAttribute('aria-expanded', !isExpanded);
         mobileMenu.classList.toggle('hidden');
+        requestAnimationFrame(updateNavbarOffset);
         
         // Mettre à jour le label du bouton pour les lecteurs d'écran
         mobileMenuBtn.setAttribute('aria-label', isExpanded ? 'Fermer le menu de navigation' : 'Ouvrir le menu de navigation');
@@ -30,12 +46,12 @@ if (mobileMenuBtn && mobileMenu) {
         link.addEventListener('click', () => {
             mobileMenu.classList.add('hidden');
             mobileMenuBtn.setAttribute('aria-expanded', 'false');
+            requestAnimationFrame(updateNavbarOffset);
         });
     });
 }
 
 // Effet de défilement de la navbar
-const navbar = document.getElementById('navbar');
 let lastScroll = 0;
 let ticking = false;
 
@@ -109,7 +125,7 @@ document.querySelectorAll('a[href^="#"]:not([href="#"])').forEach(anchor => {
             
             if (target) {
                 e.preventDefault();
-                const offsetTop = target.offsetTop - 80;
+                const offsetTop = target.offsetTop - getNavbarOffset();
                 window.scrollTo({
                     top: offsetTop,
                     behavior: 'smooth'
@@ -139,6 +155,10 @@ window.addEventListener('scroll', () => {
         window.requestAnimationFrame(updateScrollBtn);
         scrollBtnTicking = true;
     }
+}, { passive: true });
+
+window.addEventListener('resize', () => {
+    requestAnimationFrame(updateNavbarOffset);
 }, { passive: true });
 
 scrollTopBtn.addEventListener('click', () => {
