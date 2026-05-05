@@ -54,7 +54,7 @@ html {
   scroll-padding-top: var(--navbar-offset);
 }
 
-body {
+#home {
   padding-top: var(--navbar-offset);
 }
 
