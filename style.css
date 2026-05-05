@@ -364,7 +364,7 @@ html {
 @media (max-width: 767px) {
   body > footer:last-of-type,
   footer[role="contentinfo"] {
-    padding-bottom: 8rem;
+    padding-bottom: 13rem;
   }
 }
 
