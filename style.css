@@ -738,8 +738,8 @@ textarea:focus-visible {
   --green: #0f172a;
   --lime: #f1bd58;
   --serif: Georgia, "Times New Roman", serif;
-  --sans: "DM Sans", sans-serif;
-  --display: "Manrope", sans-serif;
+  --sans: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --display: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   --wrap: 1180px;
   --nav-height: 78px;
 }
